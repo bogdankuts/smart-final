@@ -1,0 +1,12 @@
+.mdl-layout__header-row {
+	.mdl-navigation {
+		.mdl-navigation__link {
+			//color: #fff;
+			&:hover,
+			&:focus {
+				cursor: pointer;
+				text-decoration: none;
+			}
+		}
+	}
+}

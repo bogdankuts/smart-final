@@ -1,0 +1,72 @@
+.admin-card {
+	width: 45%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+	margin-bottom: 40px;
+	float: left;
+	.mdl-card__supporting-text {
+		width: 100%;
+		table {
+			width: 100%;
+		}
+	}
+	.delete_admin {
+		width: 100%;
+	}
+}
+.main_heading {
+	text-align: center;
+}
+.general {
+	overflow: hidden;
+	padding: 20px;
+	.created,
+	.articles_amount {
+		float: left;
+		width: 50%;
+	}
+	.last_visit,
+	.master {
+		float: right;
+		width: 50%;
+	}
+}
+.mdl-card__menu {
+	.mdl-menu__container {
+		.mdl-menu__item {
+			&:hover,
+			&:focus {
+				text-decoration: none;
+				color: inherit;
+			}
+		}
+	}
+}
+.positions_by_admin,
+.profiles_by_admin {
+	float: left;
+}
+.actions {
+	margin-top: 20px;
+	a,
+	.delete_entity_form {
+		float: left;
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			color: inherit;
+		}
+	}
+
+	.delete_entity_form {
+		margin-left: 25px;
+	}
+}
+.admin_create_form {
+	.mdl-textfield {
+		width: 100%;
+	}
+	.add_admin {
+		float: right;
+	}
+}

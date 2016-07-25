@@ -1,0 +1,27 @@
+.mdl-layout__drawer {
+	.mdl-layout-title {
+		padding-left: 0px;
+		text-align: center;
+		font-size: 18px;
+	}
+	.mdl-navigation {
+		.active_nav {
+			background-color: #e0e0e0;
+			color: $primary-color;
+		}
+		.mdl-navigation__link {
+			margin-bottom: 3px;
+			&:hover,
+			&:focus {
+				text-decoration: none;
+			}
+		}
+	}
+}
+.mdl-navigation__devider {
+	height: 1px;
+	width: 100%;
+	background-color: $divider-color;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}

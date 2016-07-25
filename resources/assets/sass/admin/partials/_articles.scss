@@ -1,0 +1,88 @@
+.article-card {
+	float: left;
+	width: 30%;
+	margin: 0 1.5% 40px 1.5%;
+	.mdl-card {
+		&__image {
+			max-height: 250px;
+			min-height: 250px;
+			width: 100%;
+		}
+		&__title {
+			font-size: 18px;
+			min-height: 85px;
+			max-height: 85px;
+			overflow: hidden;
+			position: relative;
+			-webkit-align-items: baseline;
+			-ms-flex-align: baseline;
+			align-items: baseline;
+			padding: 0;
+			display: block;
+			&:after {
+				content: '';
+				display: block;
+				background-color: #fff;
+				height: 20px;
+				opacity: .9;
+				position: absolute;
+				top: 74px;
+				width: 100%;
+			}
+			&:hover {
+				.title {
+					position: absolute;
+					background-color: #fff;
+					text-decoration: none;
+				}
+				cursor: pointer;
+				overflow: initial;
+				background-color: #fff;
+				max-height: initial;
+				&:after {
+					display: none;
+				}
+			}
+			.title {
+				padding: 16px;
+				color: $secondary-text-color;
+				display: block;
+				font-size: 18px;
+				font-weight: 300;
+				line-height: normal;
+				margin: 0;
+			}
+		}
+		&__info {
+			padding: 0 16px;
+			.date,
+			.created_by {
+				color: $secondary-text-color;
+				font-size: 16px;
+			}
+		}
+		&__excerpt {
+			padding: 0 16px;
+			min-height: 77px;
+			p {
+				&:after {
+					content: '...';
+				}
+			}
+
+		}
+	}
+	.mdl-button {
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
+	}
+	.delete_form_btn {
+		float: right;
+		//margin-top: -1px;
+		input {
+			margin: 0;
+		}
+	}
+}
