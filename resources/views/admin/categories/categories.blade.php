@@ -8,7 +8,11 @@
 		@foreach($categories as $category)
 			<div class="one_category mdl-card">
 				<div class="mdl-card__title">
-					<h2 class="mdl-card__title-text">{{$category->title}}</h2>
+					<h2 class="mdl-card__title-text">
+						<a href="{{route('admin_category', ['category' => $category->category_id])}}">
+							{{$category->title}}
+						</a>
+					</h2>
 					<div class="actions">
 						<a href="{{route('edit_category', ['category' => $category->category_id])}}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
 							Изменить

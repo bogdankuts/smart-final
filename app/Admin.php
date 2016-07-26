@@ -68,11 +68,20 @@ class Admin extends Model {
 		return $this->hasMany('App\Position', 'created_by');
 	}
 
+	/**
+	 * Delete admin and update Articles, Positions and Profiles
+	 *
+	 * @throws \Exception
+	 */
+	public function deleteAdmin() {
+		$this->updateEntitiesOnDelete();
+		$this->delete();
+	}
 
 	/**
 	 * Updates article->created_by before the real admin is deleted
 	 */
-	public function updateArticlesOnDelete() {
+	private function updateArticlesOnDelete() {
 		foreach($this->articles as $article) {
 			$article->created_by = $this->defaultAdminId;
 			$article->save();
@@ -82,7 +91,7 @@ class Admin extends Model {
 	/**
 	 * Updates profile->created_by before the real admin is deleted
 	 */
-	public function updateProfilesOnDelete() {
+	private function updateProfilesOnDelete() {
 		foreach($this->profiles as $profile) {
 			$profile->created_by = $this->defaultAdminId;
 			$profile->save();
@@ -92,12 +101,25 @@ class Admin extends Model {
 	/**
 	 * Updates positions->created_by before the real admin is deleted
 	 */
-	public function updatePositionsOnDelete() {
+	private function updatePositionsOnDelete() {
 		foreach($this->positions as $position) {
 			$position->created_by = $this->defaultAdminId;
 			$position->save();
 		}
 	}
+
+	/**
+	 * Updates created_by attribute for all existing entities(Articles, Profiles, Positions)
+	 *
+	 */
+	private function updateEntitiesOnDelete() {
+		$this->updateArticlesOnDelete();
+		$this->updatePositionsOnDelete();
+		$this->updateProfilesOnDelete();
+
+	}
+
+
 
 
 

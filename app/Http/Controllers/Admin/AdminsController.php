@@ -9,11 +9,6 @@ use App\Http\Requests\AdminRequest;
 
 class AdminsController extends AdminBaseController {
 
-	/**
-	 * Return list of all admins
-	 *
-	 * @return \View
-	 */
 	public function index() {
 
 		return view('admin.admins.admins')->with([
@@ -21,17 +16,8 @@ class AdminsController extends AdminBaseController {
 		]);
 	}
 
-
-	/**
-	 * Return one admin page
-	 *
-	 * @param Admin $admin
-	 *
-	 * @return \View
-	 */
 	public function show(Admin $admin) {
 
-		//TODO::change the view after the frontend is done
 		return view('admin.admins.admin')->with([
 			'admin'     => $admin,
 			'articles'  => $admin->articles,
@@ -40,11 +26,6 @@ class AdminsController extends AdminBaseController {
 		]);
 	}
 
-	/**
-	 * Return create view page
-	 *
-	 * @return \View
-	 */
 	public function create() {
 
 		return view('.admin.admins.create')->with([
@@ -52,39 +33,22 @@ class AdminsController extends AdminBaseController {
 		]);
 	}
 
-	//TODO::refactor store and update methods to abstract the same parts
-	/**
-	 * Save new admin to database
-	 *
-	 * @param AdminRequest $request
-	 *
-	 * @return \Illuminate\Http\RedirectResponse
-	 */
 	public function store(AdminRequest $request) {
 		$data = $this->prepareAdminData($request);
 
 		if ($this->adminEmailIsValid($data['email'])) {
-			if (Admin::create($data)) {
-				flash('Новый админ успешно зарегестрирован', 'success');
+			Admin::create($data);
+			flash('Новый админ успешно зарегестрирован', 'success');
 
-				return redirect()->back();
-			} else {
-
-				return $this->redirectWithError();
-			}
+			return redirect()->back();
 		} else {
 
-			return redirect()->back()->withInput()->withErrors(['email' => 'Пользователь с таким email уже существет!']);
+			return redirect()->back()
+				->withInput()
+				->withErrors(['email' => 'Пользователь с таким email уже существет!']);
 		}
 	}
 
-	/**
-	 * Return update admin page
-	 *
-	 * @param Admin $admin
-	 *
-	 * @return $this
-	 */
 	public function edit(Admin $admin) {
 
 		return view('admin.admins.update')->with([
@@ -93,62 +57,32 @@ class AdminsController extends AdminBaseController {
 		]);
 	}
 
-	/**
-	 * Updates admin in DB
-	 *
-	 * @param AdminRequest $request
-	 * @param Admin        $admin
-	 *
-	 * @return \Illuminate\Http\RedirectResponse
-	 */
 	public function update(AdminRequest $request, Admin $admin) {
 		$data = $this->prepareAdminData($request);
 
 		if ($this->adminEmailIsValidForUpdate($data['email'], $admin->email)) {
-			if ($admin->update($data)) {
-				flash('Админ успешно изменен', 'success');
+			$admin->update($data);
+			flash('Админ успешно изменен', 'success');
 
-				return redirect()->back();
-			} else {
-
-				return $this->redirectWithError();
-			}
+			return redirect()->back();
 		} else {
 
-			return redirect()->back()->withInput()->withErrors(['email' => 'Пользователь с таким email уже существет!']);
+			return redirect()->back()
+				->withInput()
+				->withErrors(['email' => 'Пользователь с таким email уже существет!']);
 		}
 	}
 
-	/**
-	 * @param Admin $admin
-	 *
-	 * @return \Illuminate\Http\RedirectResponse
-	 * @throws \Exception
-	 */
 	public function delete(Admin $admin) {
-		$this->updateEntitiesOnDelete($admin);
-		if($admin->delete()) {
+		if ($admin->id !== 1) {
+			$admin->deleteAdmin();
 			flash('Админ успешно удален', 'success');
-
-			return redirect()->route('admins');
+		} else {
+			flash('Админ по умолчанию не может быть удален', 'danger');
 		}
 
-		return $this->redirectWithError();
+		return redirect()->route('admins');
 	}
-
-
-	/**
-	 * Updates created_by attribute for all existing entities(Articles, Profiles, Positions)
-	 *
-	 * @param Admin $admin
-	 */
-	private function updateEntitiesOnDelete($admin) {
-		$admin->updateArticlesOnDelete();
-		$admin->updatePositionsOnDelete();
-		$admin->updateProfilesOnDelete();
-
-	}
-
 
 	/**
 	 * Validate if email is valid for create from

@@ -207,9 +207,65 @@
   .one_category .mdl-card__title h2 {
     float: left;
     width: 50%; }
+    .one_category .mdl-card__title h2 a {
+      color: inherit;
+      text-decoration: none; }
+      .one_category .mdl-card__title h2 a:hover, .one_category .mdl-card__title h2 a:focus {
+        text-decoration: none;
+        cursor: pointer; }
   .one_category .actions {
     margin-top: 0;
     float: right; }
+
+.category-body .category_positions {
+  border-right: 2px solid #03A9F4; }
+
+.category-body .category_positions,
+.category-body .category_profiles {
+  width: 50%;
+  float: left;
+  overflow: hidden; }
+  .category-body .category_positions h3,
+  .category-body .category_profiles h3 {
+    margin-left: 1%; }
+  .category-body .category_positions .profile-card,
+  .category-body .category_positions .position-card,
+  .category-body .category_profiles .profile-card,
+  .category-body .category_profiles .position-card {
+    float: left;
+    width: 48%;
+    margin: 0 1% 20px 1%; }
+    .category-body .category_positions .profile-card .mdl-card__title,
+    .category-body .category_positions .position-card .mdl-card__title,
+    .category-body .category_profiles .profile-card .mdl-card__title,
+    .category-body .category_profiles .position-card .mdl-card__title {
+      min-height: 170px; }
+    .category-body .category_positions .profile-card .mdl-card__info,
+    .category-body .category_positions .position-card .mdl-card__info,
+    .category-body .category_profiles .profile-card .mdl-card__info,
+    .category-body .category_profiles .position-card .mdl-card__info {
+      padding: 16px; }
+    .category-body .category_positions .profile-card .mdl-card__excerpt,
+    .category-body .category_positions .position-card .mdl-card__excerpt,
+    .category-body .category_profiles .profile-card .mdl-card__excerpt,
+    .category-body .category_profiles .position-card .mdl-card__excerpt {
+      webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 16px;
+      min-height: 140px; }
+  .category-body .category_positions .empty,
+  .category-body .category_profiles .empty {
+    margin-left: 1%; }
+
+.category-body .actions {
+  float: left;
+  padding-top: 20px;
+  margin-top: 0;
+  width: 100%;
+  border-top: 2px solid #FFC107; }
 
 .body {
   padding: 20px 30px; }

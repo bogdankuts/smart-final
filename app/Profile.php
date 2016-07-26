@@ -13,6 +13,15 @@ class Profile extends Model {
 
 	public function content() {
 
-		return $this->hasOne('App\ProfileContent', 'profile_id', 'profile_id');
+		return $this->hasMany('App\ProfileContent', 'profile_id', 'profile_id');
+	}
+
+	/**
+	 * Return author of profile
+	 *
+	 * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+	 */
+	public function user() {
+		return $this->belongsTo('App\User', 'created_by', 'id');
 	}
 }

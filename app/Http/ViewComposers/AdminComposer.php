@@ -83,6 +83,10 @@ class AdminComposer {
 				$this->title = 'Категории';
 				$this->env = 'categories';
 				break;
+			case 'admin_category':
+				$this->title = 'Категория';
+				$this->env = 'category';
+				break;
 			case 'create_category':
 				$this->title = 'Категория';
 				$this->env = 'create_category';

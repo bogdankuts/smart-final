@@ -38,14 +38,10 @@ class ProjectsController extends AdminBaseController {
 
 	public function store(ProjectRequest $request) {
 
-		if (Project::create($request->all())) {
-			flash('Новый проект успешно создан', 'success');
+		Project::create($request->all());
+		flash('Новый проект успешно создан', 'success');
 
-			return redirect()->back();
-		} else {
-
-			return $this->redirectWithError();
-		}
+		return redirect()->back();
 	}
 
 	public function edit(Project $project) {
@@ -59,25 +55,17 @@ class ProjectsController extends AdminBaseController {
 
 	public function update(ProjectRequest $request, Project $project) {
 
-		if ($project->update($request->all())) {
-			flash('Проект успешно обновлен', 'success');
+		$project->update($request->all());
+		flash('Проект успешно обновлен', 'success');
 
-			return redirect()->back();
-		} else {
-
-			return $this->redirectWithError();
-		}
+		return redirect()->back();
 	}
 
 	public function delete(Project $project) {
 
-		if ($project->delete()) {
-			flash('Проект успешно удален', 'success');
+		$project->delete();
+		flash('Проект успешно удален', 'success');
 
-			return redirect()->route('admin_projects');
-		} else {
-
-			return $this->redirectWithError();
-		}
+		return redirect()->route('admin_projects');
 	}
 }

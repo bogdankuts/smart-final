@@ -10,15 +10,27 @@ class Project extends Model {
 	protected $fillable = ['title', 'field_id'];
 
 
+	/**
+	 * Get the field for the project
+	 *
+	 * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+	 */
 	public function field() {
 
 		return $this->belongsTo('App\Field', 'field_id', 'field_id');
 	}
 
-	public function getArticlesByProject($id) {
+	/**
+	 * Get all articles with the project id
+	 *
+	 * @param integer $projectId
+	 *
+	 * @return \Illuminate\Database\Eloquent\Collection|static[]
+	 */
+	public function getArticlesByProject($projectId) {
 		$article = new Article();
 
-		return $article->with('content')->where('project_id', $id)->get();
+		return $article->with('content')->where('project_id', $projectId)->get();
 
 	}
 }

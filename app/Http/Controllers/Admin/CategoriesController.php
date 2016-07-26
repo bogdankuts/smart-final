@@ -9,12 +9,21 @@ use App\Http\Requests;
 
 
 class CategoriesController extends AdminBaseController {
-	//TODO::check redirect with error, maybe it's absolute nonsense
+	//TODO::think about Success($instance) and a helper for that
 
 	public function index() {
 
 		return view('admin.categories.categories')->with([
-			'categories'  => Category::where('category_id','>',1)->orderBy('title', 'asc')->get(),
+			'categories'  => Category::orderBy('title', 'asc')->get(),
+		]);
+	}
+
+	public function show(Category $category) {
+
+		return view('admin.categories.category')->with([
+			'category'      => $category,
+		    'profiles'      => $category->getProfilesByCategory(),
+		    'positions'     => $category->getPositionsByCategory()
 		]);
 	}
 
@@ -27,14 +36,10 @@ class CategoriesController extends AdminBaseController {
 
 	public function store(CategoryRequest $request) {
 
-		if (Category::create($request->all())) {
-			flash('Новая категория успешно создана', 'success');
+		Category::create($request->all());
+		flash('Новая категория успешно создана', 'success');
 
-			return redirect()->back();
-		} else {
-
-			return $this->redirectWithError();
-		}
+		return redirect()->back();
 	}
 
 	public function edit(Category $category) {
@@ -47,26 +52,21 @@ class CategoriesController extends AdminBaseController {
 
 	public function update(CategoryRequest $request, Category $category) {
 
-		if ($category->update($request->all())) {
-			flash('Категория успешно обновлена', 'success');
+		$category->update($request->all());
+		flash('Категория успешно обновлена', 'success');
 
-			return redirect()->back();
-		} else {
-
-			return $this->redirectWithError();
-		}
+		return redirect()->back();
 	}
 
 	public function delete(Category $category) {
-
-		if ($category->delete()) {
+		if ($category->category_id !== 1) {
+			$category->deleteCategory();
 			flash('Категория успешно удалена', 'success');
-
-			return redirect()->route('admin_categories');
 		} else {
-
-			return $this->redirectWithError();
+			flash('Категория по умолчанию не можеть быть удалена', 'danger');
 		}
+
+		return redirect()->route('admin_categories');
 	}
 
 }

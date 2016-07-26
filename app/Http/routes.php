@@ -93,6 +93,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin
 		Route::post('/',                     ['as' => 'store_category',      'uses' => 'CategoriesController@store']);
 		Route::get('/',                      ['as' => 'admin_categories',    'uses' => 'CategoriesController@index']);
 		Route::get('/create',                ['as' => 'create_category',     'uses' => 'CategoriesController@create']);
+		Route::get('/{category}',            ['as' => 'admin_category',      'uses' => 'CategoriesController@show']);
 		Route::match(
 			['put','patch'], '/{category}',  ['as' => 'update_category',     'uses' => 'CategoriesController@update']);
 		Route::delete('/{category}',         ['as' => 'delete_category',     'uses' => 'CategoriesController@delete']);
