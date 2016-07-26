@@ -1,0 +1,11 @@
+### Example user template
+
+# IntelliJ project files
+.idea
+/bootstrap/compiled.php
+.env.*.php
+.env.php
+.env
+*~
+.DS_Store
+/vendor

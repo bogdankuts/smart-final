@@ -108,12 +108,6 @@
   .actions .delete_entity_form {
     margin-left: 25px; }
 
-.admin_create_form .mdl-textfield {
-  width: 100%; }
-
-.admin_create_form .add_admin {
-  float: right; }
-
 .article-card {
   float: left;
   width: 30%;
@@ -168,7 +162,8 @@
       font-size: 16px; }
   .article-card .mdl-card__excerpt {
     padding: 0 16px;
-    min-height: 77px; }
+    min-height: 77px;
+    max-height: 77px; }
     .article-card .mdl-card__excerpt p:after {
       content: '...'; }
   .article-card .mdl-button:hover, .article-card .mdl-button:focus {
@@ -177,6 +172,44 @@
     float: right; }
     .article-card .delete_form_btn input {
       margin: 0; }
+
+.projects-body .project_articles {
+  overflow: hidden;
+  border-bottom: 2px solid #FFC107; }
+
+.projects-body .actions {
+  width: 100%;
+  float: left; }
+
+.project-body select {
+  margin-bottom: 20px; }
+
+.projects_field {
+  width: 100%;
+  float: left;
+  overflow: hidden; }
+
+.flash {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 100; }
+  .flash .alert {
+    display: table;
+    margin: auto; }
+    .flash .alert .close {
+      margin-top: -1px; }
+
+.one_category {
+  width: 50%;
+  float: left;
+  min-height: initial; }
+  .one_category .mdl-card__title h2 {
+    float: left;
+    width: 50%; }
+  .one_category .actions {
+    margin-top: 0;
+    float: right; }
 
 .body {
   padding: 20px 30px; }
@@ -216,5 +249,11 @@
     margin: 0 auto;
     border-radius: 0;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }
+
+.create_form .mdl-textfield {
+  width: 100%; }
+
+.add_entity {
+  float: right; }
 
 /*# sourceMappingURL=style.css.map */

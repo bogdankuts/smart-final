@@ -1,0 +1,13 @@
+.flash {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	z-index: 100;
+	.alert {
+		display: table;
+		margin: auto;
+		.close {
+			margin-top: -1px;
+		}
+	}
+}

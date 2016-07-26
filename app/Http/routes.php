@@ -76,7 +76,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin
 		Route::get('/{position}/edit',      ['as' => 'edit_position',       'uses' => 'PositionsController@edit']);
 	});
 
-	//Positions
+	//Projects
 	Route::group(['prefix' => 'projects'], function() {
 		Route::post('/',                    ['as' => 'store_project',      'uses' => 'ProjectsController@store']);
 		Route::get('/',                     ['as' => 'admin_projects',     'uses' => 'ProjectsController@index']);
@@ -86,6 +86,17 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin
 			['put','patch'], '/{project}',  ['as' => 'update_project',     'uses' => 'ProjectsController@update']);
 		Route::delete('/{project}',         ['as' => 'delete_project',     'uses' => 'ProjectsController@delete']);
 		Route::get('/{project}/edit',       ['as' => 'edit_project',       'uses' => 'ProjectsController@edit']);
+	});
+
+	//Categories
+	Route::group(['prefix' => 'categories'], function() {
+		Route::post('/',                     ['as' => 'store_category',      'uses' => 'CategoriesController@store']);
+		Route::get('/',                      ['as' => 'admin_categories',    'uses' => 'CategoriesController@index']);
+		Route::get('/create',                ['as' => 'create_category',     'uses' => 'CategoriesController@create']);
+		Route::match(
+			['put','patch'], '/{category}',  ['as' => 'update_category',     'uses' => 'CategoriesController@update']);
+		Route::delete('/{category}',         ['as' => 'delete_category',     'uses' => 'CategoriesController@delete']);
+		Route::get('/{category}/edit',       ['as' => 'edit_category',       'uses' => 'CategoriesController@edit']);
 	});
 
 });

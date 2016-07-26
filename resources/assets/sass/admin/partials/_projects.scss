@@ -1,0 +1,21 @@
+.projects-body {
+	.project_articles {
+		overflow: hidden;
+		border-bottom: 2px solid $accent-color;
+	}
+	.actions {
+		width: 100%;
+		float: left;
+	}
+
+}
+.project-body {
+	select {
+		margin-bottom: 20px;
+	}
+}
+.projects_field {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+}

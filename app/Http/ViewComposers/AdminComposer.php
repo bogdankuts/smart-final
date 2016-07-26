@@ -63,6 +63,34 @@ class AdminComposer {
 				$this->title = 'Новость';
 				$this->env = 'article';
 				break;
+			case 'admin_projects':
+				$this->title = 'Проекты';
+				$this->env = 'projects';
+				break;
+			case 'admin_project':
+				$this->title = 'Проект';
+				$this->env = 'project';
+				break;
+			case 'create_project':
+				$this->title = 'Проект';
+				$this->env = 'create_project';
+				break;
+			case 'edit_project':
+				$this->title = 'Проект';
+				$this->env = 'update_project';
+				break;
+			case 'admin_categories':
+				$this->title = 'Категории';
+				$this->env = 'categories';
+				break;
+			case 'create_category':
+				$this->title = 'Категория';
+				$this->env = 'create_category';
+				break;
+			case 'edit_category':
+				$this->title = 'Категория';
+				$this->env = 'update_category';
+				break;
 		}
 	}
 

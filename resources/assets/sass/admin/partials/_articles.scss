@@ -64,6 +64,7 @@
 		&__excerpt {
 			padding: 0 16px;
 			min-height: 77px;
+			max-height: 77px;
 			p {
 				&:after {
 					content: '...';

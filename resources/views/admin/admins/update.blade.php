@@ -1,4 +1,4 @@
-@extends('admin.layout')
+projects@extends('admin.layout')
 @extends('admin.partials.header')
 @extends('admin.partials.drawer')
 

@@ -8,8 +8,6 @@
 	</span>
 @endif
 
-{!! Form::select('field_id', \App\Http\Help::createOptions($fields, 'field_id', 'title_ru'), null, ['class' =>'form-control']) !!}
-
 <div class="add_entity">
 	<button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
 		{{$submitButton}}

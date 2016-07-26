@@ -1,0 +1,15 @@
+.one_category {
+	width: 50%;
+	float: left;
+	min-height: initial;
+	.mdl-card__title {
+		h2 {
+			float: left;
+			width: 50%;
+		}
+	}
+	.actions {
+		margin-top: 0;
+		float: right;
+	}
+}

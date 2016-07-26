@@ -42,7 +42,7 @@
 	@endif
 	<span class="mdl-switch__label">Мастер-админ</span>
 </label>
-<div class="add_admin">
+<div class="add_entity">
 	<button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
 		{{$submitButton}}
 	</button>
