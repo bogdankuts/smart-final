@@ -10,13 +10,13 @@
 		<p>{{$content->description}}</p>
 	</div>
 	<div class="mdl-card__actions mdl-card--border">
-		<a href="{{route('admin_position', ['position' => $profile->profile_id])}}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+		<a href="{{route('admin_profile', ['profile' => $profile->profile_id])}}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
 			Посмотреть
 		</a>
-		<a href="{{route('edit_position', ['position' => $profile->profile_id])}}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+		<a href="{{route('edit_profile', ['profile' => $profile->profile_id])}}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
 			Изменить
 		</a>
-		{!! Form::open(['url' => "/admin/positions/$profile->profile_id", 'method' => 'DELETE', 'class' => 'delete_form_btn']) !!}
+		{!! Form::open(['url' => "/admin/profiles/$profile->profile_id", 'method' => 'DELETE', 'class' => 'delete_form_btn']) !!}
 			{!! Form::submit('Удалить', ['class' => 'mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect']) !!}
 		{!! Form::close() !!}
 	</div>

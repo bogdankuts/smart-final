@@ -19,7 +19,7 @@
 									<tbody>
 									<tr>
 										<th class="mdl-data-table__cell--non-numeric">Название</th>
-										<th>{{$project->title}}</th>
+										<th>{{$project->title_ua}}</th>
 									</tr>
 									<tr>
 										<th class="mdl-data-table__cell--non-numeric">Добавлен</th>

@@ -14,7 +14,7 @@ class CategoriesController extends AdminBaseController {
 	public function index() {
 
 		return view('admin.categories.categories')->with([
-			'categories'  => Category::orderBy('title', 'asc')->get(),
+			'categories'  => Category::orderBy('title_ua', 'asc')->get(),
 		]);
 	}
 

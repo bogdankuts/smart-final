@@ -5,7 +5,7 @@
 @section('body')
 	@include('flash::message')
 	<div class="body category-body mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col">
-		<h2>{{$category->title}}</h2>
+		<h2>{{$category->title_ua}}</h2>
 		<div class="category_positions">
 			<h3>Вакансии</h3>
 			@forelse($positions as $position)

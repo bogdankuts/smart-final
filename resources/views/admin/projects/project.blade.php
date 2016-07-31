@@ -5,7 +5,7 @@
 @section('body')
 	@include('flash::message')
 	<div class="body projects-body mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col">
-		<h2>{{$project->title}}</h2>
+		<h2>{{$project->title_ua}}</h2>
 		<p>Создан - {{$project->created_at}}</p>
 
 		<h3>Новости проекта</h3>

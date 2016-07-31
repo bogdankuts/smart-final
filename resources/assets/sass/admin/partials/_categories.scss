@@ -21,6 +21,7 @@
 	.actions {
 		margin-top: 0;
 		float: right;
+		border-top: 0;
 	}
 }
 .category-body {
@@ -35,37 +36,15 @@
 		h3 {
 			margin-left: 1%;
 		}
-		.profile-card,
-		.position-card {
-			float: left;
-			width: 48%;
-			margin: 0 1% 20px 1%;
-			.mdl-card__title {
-				min-height: 170px;
-			}
-			.mdl-card__info {
-				padding: 16px;
-			}
-			.mdl-card__excerpt {
-				webkit-align-items: center;
-				-ms-flex-align: center;
-				align-items: center;
-				display: -webkit-flex;
-				display: -ms-flexbox;
-				display: flex;
-				padding: 16px;
-				min-height: 140px;
-			}
-		}
 		.empty {
 			margin-left: 1%;
 		}
 	}
-	.actions {
-		float: left;
-		padding-top: 20px;
-		margin-top: 0;
-		width: 100%;
-		border-top: 2px solid $accent-color;
-	}
+}
+.actions {
+	float: left;
+	padding-top: 20px;
+	margin-top: 0;
+	width: 100%;
+	border-top: 2px solid $accent-color;
 }

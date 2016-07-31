@@ -10,7 +10,7 @@
 				<div class="mdl-card__title">
 					<h2 class="mdl-card__title-text">
 						<a href="{{route('admin_category', ['category' => $category->category_id])}}">
-							{{$category->title}}
+							{{$category->title_ua}}
 						</a>
 					</h2>
 					<div class="actions">

@@ -34,10 +34,6 @@
 	</main>
 </div>
 
-<script>
-	{{--@include('partials/js_globals')--}}
-	@yield('js')
-</script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 {{--{{ HTML::script('js/new_admin.js') }}--}}
 {{--{{ HTML::script('js/common.js') }}--}}
@@ -45,5 +41,6 @@
 <script>
 	$('div.alert').not('.alert-important').delay(3000).fadeOut(350);
 </script>
+@yield('js')
 </body>
 </html>

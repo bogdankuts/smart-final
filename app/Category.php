@@ -9,7 +9,7 @@ class Category extends Model {
 
 	protected $primaryKey = 'category_id';
 
-	protected $fillable = ['title'];
+	protected $fillable = ['title_ua', 'title_ru'];
 
 	protected $defaultCategory = 1;
 

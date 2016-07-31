@@ -28,7 +28,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin
 		Route::get('/{article}/edit',       ['as' => 'edit_article',        'uses' => 'ArticlesController@edit']);
 	});
 
-	//Admins
+	//Admins(done)
 	Route::group(['prefix' => 'admins'], function() {
 		Route::post('/',                    ['as' => 'store_admin',         'uses' => 'AdminsController@store']);
 		Route::get('/',                     ['as' => 'admins',              'uses' => 'AdminsController@index']);
@@ -76,7 +76,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin
 		Route::get('/{position}/edit',      ['as' => 'edit_position',       'uses' => 'PositionsController@edit']);
 	});
 
-	//Projects
+	//Projects(done)
 	Route::group(['prefix' => 'projects'], function() {
 		Route::post('/',                    ['as' => 'store_project',      'uses' => 'ProjectsController@store']);
 		Route::get('/',                     ['as' => 'admin_projects',     'uses' => 'ProjectsController@index']);
@@ -88,7 +88,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin
 		Route::get('/{project}/edit',       ['as' => 'edit_project',       'uses' => 'ProjectsController@edit']);
 	});
 
-	//Categories
+	//Categories(done)
 	Route::group(['prefix' => 'categories'], function() {
 		Route::post('/',                     ['as' => 'store_category',      'uses' => 'CategoriesController@store']);
 		Route::get('/',                      ['as' => 'admin_categories',    'uses' => 'CategoriesController@index']);
@@ -144,3 +144,4 @@ Route::get('/contacts/{lang?}',                         ['as' => 'contacts',    
 Route::get('/{lang?}',                                  ['as' => 'index',               'uses' => 'PagesController@index']);
 
 
+//TODO:check errors on forms in views

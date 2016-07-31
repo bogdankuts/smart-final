@@ -10,6 +10,8 @@ class Profile extends Model {
 
 	protected $primaryKey = 'profile_id';
 
+	protected $fillable = ['category_id', 'created_by', 'published_at'];
+
 
 	public function content() {
 

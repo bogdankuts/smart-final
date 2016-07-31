@@ -95,6 +95,22 @@ class AdminComposer {
 				$this->title = 'Категория';
 				$this->env = 'update_category';
 				break;
+			case 'admin_profiles':
+				$this->title = 'Профайлы';
+				$this->env = 'profiles';
+				break;
+			case 'admin_profile':
+				$this->title = 'Профайл';
+				$this->env = 'profile';
+				break;
+			case 'create_profile':
+				$this->title = 'Профайл';
+				$this->env = 'create_profile';
+				break;
+			case 'edit_profile':
+				$this->title = 'Профайл';
+				$this->env = 'update_profile';
+				break;
 		}
 	}
 

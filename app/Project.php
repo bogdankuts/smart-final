@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Project extends Model {
 	protected $primaryKey = 'project_id';
 
-	protected $fillable = ['title', 'field_id'];
+	protected $fillable = ['title_ua', 'title_ru', 'field_id'];
 
 
 	/**

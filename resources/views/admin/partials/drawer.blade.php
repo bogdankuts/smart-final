@@ -3,12 +3,16 @@
         <span class="mdl-layout-title">Привет, {{Auth::user()->name}}</span>
         <nav class="mdl-navigation">
 
-            <a class="mdl-navigation__link @if ( $env == 'dashboard') active_nav @endif" href="{{route('dashboard')}}">Панель управления</a>
+            <a class="mdl-navigation__link @if ( $env === 'dashboard') active_nav @endif" href="{{route('dashboard')}}">Панель управления</a>
             <div class="mdl-navigation__devider"></div>
 
-            <a class="mdl-navigation__link @if ( $env == 'articles' || $env == 'article') active_nav @endif" href="{{route('admin_articles')}}">Новости</a>
-            <a class="mdl-navigation__link @if ( $env == 'change_article') active_nav @endif" href="{{route('create_article')}}">Добавить новость</a>
+            <a class="mdl-navigation__link @if ( $env === 'articles' || $env == 'article') active_nav @endif" href="{{route('admin_articles')}}">Новости</a>
+            <a class="mdl-navigation__link @if ( $env === 'change_article') active_nav @endif" href="{{route('create_article')}}">Добавить новость</a>
             <div class="mdl-navigation__devider"></div>
+
+			<a class="mdl-navigation__link @if ( $env === 'profiles') active_nav @endif" href="{{route('admin_profiles')}}">Профайлы</a>
+			<a class="mdl-navigation__link @if ( $env === 'profile' || $env == 'create_profile' || $env == 'update_profile') active_nav @endif" href="{{route('create_profile')}}">Добавить профайл</a>
+			<div class="mdl-navigation__devider"></div>
 
 			<a class="mdl-navigation__link @if ( $env === 'projects') active_nav @endif" href="{{route('admin_projects')}}">Проекты</a>
 			<a class="mdl-navigation__link @if ( $env === 'project' || $env == 'create_project' || $env == 'update_project') active_nav @endif" href="{{route('create_project')}}">Добавить проект</a>

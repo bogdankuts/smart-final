@@ -1,0 +1,74 @@
+.profile-card,
+.position-card {
+	float: left;
+	width: 48%;
+	margin: 0 1% 20px 1%;
+	.mdl-card__title {
+		min-height: 170px;
+	}
+	.mdl-card__info {
+		padding: 16px;
+	}
+	.mdl-card__excerpt {
+		webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		padding: 16px;
+		min-height: 140px;
+	}
+}
+.profiles-body {
+	.profile-card {
+		width: 31.3%;
+	}
+	.mdl-card__title {
+		min-height: 115px;
+	}
+	.mdl-card__actions {
+		.delete_form_btn {
+			float: right;
+			input {
+				margin: 0;
+			}
+		}
+	}
+
+}
+.profile-body {
+	.main_info {
+		width: 100%;
+		p {
+			font-size: 18px;
+		}
+	}
+	.profile {
+		float: left;
+		padding: 16px;
+		margin-bottom: 20px;
+		.lang {
+			color: $primary-color;
+			margin-bottom: 0;
+		}
+	}
+}
+.profile-create-body {
+	.general_info {
+		overflow: hidden;
+		margin-bottom: 40px;
+		.one_select {
+			float: left;
+		}
+	}
+	.mdl-tabs__tab-bar {
+		a.mdl-tabs__tab {
+			&:hover,
+			&:focus {
+				text-decoration: none;
+				color: inherit;
+			}
+		}
+	}
+}

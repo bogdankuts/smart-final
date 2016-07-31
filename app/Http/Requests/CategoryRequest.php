@@ -24,7 +24,8 @@ class CategoryRequest extends Request
     public function rules()
     {
         return [
-	        'title'     => 'required|max:255',
+	        'title_ua'     => 'required|max:255',
+	        'title_ru'     => 'required|max:255',
         ];
     }
 }
