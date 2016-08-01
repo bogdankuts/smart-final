@@ -3,9 +3,8 @@
 namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
-use Illuminate\Support\Facades\Auth;
 
-class ProfileRequest extends Request
+class PositionCreateRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -14,15 +13,7 @@ class ProfileRequest extends Request
      */
     public function authorize()
     {
-	    $profile = $this->route('profile');
-	    $userId = $profile->user->id;
-	    if (Auth::user()->master || Auth::user()->id === $userId) {
-
-		    return true;
-	    } else {
-
-		    return false;
-	    }
+        return true;
     }
 
     /**
@@ -34,11 +25,11 @@ class ProfileRequest extends Request
     {
         return [
 	        'category_id'       => 'required',
-            'published_at'      => 'required',
+	        'published_at'      => 'required',
 	        //'meta_title[ua]'    => 'required|max:80',
 	        //'meta_description'  => 'required|max:200',
 	        //'meta_keywords'     => 'required|max:250',
-	        //'name'              => 'required|max:255',
+	        //'title'             => 'required|max:255',
 	        //'description'       => 'required|max:128',
 	        //'file'              => 'required|max:255'
         ];

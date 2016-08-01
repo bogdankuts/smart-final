@@ -4,11 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class PositionContent extends AdminBaseModel {
-	protected $table = 'positions_contents';
+class ReportContent extends AdminBaseModel {
+    protected $table = 'reports_contents';
 	public $timestamps = false;
-	protected $fillable = ['meta_title', 'meta_description', 'meta_keywords', 'title', 'file', 'description', 'lang_id', 'position_id'];
-
+	protected $fillable = ['meta_title', 'meta_description', 'meta_keywords', 'title', 'file', 'description', 'lang_id', 'report_id'];
 
 	/**
 	 * Fields to check and store

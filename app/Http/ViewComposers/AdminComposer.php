@@ -48,11 +48,11 @@ class AdminComposer {
 				$this->env = 'admin';
 				break;
 			case 'create_admin':
-				$this->title = 'Администратор';
+				$this->title = 'Добавить администратора';
 				$this->env = 'admin_create';
 				break;
 			case 'edit_admin':
-				$this->title = 'Администратор';
+				$this->title = 'Изменить администратора';
 				$this->env = 'admin_update';
 				break;
 			case 'admin_articles':
@@ -72,11 +72,11 @@ class AdminComposer {
 				$this->env = 'project';
 				break;
 			case 'create_project':
-				$this->title = 'Проект';
+				$this->title = 'Добавить проект';
 				$this->env = 'create_project';
 				break;
 			case 'edit_project':
-				$this->title = 'Проект';
+				$this->title = 'Изменить проект';
 				$this->env = 'update_project';
 				break;
 			case 'admin_categories':
@@ -88,11 +88,11 @@ class AdminComposer {
 				$this->env = 'category';
 				break;
 			case 'create_category':
-				$this->title = 'Категория';
+				$this->title = 'Добавить категорию';
 				$this->env = 'create_category';
 				break;
 			case 'edit_category':
-				$this->title = 'Категория';
+				$this->title = 'Изменить категорию';
 				$this->env = 'update_category';
 				break;
 			case 'admin_profiles':
@@ -104,12 +104,44 @@ class AdminComposer {
 				$this->env = 'profile';
 				break;
 			case 'create_profile':
-				$this->title = 'Профайл';
+				$this->title = 'Добавить профайл';
 				$this->env = 'create_profile';
 				break;
 			case 'edit_profile':
-				$this->title = 'Профайл';
+				$this->title = 'Изменить профайл';
 				$this->env = 'update_profile';
+				break;
+			case 'admin_positions':
+				$this->title = 'Вакансии';
+				$this->env = 'positions';
+				break;
+			case 'admin_position':
+				$this->title = 'Вакансия';
+				$this->env = 'profile';
+				break;
+			case 'create_position':
+				$this->title = 'Добавить вакансию';
+				$this->env = 'create_position';
+				break;
+			case 'edit_position':
+				$this->title = 'Изменить вакансию';
+				$this->env = 'update_position';
+				break;
+			case 'admin_reports':
+				$this->title = 'Отчеты';
+				$this->env = 'reports';
+				break;
+			case 'admin_report':
+				$this->title = 'Отчет';
+				$this->env = 'report';
+				break;
+			case 'create_report':
+				$this->title = 'Добавить отчет';
+				$this->env = 'create_report';
+				break;
+			case 'edit_report':
+				$this->title = 'Изменить отчет';
+				$this->env = 'update_report';
 				break;
 		}
 	}

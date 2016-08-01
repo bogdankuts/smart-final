@@ -26,7 +26,9 @@
 			<div class="positions_by_admin card mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--6-col">
 				<h4 class="main_heading">Вакансии этого админа</h4>
 				@foreach($positions as $position)
-					<div>{{$position->content->title}}</div>
+					@foreach($position->content as $content)
+						<div>{{$content->title}}</div>
+					@endforeach
 				@endforeach
 			</div>
 		@endif
@@ -34,7 +36,9 @@
 			<div class="profiles_by_admin card mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--6-col">
 				<h4 class="main_heading">Профайлы этого админа</h4>
 				@foreach($profiles as $profile)
-					<div>{{$profile->content->name}}</div>
+					@foreach($profile->content as $content)
+						<div>{{$content->name}}</div>
+					@endforeach
 				@endforeach
 			</div>
 		@endif

@@ -23,8 +23,9 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 
 $factory->define(App\Project::class, function (Faker\Generator $faker) use ($factory) {
 	return [
-		'field_id'          => rand(1, 3),
-		'title'             => $faker->sentence,
+		'field_id'              => rand(1, 3),
+		'title_ua'              => $faker->sentence,
+		'title_ru'              => $faker->sentence,
 	];
 });
 
@@ -57,7 +58,8 @@ $factory->define(App\ArticleContent::class, function (Faker\Generator $faker) us
 
 $factory->define(App\Category::class, function (Faker\Generator $faker) {
 	return [
-		'title' => $faker->sentence(1),
+		'title_ua' => $faker->sentence(1),
+		'title_ru' => $faker->sentence(1),
 	];
 });
 
@@ -74,6 +76,9 @@ $factory->define(App\ProfileContent::class, function (Faker\Generator $faker) us
 	return [
 		'profile_id'        => factory(App\Profile::class)->create()->profile_id,
 		'lang_id'           => rand(1, 2),
+		'meta_title'        => $faker->sentence,
+		'meta_description'  => $faker->sentence,
+		'meta_keywords'     => $faker->sentence(10),
 		'name'              => $faker->name,
 		'description'       => $faker->sentence,
 	    'file'              => $faker->image()
@@ -93,6 +98,30 @@ $factory->define(App\PositionContent::class, function (Faker\Generator $faker) u
 	return [
 		'position_id'       => factory(App\Position::class)->create()->position_id,
 		'lang_id'           => rand(1, 2),
+		'meta_title'        => $faker->sentence,
+		'meta_description'  => $faker->sentence,
+		'meta_keywords'     => $faker->sentence(10),
+		'title'             => $faker->sentence,
+		'description'       => $faker->sentence,
+		'file'              => $faker->image()
+	];
+});
+
+$factory->define(App\Report::class, function (Faker\Generator $faker) use ($factory) {
+	return [
+		'category_id'       => rand(1, 2),
+		'published_at'      => \Carbon\Carbon::now(),
+		'views'             => rand(0, 1500),
+	];
+});
+
+$factory->define(App\ReportContent::class, function (Faker\Generator $faker) use ($factory) {
+	return [
+		'report_id'         => factory(App\Report::class)->create()->report_id,
+		'lang_id'           => rand(1, 2),
+		'meta_title'        => $faker->sentence,
+		'meta_description'  => $faker->sentence,
+		'meta_keywords'     => $faker->sentence(10),
 		'title'             => $faker->sentence,
 		'description'       => $faker->sentence,
 		'file'              => $faker->image()

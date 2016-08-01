@@ -10,6 +10,8 @@ class Position extends Model {
 
 	protected $primaryKey = 'position_id';
 
+	protected $fillable = ['category_id', 'created_by', 'published_at'];
+
 	//TODO::think about slug instead of id
 
 	public function content() {
@@ -25,4 +27,10 @@ class Position extends Model {
 	public function user() {
 		return $this->belongsTo('App\User', 'created_by', 'id');
 	}
+
+	public static function getAllPositions() {
+
+		return Position::orderBy('created_at', 'desc')->get();
+	}
+
 }

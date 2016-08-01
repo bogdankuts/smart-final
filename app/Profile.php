@@ -5,13 +5,9 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 class Profile extends Model {
-
 	protected $dates=['created_at', 'updated_at', 'published_at'];
-
 	protected $primaryKey = 'profile_id';
-
 	protected $fillable = ['category_id', 'created_by', 'published_at'];
-
 
 	public function content() {
 
@@ -25,5 +21,10 @@ class Profile extends Model {
 	 */
 	public function user() {
 		return $this->belongsTo('App\User', 'created_by', 'id');
+	}
+
+	public static function getAllProfiles() {
+
+		return  Profile::orderBy('created_at', 'desc')->get();
 	}
 }

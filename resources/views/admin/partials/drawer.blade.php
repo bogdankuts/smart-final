@@ -14,12 +14,20 @@
 			<a class="mdl-navigation__link @if ( $env === 'profile' || $env == 'create_profile' || $env == 'update_profile') active_nav @endif" href="{{route('create_profile')}}">Добавить профайл</a>
 			<div class="mdl-navigation__devider"></div>
 
+			<a class="mdl-navigation__link @if ( $env === 'positions') active_nav @endif" href="{{route('admin_positions')}}">Вакансии</a>
+			<a class="mdl-navigation__link @if ( $env === 'position' || $env == 'create_position' || $env == 'update_position') active_nav @endif" href="{{route('create_position')}}">Добавить вакансию</a>
+			<div class="mdl-navigation__devider"></div>
+
 			<a class="mdl-navigation__link @if ( $env === 'projects') active_nav @endif" href="{{route('admin_projects')}}">Проекты</a>
 			<a class="mdl-navigation__link @if ( $env === 'project' || $env == 'create_project' || $env == 'update_project') active_nav @endif" href="{{route('create_project')}}">Добавить проект</a>
 			<div class="mdl-navigation__devider"></div>
 
 			<a class="mdl-navigation__link @if ( $env === 'categories') active_nav @endif" href="{{route('admin_categories')}}">Категории вакансий/резюме</a>
 			<a class="mdl-navigation__link @if ( $env === 'category' || $env == 'create_category' || $env == 'update_category') active_nav @endif" href="{{route('create_category')}}">Добавить категорию</a>
+			<div class="mdl-navigation__devider"></div>
+
+			<a class="mdl-navigation__link @if ( $env === 'reports') active_nav @endif" href="{{route('admin_reports')}}">Отчеты</a>
+			<a class="mdl-navigation__link @if ( $env === 'report' || $env == 'create_report' || $env == 'update_report') active_nav @endif" href="{{route('create_report')}}">Добавить отчет</a>
 			<div class="mdl-navigation__devider"></div>
 
             <a class="mdl-navigation__link @if ( $env === 'admins') active_nav @endif" href="{{route('admins')}}">Администраторы</a>

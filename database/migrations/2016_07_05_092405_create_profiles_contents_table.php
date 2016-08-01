@@ -19,6 +19,9 @@ class CreateProfilesContentsTable extends Migration
 		        ->references('profile_id')->on('profiles')
 		        ->onDelete('cascade');
 	        $table->integer('lang_id')->unsigned();
+	        $table->string('meta_title', 80);
+	        $table->string('meta_description', 200);
+	        $table->string('meta_keywords', 250);
 	        $table->string('name');
 	        $table->string('description', 256);
 	        $table->string('file');

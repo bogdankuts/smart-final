@@ -45,9 +45,6 @@
 						<a href="{{route('edit_admin', ['admin' => $admin->id])}}" class="mdl-menu__item">
 							Изменить
 						</a>
-{{--						<a class="mdl-menu__item delete_admin" data-id="{{$admin->id}}">--}}
-							{{--Удалить--}}
-						{{--</a>--}}
 						{!! Form::open(['url' => "/admin/admins/$admin->id", 'method' => 'DELETE', 'class' => 'delete_entity_form']) !!}
 							{!! Form::submit('Удалить', ['class' => 'mdl-menu__item delete_admin']) !!}
 						{!! Form::close() !!}

@@ -295,6 +295,12 @@
   text-decoration: none;
   color: inherit; }
 
+.positions-body .mdl-card__title {
+  min-height: 130px; }
+
+.reports-body .mdl-card__title {
+  min-height: 165px; }
+
 .body {
   padding: 20px 30px; }
 
