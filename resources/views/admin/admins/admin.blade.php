@@ -3,7 +3,7 @@
 @extends('admin.partials.drawer')
 
 @section('body')
-	<div class="body mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col">
+	<div class="body admin-body mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col">
 		<h2 class="main_heading">Администратор - {{$admin->name}}</h2>
 		<h4 class="main_heading">Общие сведения</h4>
 		<div class="general card mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--8-col mdl-cell--2-offset">
@@ -18,7 +18,9 @@
 			<div class="articles_by_admin card mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col">
 				<h4 class="main_heading">Статьи этого админа</h4>
 				@foreach($articles as $article)
-					<div>{{$article->content->body}}</div>
+					@foreach($article->content as $content)
+						@include('admin.articles._article_for_list')
+					@endforeach
 				@endforeach
 			</div>
 		@endif
@@ -27,7 +29,7 @@
 				<h4 class="main_heading">Вакансии этого админа</h4>
 				@foreach($positions as $position)
 					@foreach($position->content as $content)
-						<div>{{$content->title}}</div>
+						@include('admin.positions._position_for_list')
 					@endforeach
 				@endforeach
 			</div>
@@ -37,7 +39,7 @@
 				<h4 class="main_heading">Профайлы этого админа</h4>
 				@foreach($profiles as $profile)
 					@foreach($profile->content as $content)
-						<div>{{$content->name}}</div>
+						@include('admin.profiles._profile_for_list')
 					@endforeach
 				@endforeach
 			</div>

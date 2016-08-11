@@ -5,6 +5,7 @@
 	<div class="mdl-card__info">
 		<p class="date">Опубликовано - {{$profile->published_at->format('d.m.Y в H:i')}}</p>
 		<p class="created_by">Автор - {{$profile->user->name}}</p>
+		<p class="created_by">Просмотров - {{$profile->views}}</p>
 	</div>
 	<div class="mdl-card__excerpt">
 		<p>{{$content->description}}</p>

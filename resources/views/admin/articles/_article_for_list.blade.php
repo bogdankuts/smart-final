@@ -1,6 +1,6 @@
 <div class="article-card mdl-card mdl-shadow--2dp">
 	<div class="mdl-card__image">
-		<img src="{{public_path().'/img/articles/'.$article->image}}" alt="{{$article->title}}">
+		<img src="{{'/img/articles/'.$article->image}}" alt="{{$content->title}}">
 	</div>
 	<div class="mdl-card__title">
 		<h2 class="title">{{$content->title}}</h2>
@@ -8,6 +8,9 @@
 	<div class="mdl-card__info">
 		<p class="date">Опубликовано - {{$article->published_at->format('d.m.Y в H:i')}}</p>
 		<p class="created_by">Автор - {{$article->user->name}}</p>
+		<p class="created_by">Язык - {{$content->language->title}}</p>
+		<p class="created_by">Тип - {{$article->getType()}}</p>
+		<p class="created_by">Прсомотров - {{$article->views}}</p>
 	</div>
 	<div class="mdl-card__excerpt">
 		<p>{{$content->preview_text}}</p>

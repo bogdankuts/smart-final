@@ -7,6 +7,11 @@
 		<div class="main_info">
 			<p class="created_at">Добавлен - {{$report->created_at}}</p>
 			<p class="created_at">Последние изменения - {{$report->updated_at}}</p>
+			@if($report->cetegory_id == 1)
+				<p class="created_at">Тип - Документ</p>
+			@else
+				<p class="created_at">Тип - Отчет</p>
+			@endif
 			@if($report->published_at < \Carbon\Carbon::today())
 				<p class="published">Опубликован</p>
 			@else

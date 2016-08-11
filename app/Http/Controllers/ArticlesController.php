@@ -10,13 +10,27 @@ use App\Http\Requests;
 
 class ArticlesController extends BaseController {
 
-	public function index(Article $article) {
-		//return "This are all of the articles in $lang";
+	public function index() {
+
+		return view('pages.articles')->with([
+			'contents' => ArticleContent::selectArticlesByLanguage($this->getLangId())
+		]);
 	}
 
     public function show(Article $article) {
-	    dd($this->lang);
-	    //dd($article->content());
+
+	    $article->views++;
+	    $article->save();
+
+	    $content = $article->contentByLang($this->getLangId());
+
+	    if (!is_null($content)) {
+		    return view('pages.article')->with([
+			    'content' => $article->contentByLang($this->getLangId()),
+		    ]);
+	    } else {
+		    abort(404);
+	    }
     }
 
 }

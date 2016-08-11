@@ -1,0 +1,30 @@
+.all_reports {
+	.reports,
+	.docs {
+		//float: left;
+		//width: 50%;
+		.heading {
+			text-transform: uppercase;
+			text-align: center;
+		}
+		.one_report {
+			.report_link {
+				color: $blue;
+				font-size: 16px;
+				text-transform: uppercase;
+				&:hover,
+				&:focus {
+					text-decoration: none;
+					cursor: pointer;
+					color: $blue;
+				}
+			}
+			.small_description {
+				font-size: 14px;
+				text-align: justify;
+				font-style: italic;
+				font-weight: 400;
+			}
+		}
+	}
+}

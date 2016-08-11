@@ -1,4 +1,4 @@
-<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label {{ $errors->has('title_ua') ? ' has-error' : '' }}">
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label {{ $errors->has('title_ua') ? ' is-invalid' : '' }}">
 	{!! Form::label('title_ua', 'Название(укр)', ['class' => 'mdl-textfield__label']) !!}
 	{!! Form::text('title_ua', old('title_ua'), ['class'=>'mdl-textfield__input', 'id' => 'title_ua', 'required']) !!}
 </div>
@@ -7,7 +7,7 @@
 		<strong>{{ $errors->first('title_ua') }}</strong>
 	</span>
 @endif
-<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label {{ $errors->has('title_ru') ? ' has-error' : '' }}">
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label {{ $errors->has('title_ru') ? ' is-invalid' : '' }}">
 	{!! Form::label('title_ru', 'Название(рус)', ['class' => 'mdl-textfield__label']) !!}
 	{!! Form::text('title_ru', old('title_ru'), ['class'=>'mdl-textfield__input', 'id' => 'title_ru', 'required']) !!}
 </div>

@@ -16,6 +16,16 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin
 	Route::get('/',                         ['as' => 'dashboard',           'uses' => 'DashboardController@dashboard']);
 	Route::get('/about',                    ['as' => 'admin_about',         'uses' => 'DashboardController@about']);
 
+	//Recent
+	Route::group(['prefix' => 'recent'], function() {
+		Route::get('/admins/{lastVisit}',       ['as' => 'recent_admins',       'uses' => 'DashboardController@recentAdmins']);
+		Route::get('/articles/{lastVisit}',     ['as' => 'recent_articles',     'uses' => 'DashboardController@recentArticles']);
+		Route::get('/profiles/{lastVisit}',     ['as' => 'recent_profiles',     'uses' => 'DashboardController@recentProfiles']);
+		Route::get('/positions/{lastVisit}',    ['as' => 'recent_positions',    'uses' => 'DashboardController@recentPositions']);
+		Route::get('/documents/{lastVisit}',    ['as' => 'recent_documents',    'uses' => 'DashboardController@recentDocuments']);
+		Route::get('/subscribers/{lastVisit}',  ['as' => 'recent_subscribers',  'uses' => 'DashboardController@recentSubscribers']);
+	});
+
 	//Articles
 	Route::group(['prefix' => 'articles'], function() {
 		Route::post('/',                    ['as' => 'store_article',       'uses' => 'ArticlesController@store']);
@@ -28,7 +38,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin
 		Route::get('/{article}/edit',       ['as' => 'edit_article',        'uses' => 'ArticlesController@edit']);
 	});
 
-	//Admins(done)
+	//Admins
 	Route::group(['prefix' => 'admins'], function() {
 		Route::post('/',                    ['as' => 'store_admin',         'uses' => 'AdminsController@store']);
 		Route::get('/',                     ['as' => 'admins',              'uses' => 'AdminsController@index']);
@@ -76,7 +86,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin
 		Route::get('/{position}/edit',      ['as' => 'edit_position',       'uses' => 'PositionsController@edit']);
 	});
 
-	//Projects(done)
+	//Projects
 	Route::group(['prefix' => 'projects'], function() {
 		Route::post('/',                    ['as' => 'store_project',      'uses' => 'ProjectsController@store']);
 		Route::get('/',                     ['as' => 'admin_projects',     'uses' => 'ProjectsController@index']);
@@ -88,7 +98,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin
 		Route::get('/{project}/edit',       ['as' => 'edit_project',       'uses' => 'ProjectsController@edit']);
 	});
 
-	//Categories(done)
+	//Categories
 	Route::group(['prefix' => 'categories'], function() {
 		Route::post('/',                     ['as' => 'store_category',      'uses' => 'CategoriesController@store']);
 		Route::get('/',                      ['as' => 'admin_categories',    'uses' => 'CategoriesController@index']);
@@ -100,48 +110,48 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin
 		Route::get('/{category}/edit',       ['as' => 'edit_category',       'uses' => 'CategoriesController@edit']);
 	});
 
+	//Subscribers
+	Route::group(['prefix' => 'subscribers'], function() {
+		Route::get('/',                      ['as' => 'admin_subscribers',          'uses' => 'SubscribersController@index']);
+		Route::get('/load',                  ['as' => 'admin_load_subscribers',     'uses' => 'SubscribersController@load']);
+		Route::get('/load-xls',              ['as' => 'admin_load_subscribers_xls', 'uses' => 'SubscribersController@loadXls']);
+		Route::delete('/{subscriber}',       ['as' => 'delete_subscriber',          'uses' => 'SubscribersController@delete']);
+	});
+
 });
 
 //Auth
 Route::auth();
 
+//Subscribe
+Route::post('/subscribe/{lang?}',                           ['as' => 'subscribe',           'uses' => 'PagesController@subscribe']);
+
 //Articles
-Route::get('/articles/{article}/{lang?}',               ['as' => 'article',             'uses' => 'ArticlesController@show']);
-Route::get('/articles/{lang?}',                         ['as' => 'articles',            'uses' => 'ArticlesController@index']);
+Route::get('/articles/{lang?}',                             ['as' => 'articles',            'uses' => 'ArticlesController@index']);
+Route::get('/articles/{article}/{lang?}',                   ['as' => 'article',             'uses' => 'ArticlesController@show']);
 
 //Opportunities
-Route::get('/opportunities/{lang?}',                    ['as' => 'opportunities',       'uses' => 'OpportunitiesController@index']);
-Route::get('/opportunities/{type}/{lang?}',             ['as' => 'opportunity_group',   'uses' => 'OpportunitiesController@show']);
+Route::get('/opportunities/{type}/{lang?}',                 ['as' => 'opportunity_group',   'uses' => 'OpportunitiesController@index']);
+Route::get('/opportunities/{article}/{type}/{lang?}',       ['as' => 'opportunity',         'uses' => 'ArticlesController@show']);
 
 //Projects
-Route::get('/branches/{field}/{lang?}',                 ['as' => 'field',               'uses' => 'ProjectsController@index']);
-Route::get('/branches/{field}/{project}/{lang?}',       ['as' => 'project',             'uses' => 'ProjectsController@show']);
+Route::get('/branches/{field}/{lang?}',                     ['as' => 'field',               'uses' => 'ProjectsController@index']);
+Route::get('/branches/{field}/{project}/{lang?}',           ['as' => 'project',             'uses' => 'ProjectsController@show']);
+Route::get('/branches/{article}/{field}/{project}/{lang?}', ['as' => 'project_text',        'uses' => 'ArticlesController@show']);
 
 //About
-Route::get('/about/{lang?}',                            ['as' => 'about',               'uses' => 'AboutController@about']);
-Route::get('/about/story/{lang?}',                      ['as' => 'story',               'uses' => 'AboutController@story']);
-Route::get('/about/reports/{lang?}',                    ['as' => 'all_reports',         'uses' => 'AboutController@allReports']);
-Route::get('/about/reports/docs/{lang?}',               ['as' => 'docs',                'uses' => 'AboutController@docs']);
-Route::get('/about/reports/reports/{lang?}',            ['as' => 'reports',             'uses' => 'AboutController@reports']);
-Route::get('/about/reports/reports/{report}/{lang?}',   ['as' => 'report',              'uses' => 'AboutController@report']);
-Route::get('/about/team/{lang?}',                       ['as' => 'team',                'uses' => 'AboutController@team']);
+Route::get('/about/{type}/{lang?}',                         ['as' => 'about',               'uses' => 'AboutController@about']);
+Route::get('/about/reports/{report}/{lang?}',               ['as' => 'report',              'uses' => 'AboutController@report']);
+Route::post('/increment-views-report/{report}',             ['as' => 'ajax_views_reports',  'uses' => 'AboutController@incrementViewsReport']);
 
-//Profiles
-Route::get('/profiles/{lang?}',                         ['as' => 'profiles',            'uses' => 'ProfileController@index']);
-Route::get('/profiles/{profile}/{lang?}',               ['as' => 'profile',             'uses' => 'ProfileController@show']);
-
-//Positions
-Route::get('/positions/{lang?}',                        ['as' => 'positions',           'uses' => 'PositionsController@index']);
-Route::get('/positions/{position}/{lang?}',             ['as' => 'position',            'uses' => 'PositionsController@show']);
-
-//Stories
-Route::get('/stories/{lang?}',                          ['as' => 'stories',             'uses' => 'StoriesController@index']);
-Route::get('/stories/{story}/{lang?}',                  ['as' => 'story',               'uses' => 'StoriesController@show']);
+//About project
+Route::get('/about-the-project/{type}/{lang?}',             ['as' => 'about_project',       'uses' => 'AboutProjectController@index']);
+Route::get('/about-the-project/{article}/{type}/{lang?}',   ['as' => 'story',               'uses' => 'ArticlesController@show']);
 
 //Pages
-Route::get('/about-the-project',                        ['as' => 'about_project',       'uses' => 'PagesController@aboutProject']);
-Route::get('/contacts/{lang?}',                         ['as' => 'contacts',            'uses' => 'PagesController@contacts']);
-Route::get('/{lang?}',                                  ['as' => 'index',               'uses' => 'PagesController@index']);
+Route::get('/contacts/{lang?}',                             ['as' => 'contacts',            'uses' => 'PagesController@contacts']);
+Route::get('/help-the-project/{lang?}',                     ['as' => 'donate',              'uses' => 'PagesController@donate']);
+Route::post('/increment-views-profile/{profile}',           ['as' => 'ajax_views_profile',  'uses' => 'AboutProjectController@incrementViewsProfile']);
+Route::post('/increment-views-position/{position}',         ['as' => 'ajax_views_positions','uses' => 'AboutProjectController@incrementViewsPosition']);
+Route::get('/{lang?}',                                      ['as' => 'index',               'uses' => 'PagesController@index']);
 
-
-//TODO:check errors on forms in views

@@ -62,9 +62,15 @@ class ProjectsController extends AdminBaseController {
 	}
 
 	public function delete(Project $project) {
+		if ($project->project_id !== 1) {
 
-		$project->delete();
-		flash('Проект успешно удален', 'success');
+			$project->setDefaultArticles();
+			$project->delete();
+
+			flash('Проект успешно удален', 'success');
+		} else {
+			flash('Проект по умолчанию не может быть удален', 'danger');
+		}
 
 		return redirect()->route('admin_projects');
 	}

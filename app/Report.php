@@ -2,7 +2,9 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\File;
 
 class Report extends Model {
 	protected $dates=['created_at', 'updated_at', 'published_at'];
@@ -18,4 +20,26 @@ class Report extends Model {
 
 		return Report::orderBy('created_at', 'desc')->get();
 	}
+
+	public function deleteFile() {
+		$contents = $this->content;
+
+		foreach ($contents as $content) {
+			File::delete(public_path('files/reports/'.$content->file));
+		}
+	}
+
+	/**
+	 * Return only published reports
+	 *
+	 * @param $query
+	 *
+	 * @return mixed
+	 */
+	public function scopePublished($query) {
+
+		return $query->where('published_at', '<' , Carbon::now());
+	}
 }
+
+

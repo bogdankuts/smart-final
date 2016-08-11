@@ -2,42 +2,544 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65ebe980-6632-4f59-b630-7eee1f462002" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/sass/admin/partials/_reports.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/positions/_form.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/positions/_update_form.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/positions/create.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/positions/position.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/positions/positions.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/positions/update.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/ViewComposers/FrontComposer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/admin/admin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/admin/articles.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/ajax.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/navbar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/sass/admin/partials/_dashboard.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/sass/admin/partials/_subscribers.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/sass/pages/_aboutProject.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/sass/pages/_articles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/sass/pages/_contacts.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/sass/pages/_donate.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/sass/pages/_footer.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/sass/pages/_header.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/sass/pages/_index.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/sass/pages/_opportunities.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/sass/pages/_projects.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/sass/pages/_reports.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/sass/pages/partials/_colors.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/lang/ua/about.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/lang/ua/aboutProject.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/lang/ua/donate.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/lang/ua/footer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/lang/ua/general.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/lang/ua/messages.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/lang/ua/navigation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/lang/ua/opportunities.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/lang/ua/projects.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/lang/ua/short_description.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/about.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/admins/_admin_for_list.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/articles/_update_form.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/subscribers/_subscribers_for_list.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/subscribers/subscribers.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/errors/404.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/pages/about.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/pages/about_project.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/pages/article.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/pages/articles.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/pages/contacts.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/pages/donate.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/pages/index.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/pages/layout.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/pages/opportunities.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/pages/partials/_articles_for_list.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/pages/partials/_breadcrumbs.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/pages/partials/_short_about.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/pages/partials/footer.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/pages/partials/header.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/pages/project.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/pages/projects.blade.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/PositionsController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/StoriesController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/.idea/.rakeTasks" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/.idea/bootstrap-sass.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/.ruby-gemset" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/.ruby-version" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/Gemfile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/Rakefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/bootstrap-sass.gemspec" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/lib/bootstrap-sass.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/lib/bootstrap-sass/engine.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/lib/bootstrap-sass/version.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/sache.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/tasks/bower.rake" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/tasks/converter.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/tasks/converter/char_string_scanner.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/tasks/converter/fonts_conversion.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/tasks/converter/js_conversion.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/tasks/converter/less_conversion.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/tasks/converter/logger.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/tasks/converter/network.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/templates/project/_bootstrap-variables.sass" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/templates/project/manifest.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/templates/project/styles.sass" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/compass_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/compilation_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_node_mincer/apple-touch-icon-144-precomposed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_node_mincer/application.css.ejs.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_node_mincer/manifest.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/README.rdoc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/Rakefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/app/assets/images/.keep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/app/assets/javascripts/application.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/app/assets/stylesheets/application.sass" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/app/controllers/application_controller.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/app/controllers/pages_controller.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/app/helpers/application_helper.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/app/views/layouts/application.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/app/views/pages/root.html.slim" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/config.ru" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/config/application.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/config/boot.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/config/environment.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/config/environments/development.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/config/environments/production.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/config/environments/test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/config/initializers/backtrace_silencers.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/config/initializers/filter_parameter_logging.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/config/initializers/inflections.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/config/initializers/mime_types.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/config/initializers/secret_token.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/config/initializers/session_store.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/config/initializers/wrap_parameters.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/config/locales/en.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/config/locales/es.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/config/routes.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/log/.keep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/--okWP-9_LIIhG36OrV53pXwoCgtbMMrBUyiRs43IEU.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/-0rli6HProPPqrGSPZQ_gShAhCr1It18ds8_Weg2YeQ.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/-AsDN8LqK8GN1k2NA5XGq9AMeUJQ5v4qXKHELQdzRXI.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/-PM3bNdABOHlV7-rr_A5YKmNEZgV1hnz24oR6taNN2c.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/-Yx0mBs_XRC9NIStFOhZrnhQx4EG8WcdNfVZTuWXr58.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/-nbqHaLLLEgfAj7yVaTww-o0wl7gF-Z6VzfsCY5qouA.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/-s87PCG6Rnn5as_B5-qpmAQtvNzGznimRlPE3Uav5P4.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/0-szgRoXf4w__c-wuivjCiIxMbfd6DwaqGmEVUKgv8A.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/0ObKjYyM7AKnAFtnLPcb0tdyM-vW3Al1e9JyQXKz3yo.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/0QetPNIgIK6V7QPDkvS_gOQWC-dPd_A6hbH7NvSHLOU.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/0RtZh7kTlFFdVggZYeXcZRoYRzUjWl9xAfYoOzNLEV4.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/0TFaq_yESCgzIegcOlaxeVQuxjliP0k8UZ_AIZ_Sf64.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/0giVb1aGVMvtU2V_nX1v77aqs61mcvNwqV4fqR-GN-M.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/0t8k0N7yj_3sRiEzNFLKvD1HRAUAFYnr9XUeCZkwlJg.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/102XFCVd2XjgrGif_jTpSE_zSmuL9MeiesmWFAW-zvY.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/1Q2kpuRb0gvBC0yPwY6lSa8CizG33J1Eo6-hVLGdMYQ.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/1b_dIHZL9-cChTkm-jI_na0NHHilSCw7NTQPDVWlTxo.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/1nWoFEhtmxzXOHL-FXJXnQNULEPNDnxKtR0jgf46Y14.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/1yYI2D6Oc9ji5WMrNcQpF_Z8PwWMQ8yp6j1O1QQvJts.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/2GvEJ5tRvSVo-jZ25neqdnd_DqqJ8RVRr06C6UE5dsE.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/2KGmbcD97AHlkGDlvLTiQmIBI-GOWYELMfX6kZ2rM88.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/2U6Ssm6g5PS7_hoih1nIzPILLBmxASuqoGQPEwxupWg.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/2ZQklqxUUSpyrwzU7jbCxvWR38Gf4frRiCLY4goLbF8.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/3U4db-aZCSDnUyLRGDtCAxYWqJo0A9BmL9lz5TOyBTI.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/3WeBO7ABMbbeRfAkrpWScww2LwpJ8ezDqUcrEjrnEp4.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/3pn78fD0PGeAsyBZKa3Vf_8UiMAzyami-GHXza81a1E.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/4z9CMOhQ66izqXK8uQ9Zhd6vkCx9crJrWj3Tr3PU95o.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/5AEsnf0r-EvV81jeMhMiV-hAjKfYTwVSy3jDJSE4aGg.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/5VWi3Pmd00P645wzaTuDRgO-jnVMYGc5TMyGDYhxT5M.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/5c0i6ef6KUCevTuuCN1dgB6oLs4f0fjrFFmYSON2HWA.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/5pxToIAb0ltqDyw_wWCtPvWNobrBMd6H_EXKPxxhITU.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/69F5tDpkc-cPxEG2royeE1UcFbHT3yejyVPbx5VCPIQ.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/6McJQWS77cPpjbR4jRp7JI5EMs6Hekaod9bSaXBEI5g.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/6PkjsTdWccSTIVYbCP2ycywoJp8qFO_4abLm3Z9Zyic.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/6Qvvqn5j2lPwjP_Y3g_oo3j6uzW4ks99B_HsJn9GI6M.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/6ce2bfA55AjHehaBGvIM68n5a-njBnsR8FtQG3Kr284.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/6jLZCBScVlwEJejXe1_SqFEx93FCZpV6p8oaE1xpQJw.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/6q0-JcIAYuWb43WaZaiUudLEkE35WkG1rOkvOnwVQDk.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/6xr1jGaA9d8tzp9qAfuZjt7IrcLyAbXnlARrau0gLAc.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/7A62EswhDkxuAeGYCJiMz3Od3Buk_ejcGc9NwgvW0MY.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/7ZRH2Mk4Ty71_jFKAWgmi75Bb4FhpjuX6zOSrtMv1BY.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/84wF-Tfgv2v0i7s2ck_jNMRnGR8txcdf26EqADn-naI.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/87gaj5D1mwThMTfHJe2uzVLiz0S2EAk7x21gvXWmFA8.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/8uaPnR6ZEIzAVUPZIEFZKePMcsg1qI2ysfvNSZO4IFk.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/8uwb5KG25HChGmR13WomvygSYJS32jZOxDa_fAN2efw.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/8xZfMKaYOuGCYtH4MklPaz6AngSb9spH_puOtlfsjLs.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/9ZQvGbNLIf-n87E04l97IstZp0GmGTI_WGF_RzGjrJc.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/9cWM2Ou0Iq0STYOjS0XYPywtQWNlMriBnPzk6db87OQ.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/9xIsfNm1lj7-95PDQy5k4WxiEnAhpD-gB3uGA2CdQCg.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/9xZfD9Q5ooYcE5QF0LcMjeevU21EI-mxo_U8VO_5BbE.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/ANPMfhgnqKa2B7H12dYSXkg0ytMdl2t725yQeycczhc.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/AwzAIsXfBccuS1Xy5jngD_QzkzZtRfNf7rSSleHMtNg.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/B06PFgi8cqEB04Kz007lW4LdPA-pAcJRrICdkZEcFB8.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/B2YLrhCVKQsObeS5Txvy8imBmkcn0X-7_lGbymxXw-o.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/BJZ_rNg8WjW2YmtGqMBowVqTT1sktAi5as7aokbYcrI.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/BJflb0ygxFyTTCGxpuB3959V7TY_7dLbTkI48q-bHvs.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/BdJxNKGGaFUwCrCmcm2jHG_aRnquxHfRejADAlPoT8U.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/BnOV4iIEQSOcopNVJpwkhRPiWUtq7-EHftPS402KcBw.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/Bsvi_fFHehKmAIlWFntEeCUjlnemmUeKWdpTK_gbAuA.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/C5TcosrpnNiUXfLta47VmMMKMqtPIKsizvVwBD7FXRw.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/CSohIiqhUAWeA-rknJz8vh8Is5RYvSCQrPIedIGNmxk.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/CaXSbxNbDMDqU4V55WlkSAPTV0Dh-6vrzvKgZ6E6C6A.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/CdELxfcKuOHkOQ9_kwgEBB9SG2-qorAtVCHL98I7RRI.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/DKLWmkOh6Ea253KcW768KtH0vyWI8hBIdQ_E7JsmMZ4.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/DMDjuaM-akDlVMHo3g3cqNVEL03Q7UN9OGOCQOF1RUo.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/DMwC-o0XjAvoo_cbrzYx6vTJCAChpTElbgCl57dfXe0.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/Do2wCMcjB0pIHl9AwJF8fTfSGjqtIrVU1ym1ZoZvOqY.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/EtEFJd3a4jGDko5kTlCzJriNnAFQj0yK0c7ZI8e7sOg.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/F84UWg_ij4V1vcf4pcH9Itm78I0zaJxfXIP4k62Sgdw.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/FXWQWJhi2hjfdQrVWCbsvhDatXuHaLhn00WwspsRP6I.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/FdjuAzsVfVgrwxxGTnWf3RGZydYu9fNgVDtB9sknbq4.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/FikFcBh-zFdQBl-qT98gGLzytzmyI3oNGs3pPoQ6S6U.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/Fo-tM8V9g9T5nPX6BCS9R1JNcjV4Cmly5dPErw1K1fI.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/FwVvnOau56ljNg1Ws7_KgB2qisZeWGz22GTySav_DO4.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/G-e3E_TlkkUyhZ6GTVyr6yZTyhH4gArDu8jD69UAK2c.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/GDnyNZTgqSMgKyNLov4lLpKyl-eGjCQE17dl6rw07Bs.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/GeYqElygItDKwnjQJ0elMpWlIO9EeiJj7yHyhkVtJrM.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/H9TmB1MomakBHIuPmYdljaoTcrwBYu0ru7GMnTI1hVI.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/HIHmW7_ysDKrzzwyy4ii41gmcKrkZgdkO1DWF1rI8G4.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/Hc-EZjuGnPCq-aYrvmqFoPe-h7GerSN_tZoOSWTcT5E.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/HpMFeoZIrlYFuvsSXNPHWwlsphiP5166z-Bdsf4pAcg.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/I55p2vuuEG4HqxoTbj6NIycijxPUJWDR1IfpcOydOIE.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/I9BK785mI-kaAPsY-9Ep4hNkxIoQKmK9tUQ7STtnSMI.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/IAmBd4iBQek-rc_rYcoQC3c7d0INOypg0BKug5P_RQc.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/IHXNUBwas-sRIjR-Lxiv9jhY9FKdnG_rgLCGccnv4lI.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/IdcdTdiROEu7lROJxy1cLSZ6Z3ZdJHtkUwObxFrYNiI.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/IfKBhRtN5RJJXsiPW0158Jf1PnPz7dFHJX-il-dSWrY.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/IfpkLZ9YN9hMn3uqMcpOD6L8PL5D7NSvc9V2aJb8I6M.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/IsKMh3ou2T-W0HQ7NG2Ynidzyxsyoz7sB5QW0UlQwao.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/J-wUSDVnm769z1aZZEOktiQNaxsh4h-GG_LNOptbec8.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/J3Qa2cF5Jt3QJGsNl8DwANtz56N89pac99pSdlRrXbY.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/JGcG4yA3dwr5d0UFVVUJdiQABCW8HtIHbqYhMAj1If4.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/JJpdiT2cd4HuvHfMXTYL5C3DAYeJzPeCwhbkNhjpC5Q.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/JKgKwpYoe7obJaTXMYuPIACvtxSy7ZZ95yg_2rE8SYE.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/JMB72vz_EJnRh8AGSpHN-0zjg1ccddzxS9LlZZKalXk.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/JbArW4hhQakZIaiKmomo8lgaaUgMmMB6u_bh-eiUQF4.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/Jgm6Yt1sFyEay-KgjFX_Sa8c20L0zZTpSzOXxH2Q5jE.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/JkR9ufgRpHlVgRJOn8gFLD9YgWeikiUK1AugLOqYZGU.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/JkSxW61XUHHI8qs63HgxTx1CFnE9FePXm4XuWby5n_c.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/JmI9H5rFIHanpTXHv3RFEHrKMFQjOkT2RqamQ_fx7u0.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/K41WHkDQh349XGP4TDRH5i3kM3e8DJ9FhRUIhjIF8xE.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/K6ljCyetJKnBmT6UejOSIWEPFngz25Ib8jneFCPAVJk.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/KGBzDYPu23SmPOnpX4ptCW0EMqgk32BfNxYOgZFYjvw.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/KHVrpq0diZ2KqeapiiAFwOPGqxjAvIgWQ_H9DX6t-FI.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/KPMEDaPdjTDMp5Qy6y6bt-dSlbo_BonWduYdoOq3bSg.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/K_AOrDjDoXWWQwbSScELpPM7sBooex_-kqgr8XhBPl0.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/LR5hiLLR1g7qIjvNaZ0GBvugE_fSl7NeKcVfPHtibbg.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/LSDt8FHb8gD89wUfj8t3nWsoiLK5tgsvw9mxnb_LGto.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/LX_Qz1bHdFvgdIU7OSXCYIDZ4nmHtEbHZSs55G6b7TE.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/MNap6nwST03Pjdao5sK5FE9AEUi4cC2RyHrrFQQ3mN8.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/MSINZM8p5GbXciMkOjxV3lz8TKMgJOiAThGzuQQgCiU.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/MVAvtf-GvjiFBztNZeOGwupUC2ofS0VF0HDzHX7a_54.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/Mw-krejt0lgorbyu_LUW0PgusNLNfjDc2RsorXmGa3k.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/N-TxXMlDKfxtJxVPgrA1urLBu7cQbPFcdGMx6yj8GD0.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/N1_Jr9NMC78XTFHTbxzxYXwlLdlRZr7ClzkmKsuIsnU.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/N30Dbfuy_n0_oo8dmmEzFVhtwbeq8t3LvVLdHS2DZqM.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/NfyQOIMfB8-_jG6xI_c2Og-YSnVeevDQSbce2KEOkmg.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/OEmD6mfp8FpMGVke0ULx_kINFConKtxUyirWUCVBW-U.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/OcQAs7g7UfISUuI9sF4UQMYJ0b4zNyVc5Jg88189Qd8.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/OnJXMgBof8ZWgg1giAjwB1ttkxgPcr5KNQ6ySPVR-uk.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/OtVMZhBuNXR1ZjIR_RhPmk8LDJjcVKslNYT9WpOq2Mw.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/OxGrB4OeDpFa-0TnwcwjyYCdLnrxsjwbY-w4kIduVOA.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/P9F1wv6sCQGDMORtDa_HYvfEZmPFPkC_Ts0pzDLqtdM.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/PFOzz49wAttGvbFq_-ypQ55OdjvajT5CNySmbTaX3h8.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/PHNOftandNzWr_9Mnkj-Y1vIX4MH6q_wK3cLAsARYm4.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/PJpUDA75SNzQQ3XYOb8IRxMqlFqHo_erD26D5f8deKY.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/PR6wOhKn6sVeeJcak1ikVfuSRUC34kzw0OKp8xu3zVk.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/QJBnq558Mfn2QqaBa-QIrglwTRYdCaxbTPeikPpz8wU.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/QsU8o6XRsRP_oFUTGxhoDffuRkkaU66xWWc3bOKgtog.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/RSQbzDM1H0zMUDigw0Xu9E3x_qw7U6ciL49iYt09F4I.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/RTWHgNkDul_TTpqyTzABlKajc1hETI_troY8zF8rprM.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/SYygOhiX14lPHIk9UCI6YXFnVIenEm-aGDeleRNz_1I.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/S_x75aazsZq_wXMIQ_-qZRpAax6pA9cZaq-n9oYW6xg.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/SfIi21jlxJ0lNpnCn5vRg5htyZVJ_TzKcNXPfrvRTAA.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/TQD5lmO39Jz0cbfKFtuM6YtQPDVy-NnMoSQ7lM29-Rw.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/TboYDkBD3Tj39u6YgZh_1zpJdvjym_j8vtYt9FONJoI.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/Tu150KE-Gd2f1uGks8ytpZc1H24Rng_qrt7gwjf1NeY.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/U0qjG27RAwz6g1-a3cMpEmXCmdouQq1IYjwBb65hso4.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/UUv70bancVCVdaliVsw-7_vUxGiCKhjta3X3IaEmIyY.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/UW3PsOkGXGBz36nyx7LuSxlIoplC7XX9mnCNYU3t9wY.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/UzQ29LqxKTj-TA0DAU_eOjah2C2ldvXGdgXLytp6ynY.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/V0pXVrL-L97Pbh2MaCcjTGkICzG61EpN71nBvDhBm58.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/VGPcnu9CjBeDPfnIL7YLUmUVRxznqUC2kP-3JRpG0fg.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/VHBWeOtPSkpLNMPw8hScF_Cq8S_a8DOdrNryEs0QKBA.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/VyZxo63s7-eytmhc9D0EIOkOWPbcVwxLY8RnJgolokc.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/Vygbc35Z0fLTFlt6RrFwpQyO45HqPALfeo4lCR1vX7o.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/WKcbbdLuuNr0xQ0IMe40Hlfp8d_C9Dps1nN2Mwy21Aw.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/WdIrLPvHDHME_dqTh_S6OI3eYY1iOlppPuuAOkNYe2w.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/WglOAWZh6NnY3w73EAKhXNTsgiSc2LoYCCqiFIAJ8J8.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/Wgo3-3vTlOsOLsH88AjRinlGJoMNXcbDhzbBh7sdW7Y.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/Wlv3AjJze_gL2wGwNswtC-jbYt3kMqMny0LkUbdzJAw.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/WqsrukU60FHkG8IxB_UwVtEd8NflziN5Ibr0JBbjLS4.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/X2oN4__Qg3Yx-Z2Jd1Lb8CTE6yBDRApWGW7IYdV5re0.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/XN7_tphotxkIMELrwwEZc8l_OemxLgO3hBp-ODtQ9Qg.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/Xv0EHw66Zo37VigGRqvxECn3M6w5eZN33G9fxb7sEaw.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/Yggh5uye5bU49QNmK_wvfs3736FhWWz-ERE4QxSAPos.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/YplbjQD2Pfy3T04HJW_qgvkR5QXuG_neDENBslP80L4.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/ZQuFI6Su76esKYyO9Z78rsPTjy45mW7xYggk8fN6svk.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/ZaPOt-or50VWgHzJWHBsqJgqrLtT1UjI_JekgMNhs_A.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/Zn24-9Pl6-sZoa1rJawqSkfGDgpqn67Ff3XUXCInxFY.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/ZsQYO_PSxF-AWz9XWHAUWMO_lnCqCl-Vy2ft0CjdRDo.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/Zugtsb6Jz5Y31eRXnoNjAbpeLk1U7qMHoYgjDOdsOQs.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/_6jJgby1kl1SwyHemO8GEJY3q29Ao7VRTRnmactZs_I.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/_IXsXeYYIBkr0MkD_JbqmxgtZEXH8prla27hHCCVg6M.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/_Jyu7o0jNHCFnhfgVqff7sAKzrMhAaXIAdQDOmq5YIc.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/_Ywp4_oRUK_D8cm_bTtPYSwg8SggFukfj9nOZQ96Jg8.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/a5CRuLGGtcxTVi4pOCIy19IbtwG5V3L-BJ1UWYQpOTo.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/afHdAz2vamGAy7rnZ_sJDYexMeBoJKmhjRIRwU450fM.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/ajtU32lMFhIyEU5ofB-rjGs8jV-Md3Z-1ZDaF5Lf5b4.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/arMgP-_mr1B88b4PS74k5maCSNkZ4U8NEC-mJlSnNIA.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/b0FK6ABGyTE-reAjSkXuCQ7Gvh8J32tWiBSuxkCvuTw.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/bEbDbS5IlRazQTF2qpCa6IaiImkTzVu2bLJjjwR7zcc.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/bMV5IrzlgrJnwY8TeZX1PpV-s27yVsp62hnGVhx9PB0.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/bQmbJzs66k0c_7DadNWlHfQ0YAjJmJANW--znBgJQr0.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/baTZZAFuXCpyxpKLQMTn0MuhrxUIPKfI1ZRogbs2B1I.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/bwdMKk1Ja05zfeDKbMeKioqLRuqqTPo-ecdliPBX8Hs.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/c0YjiO2cBKWdOXX9fkXR8_yXFqjteyMm5Ru36RN_N9s.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/csZy0O7PdQ00MbpQRv61kaJsolUFXawl_Z07aRddfFs.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/d4d1AvI7HmPVL3j-zg_8fcCqUzDI6xkKfZLk8Pxh0n0.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/dZ3_Iuyiq1Fj8FzIfgf2iTHdvosyYzqymm-zReWnCb8.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/dqONcgubHKYF2a7odNeSn3Ln1rEYPQtFW6zb74OYvMM.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/dvjuh8Qt1J2_d4Mb3UgJjFpdACgY9JTCcdWalH9pwJM.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/dwajcXrH1hR5jn0rQWpxn7jIaBJ5cBOr4REka7iG0kw.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/eL1dbzbilV879DJTgjhSHpI5BGAGQgKEE3TGM6k_qGQ.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/eYsngWR1-eEQ44rUfrF0_pV5O0kScBS9KgNLS5R4oFw.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/eagfxqAahUGLGQT0MoXdBDblmOynbWJwKveDcyj8xeY.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/eqA2aZZe5tnHt-qq0MRwJ3WSEdSBpBJ47kCDj02Qh0c.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/fxLYngb7DV28U5M2CuuVXWgJRzeYcr1nvHvPTQuBCJo.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/g0Lk-9weVga5dVFxm7noIY03AGANbu3GZmd0r96Za00.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/g2G98swe3cqpPCEoWs8iPK1P-n_1i02Z1k7jfC1as7o.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/g4gBPY5hOVmfIM-LCaI12sCEPtsmQ8Gi7BcJ2_GWQ6A.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/hCB_LXIXZZptIIFQfjj1diIlgcFGKF_sjSKGoOAb5rI.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/hF5EJXsQUW52BQGXjnnqwjupKqqko8mmxAxjIITXax4.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/hMJgCAuXbLZNCRO2rtkGkiie0lcl-f22OSMNAjoypBw.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/hlWqzkBNAb3PHQQ_8mNONmenPuuWpXZBb0X1hVWFess.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/iAjr-lzBSEcqv30HopoAPj0uU3h9234GdBeHw4-lxPo.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/iKiODfTcRojsLNdR3TCjHBt-xvEf3OS3YHsa5V9AE6w.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/iQup3Nlv5q_zZ1RVcNcvyeBg2oa1-_EGeHOt2GVU4Dw.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/i_R1p5W4bd3pDqkZCvaKSLq2f_llPxcwpFiG6ph0GV8.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/j0bvJGdlcr4BLPaxjPDDUIyY1HZCjnTx-55JdVMTty8.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/j8heAtUMmAzvvfwBQBeX9o847O3P_GgmYFgAsh5EV1k.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/jEUC5zFnnOmLEfCVWyuq7bpRfrMe75Zqz_lo8J-Vego.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/jNLauSEbEIMOgEa739lV6mUrgTyG6Qbvi--CpgZcfB8.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/jNbBzyew-DYrWo7sZTGRQyU4MF7hb8LwC2PWZAQ1xnI.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/jQO1HoiuDZ7-CsiTCGI5xRAICaWtzgxiHJKGdqlnaJw.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/jax5keg3oSLRCcmneMhFeq2WLapjeH-4VTficIqNCfc.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/jpHRvALiTQHI4jEs-hlv5WioSr8LtsTQhzHIWoNxH2U.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/k26Clger1RrimzMSRSE3eqP-6TQSPGYjK7G-dp9IOxg.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/k6fyY9f9hhCtZGTEk786nDAVm1XuNAWcootlC1DivKU.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/k99x__2bCLPHKX8B0yJSLlT5ToRGYP7hrVZLOdRTm8c.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/kFTdluDq56hcbAf7rSZACZDKiK49Dj_LCHvaUrMPoYk.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/kKSp_-zE5dnh6a53c-TQQbc4VjovQXsYcxQH4um58EU.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/kQKoA_5nyaIGKX-SOWiBTkQzF6atOeRSfBkz0NeNxDg.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/ksQk1lK2hpZOoqEUztx4U-Ugy7aBdpBt4Hp58EgWHB4.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/lCat4jAduOqFPHfRlvd4lexVzYMiaYEMDqoQojzDx24.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/lLUEFE18Bmo22IDZAW1tYsSnR0hjxV1qkGyQUA6689E.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/lWKLI4YYoMupn6Xxza4CMQ0xMPnKbC0yOgQUuCwpASQ.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/l_IlY2lbojTxdt3FXKTyS6D2c8bcVfMjlRV0nB9ofzU.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/ld6YgdzO6uccEUG-F_9qkAZ5wJMtQNyAL_1e-F5vZCs.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/lhy-gRt_erDgrSiM2Xnt5bLqIDjPfwsKra49HsWS9G8.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/mDmR5ZVconfiKBJ79_AnbcD88JDv1b6uvcdB4vS-5hI.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/mGmoDiz84QYPeli-FcHj-B9psQWVBTBzV5LhkHsjDB4.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/meYJxNG5_aMYmQXiZOUK-yeghqxG4R4u3xNDtnxQQBs.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/n9eGQDecrDQCjCDr_88hasSTw2j-swsx5QVHmeq9SJM.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/nHkBo522QFhbOhWi2j_u8N037y89MkF9adFBZhqmB5I.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/nR00e8ImEkZvk2Inj1INwY8WucGqxvMgzGsdYUak6gc.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/nTlklzbt9QfZPeaUN4EX4-lX1U0ahNMQPYfI0-YEnkA.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/ngOKrhMjcZSQ7_me46ScCMsoGOmZi7oGoVTot30vWDk.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/oCO-LGQiSxGf9dnUD6Bvdk-DVtdwLgmySeZsZDUAg-U.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/oGdJ_ewPhPPblPRdTHsD6TGAB9nVOXuskqfzc4orMcE.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/oNXkD8ZThDeF_AsMe_Nyw-K9CWU2kSDODlfXAycqgm0.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/obyuj3yNi2O7Svp2V3GaU36ep9ON030vUCUj2W9YT4o.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/otuIyCVbKdO8gTJlu9ndgrNsTJBbyGxGcFhnaxVGf10.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/owpNMB79boYZfXr3MIEj0zJVn0cXcxHBx_DDhaMKXeo.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/p3rZFaExst-EZ6XRNJ_kidg9_tilsjqNIWQMvZJjbK8.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/pBRvpf8LaVwWwy5Bn7S9HEnrLP8LfyateIrCWBQ9Ozg.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/pEGMd-BxpOCOdX9eEq4EPsqeI_3lYWHKCgbinobtBnc.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/pEIRAfOxiKiP9osBlnLLqjFCPmeURB0s8y6lORBRios.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/pETdNtqOF85VcDnZ1s4bRHxT-BIYswsLtCSJc5szdYk.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/pJEVU20NVszCEU8lbcPjL95jbj2y5VUnmOJMTtTVy6A.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/pac5-vRVD_cWv78jbEHUY2N9KyewamcXfy681xlwl7E.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/ph7ryvbGutMU6WxOUcHRHkLr1OKkD5KxozyefSDqduw.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/qC_viRhYvUabahyDIJ5NUkNdgYvVFOo5UIYNI2gSGXY.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/qLcB3pELe2fURQ61Amy2HBAVfL9WAVZnlJLinbsgNiI.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/qOq6WHW-IqSVerHuiq3uAo3Er8Z8DKjBxbk88y4iPkg.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/r1Cw0R_SMtuEKsQAl7alwahyzcYcDqEDP7mwc7FknmY.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/r7NWr5D9AAZHdqF_O7FLTS3uCWbKne7k_7nOBbTMdsQ.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/rGn_BpeYOivOdQXVWgNCuFXyJhjNNAtI4GzQrmy7A7A.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/rd2jkoSJ2tdXA72W6xpNFTdmMLGYt5bKbbMhMVXZpes.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/rdRkyczVm8iBAfETaKZzi0P19lYnBdcXhkY9UxRfJgc.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/rg-8m-OgdggioNmnDrmQA_54f4ut-ZCrWzsVdvPO5UA.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/sAQOWQhM_QeuFGltKFo-Fc9V77Ln4Fh8e0HbFSTj0L4.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/sILQHKlgX_FGDhQ5otnsi2NaPi6QpMHVkBsauGrmtAs.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/sRLb3DXl9p_ShDFRTOMek1xrKJgsI9y-rQpc0KGG9q4.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/sYQp1dPj89TlM0ONaIX9qVRhvzt_GvxWxLiBhjF-jOI.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/snhmfRexYEhPwyskjsvG5PSSp0HVpe9WQq69oCGtvpY.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/soTi1F7HNFAGGgAayNsT2WuTLP0_feP-J2_fw6q4RNI.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/sptWl3a08eq8nSGqwXI2pxlRvTPbaEGSevLep4q1kLw.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/tBIiZw5aerFW6yK_RTxaD7IQfUh-NqOf-VfByU5NZak.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/tJGsDdWQ8z4HphAOUei4K9ILzrxauHdEOVja0dvHJ7A.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/tK2oYbgmgz9uU06N8RlM05JOzhN2rJjgkAlsjy7W-cw.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/tbzYEDBiz6mG6XOzpoQR_EhtvsjJyt18l7GePFq7r1M.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/u_0gWh6NyKHn5830sHtSJvPtpz2-9FvVHrSTy5GftDU.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/ubrNE0eYW7aeoIkQlGd80pd4tvWS2I8Bb-_A8QYPnIA.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/uucO7n5Ap3g3WQeF6ckMWUQwZotySSp49BrwEuKTPGg.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/vG1poAa40FcdTAdK1la-wjpI6UXatJHKXJVic79ntAI.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/vOAqpmVjULeCCu-B_0JHkSAATbQKBl0k1L6LDM-Aqlw.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/vrcKFcq5JJq0xCHiwDLrpcZFsoxulRxoiFo08F_vdVM.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/vuoNXdzSv4-jAF-KUT9NtSKb0PzgqZ3EH-j_5AEH8ws.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/w1zlfuF_S2BG8hINorr9HdA9fuwj_DRMW2K7XUSM1hE.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/w6qqFKIi1NEy4_5FUBoouskXFgUaSfNGgiQc_DvFRi0.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/w7cM9O56e2LcvdvjsSb8-BXSGtkgjBE3dTXox70I2vI.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/wB13oKc_-qP7Agn7IClFnj6o_unFoDlOlcbtenTRDrE.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/wE373jVdLVPGRMehn77TSrJkORiS1oSA2LVT9R_KM48.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/wFnFPinMghLGvEqfbiqqHIYoh53S6XN1LF-RPb-f_hc.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/wJ-19j2U6QwRZ5740RShgZczh3koHYk9ESy15yhK9Eg.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/wV7n6WBH2_MfcRZHzfCHZmdm9MSqxeY7kDynzRHrj6o.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/w_fbGEJzWchRQ-z-c-LWNyk-WhEI6rVQYT6Gm-7ve08.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/wnR2jOS1DbGmL4iyWyOmVU4kFoXBUrLtk6I-EIKSDKI.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/x9kW_AVQIaOvDXW9TSJFTvWmLXEdb606RGAoPpde2BQ.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/xPMEqjLAPWO7-1VW-6LYjR1R0HsstDGDBeGzqPojZBE.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/xm0F1mPn-OGqrodVJQrwpXBo6sKp-p43j_WjUKmDInw.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/xoCQ_gfJkZp5aTIlwz6z75szIlCxuDSX3X2GMs_xfdI.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/xohw76-5iOPXU_iqIFjS9IKjZ3jtmni216Z--6Hcre0.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/yM81XKbmxT8SSIpty3Op2QoRkEVlAbNVt6lJ0fh_cTc.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/yT4fhMZ54aiwibwxYPHlemdWFUzQ-xIlWCMGvnwDSOc.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/yTqodwKLydrESej33Z6Cb8-qwyLpd-vk-XRn5j2n1bk.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/ynxKR5X7ehk_8IGCrzoYs45IuWNEOCPSg0zddCuvRLg.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/z5cXWM0UiAzqJvXbDSZLszjGNSNpPuj8tyvx1Qkd-g8.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/zWXKc1t7towUOqpgFAktQVazwEkecHtLVZjhNlc6wjU.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_rails/tmp/cache/sprockets/v4.0/zzMdZ_qeh32s1bip95LLTgUvHg4MS39TyOMXb1RsrFw.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_sass_only/Gemfile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_sass_only/compile.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/dummy_sass_only/import_all.sass" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/gemfiles/rails_head.gemfile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/gemfiles/sass_3_3.gemfile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/gemfiles/sass_3_4.gemfile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/gemfiles/sass_head.gemfile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/node_mincer_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/node_sass_compile_test.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/pages_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/sass_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/sprockets_rails_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/support/dummy_rails_integration.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/support/reporting.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/test_helper.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/test/test_helper_rails.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/articles/upload/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/articles/upload/.thumbs/images/Скриншот 2015-09-09 17.52.49.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/articles/upload/images/Скриншот 2015-09-09 17.52.49.png" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/resources/assets/sass/partials/_colors.scss" afterPath="$PROJECT_DIR$/resources/assets/sass/admin/_colors.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.phpstorm.meta.php" afterPath="$PROJECT_DIR$/.phpstorm.meta.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_ide_helper.php" afterPath="$PROJECT_DIR$/_ide_helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Admin.php" afterPath="$PROJECT_DIR$/app/Admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AdminBaseModel.php" afterPath="$PROJECT_DIR$/app/AdminBaseModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Article.php" afterPath="$PROJECT_DIR$/app/Article.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/ArticleContent.php" afterPath="$PROJECT_DIR$/app/ArticleContent.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/AboutController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/AboutController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminBaseController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminBaseController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ArticlesController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ArticlesController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/DashboardController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/DashboardController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PositionsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PositionsController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProfilesController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProfilesController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProjectsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProjectsController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ReportsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ReportsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Requests/ProfileRequest.php" afterPath="$PROJECT_DIR$/app/Http/Requests/ProfileRequest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/OpportunitiesController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/OpportunitiesController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Requests/ArticleRequest.php" afterPath="$PROJECT_DIR$/app/Http/Requests/ArticleRequest.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/ViewComposers/AdminComposer.php" afterPath="$PROJECT_DIR$/app/Http/ViewComposers/AdminComposer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Position.php" afterPath="$PROJECT_DIR$/app/Position.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/PositionContent.php" afterPath="$PROJECT_DIR$/app/PositionContent.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Profile.php" afterPath="$PROJECT_DIR$/app/Profile.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/ProfileContent.php" afterPath="$PROJECT_DIR$/app/ProfileContent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/User.php" afterPath="$PROJECT_DIR$/app/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/factories/ModelFactory.php" afterPath="$PROJECT_DIR$/database/factories/ModelFactory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_07_05_091346_create_categories_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_07_05_091346_create_categories_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_07_05_092405_create_profiles_contents_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_07_05_092405_create_profiles_contents_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_07_05_092802_create_positions_contents_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_07_05_092802_create_positions_contents_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_07_06_094558_create_projects_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_07_06_094558_create_projects_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Project.php" afterPath="$PROJECT_DIR$/app/Project.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Report.php" afterPath="$PROJECT_DIR$/app/Report.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/ReportContent.php" afterPath="$PROJECT_DIR$/app/ReportContent.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/CHANGELOG.md" afterPath="$PROJECT_DIR$/node_modules/bootstrap-sass/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/LICENSE" afterPath="$PROJECT_DIR$/node_modules/bootstrap-sass/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/README.md" afterPath="$PROJECT_DIR$/node_modules/bootstrap-sass/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/javascripts/bootstrap-sprockets.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/javascripts/bootstrap-sprockets.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/javascripts/bootstrap.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/javascripts/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/javascripts/bootstrap/affix.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/javascripts/bootstrap/affix.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/javascripts/bootstrap/alert.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/javascripts/bootstrap/alert.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/javascripts/bootstrap/button.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/javascripts/bootstrap/button.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/javascripts/bootstrap/carousel.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/javascripts/bootstrap/carousel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/javascripts/bootstrap/collapse.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/javascripts/bootstrap/collapse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/javascripts/bootstrap/modal.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/javascripts/bootstrap/modal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/javascripts/bootstrap/popover.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/javascripts/bootstrap/popover.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/javascripts/bootstrap/tab.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/javascripts/bootstrap/tab.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_panels.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_panels.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_scaffolding.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_scaffolding.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_theme.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_theme.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_tab-focus.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_tab-focus.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap-sass/package.json" afterPath="$PROJECT_DIR$/node_modules/bootstrap-sass/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/ckeditor/config.js" afterPath="$PROJECT_DIR$/public/ckeditor/config.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/admin/style.css" afterPath="$PROJECT_DIR$/public/css/admin/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/admin/style.css.map" afterPath="$PROJECT_DIR$/public/css/admin/style.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css.map" afterPath="$PROJECT_DIR$/public/css/style.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/sass/admin/admin.scss" afterPath="$PROJECT_DIR$/resources/assets/sass/admin/admin.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/sass/admin/partials/_admins.scss" afterPath="$PROJECT_DIR$/resources/assets/sass/admin/partials/_admins.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/sass/admin/partials/_articles.scss" afterPath="$PROJECT_DIR$/resources/assets/sass/admin/partials/_articles.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/sass/admin/partials/_categories.scss" afterPath="$PROJECT_DIR$/resources/assets/sass/admin/partials/_categories.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/sass/admin/partials/_profiles_positions.scss" afterPath="$PROJECT_DIR$/resources/assets/sass/admin/partials/_profiles_positions.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/sass/admin/partials/_reports.scss" afterPath="$PROJECT_DIR$/resources/assets/sass/admin/partials/_reports.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/sass/style.scss" afterPath="$PROJECT_DIR$/resources/assets/sass/style.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/lang/ru/index_page.php" afterPath="$PROJECT_DIR$/resources/lang/ru/index_page.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/lang/ua/index_page.php" afterPath="$PROJECT_DIR$/resources/lang/ua/index_page.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/admins/admin.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/admins/admin.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/admins/admins.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/admins/admins.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/admins/update.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/admins/update.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/articles/_article_for_list.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/articles/_article_for_list.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/articles/_form.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/articles/_form.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/articles/article.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/articles/article.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/articles/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/articles/create.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/articles/update.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/articles/update.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/categories/_form.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/categories/_form.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/layout.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/layout.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/partials/drawer.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/partials/drawer.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/positions/_position_for_list.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/positions/_position_for_list.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/positions/_form.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/positions/_form.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/positions/_update_form.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/positions/_update_form.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/positions/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/positions/create.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/profiles/_form.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/profiles/_form.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/profiles/_profile_for_list.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/profiles/_profile_for_list.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/profiles/_update_form.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/profiles/_update_form.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/projects/_form.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/projects/_form.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/reports/_form.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/reports/_form.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/reports/_update_form.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/reports/_update_form.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/reports/report.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/reports/report.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/reports/reports.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/reports/reports.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" />
     </list>
     <ignored path="smart-final.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,37 +561,59 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AdminComposer.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/ViewComposers/AdminComposer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5837629">
-              <caret line="50" column="55" selection-start-line="50" selection-start-column="55" selection-end-line="50" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.8461537">
-              <caret line="113" column="49" selection-start-line="113" selection-start-column="49" selection-end-line="113" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="25" column="76" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="76" />
               <folding>
-                <element signature="e#784#1586#1#PHP" expanded="false" />
-                <element signature="e#1644#2432#1#PHP" expanded="false" />
-                <element signature="e#2486#3281#1#PHP" expanded="false" />
-                <element signature="e#4197#5006#1#PHP" expanded="false" />
-                <element signature="e#5926#6746#1#PHP" expanded="false" />
+                <element signature="e#1598#2400#1#PHP" expanded="false" />
+                <element signature="e#2452#3240#1#PHP" expanded="false" />
+                <element signature="e#3294#4089#1#PHP" expanded="false" />
+                <element signature="e#4145#4947#1#PHP" expanded="false" />
+                <element signature="e#5005#5814#1#PHP" expanded="false" />
+                <element signature="e#5870#6662#1#PHP" expanded="false" />
+                <element signature="e#6722#7542#1#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/User.php">
+      <file leaf-file-name="AdminComposer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/ViewComposers/AdminComposer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-23.961538">
-              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="163" column="22" selection-start-line="163" selection-start-column="22" selection-end-line="163" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UsersTableSeeder.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/seeds/UsersTableSeeder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.461538">
+              <caret line="16" column="53" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="aboutProject.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/lang/ru/aboutProject.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.8461537">
+              <caret line="17" column="249" selection-start-line="17" selection-start-column="249" selection-end-line="17" selection-end-column="249" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="aboutProject.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/lang/ua/aboutProject.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.21907216">
+              <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -97,63 +621,70 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/admin/profiles/_update_form.blade.php" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/resources/views/admin/positions/positions.blade.php" />
-        <option value="$PROJECT_DIR$/resources/assets/sass/admin/partials/_profiles_positions.scss" />
-        <option value="$PROJECT_DIR$/resources/views/admin/positions/_form.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/positions/create.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/positions/update.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/positions/_update_form.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/positions/position.blade.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_07_05_092405_create_profiles_contents_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_07_05_092802_create_positions_contents_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_08_01_130207_create_reports_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_08_01_130215_create_reports_contents_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_07_06_094558_create_projects_table.php" />
-        <option value="$PROJECT_DIR$/database/seeds/ReportsSeeder.php" />
-        <option value="$PROJECT_DIR$/database/factories/ModelFactory.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_07_05_091346_create_categories_table.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/positions/_position_for_list.blade.php" />
-        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
-        <option value="$PROJECT_DIR$/database/seeds/ReportsTableSeeder.php" />
-        <option value="$PROJECT_DIR$/app/User.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/PositionRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/ReportRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminBaseController.php" />
-        <option value="$PROJECT_DIR$/app/Position.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/ProfileRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/ProfileCreateRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ProfilesController.php" />
-        <option value="$PROJECT_DIR$/app/PositionContent.php" />
-        <option value="$PROJECT_DIR$/app/ProfileContent.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/PositionCreateRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/PositionsController.php" />
-        <option value="$PROJECT_DIR$/app/Profile.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/lang/ru/projects.php" />
+        <option value="$PROJECT_DIR$/resources/lang/ua/projects.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" />
+        <option value="$PROJECT_DIR$/resources/lang/ru/general.php" />
+        <option value="$PROJECT_DIR$/app/Http/ViewComposers/FrontComposer.php" />
+        <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
+        <option value="$PROJECT_DIR$/resources/views/errors/404.blade.php" />
+        <option value="$PROJECT_DIR$/resources/lang/ua/general.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/partials/header.blade.php" />
+        <option value="$PROJECT_DIR$/resources/assets/sass/pages/partials/_media.scss" />
+        <option value="$PROJECT_DIR$/resources/views/pages/partials/footer.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/partials/_articles_for_list.blade.php" />
+        <option value="$PROJECT_DIR$/resources/assets/sass/pages/_articles.scss" />
+        <option value="$PROJECT_DIR$/resources/views/pages/contacts.blade.php" />
+        <option value="$PROJECT_DIR$/resources/assets/sass/pages/_contacts.scss" />
+        <option value="$PROJECT_DIR$/resources/views/pages/partials/_short_about.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/admins/admin.blade.php" />
+        <option value="$PROJECT_DIR$/resources/assets/sass/admin/partials/_admins.scss" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/DashboardController.php" />
+        <option value="$PROJECT_DIR$/resources/assets/sass/pages/_aboutProject.scss" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/OpportunitiesController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Controller.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/layout.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" />
+        <option value="$PROJECT_DIR$/public/js/ajax.js" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/ReportContent.php" />
-        <option value="$PROJECT_DIR$/app/AdminBaseModel.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/reports/_form.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/reports/_report_for_list.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/reports/_update_form.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/reports/create.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/reports/report.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/reports/update.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/partials/drawer.blade.php" />
         <option value="$PROJECT_DIR$/app/Report.php" />
-        <option value="$PROJECT_DIR$/resources/assets/sass/admin/admin.scss" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/articles.blade.php" />
+        <option value="$PROJECT_DIR$/app/ArticleContent.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/project.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/opportunities.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/about_project.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AboutProjectController.php" />
+        <option value="$PROJECT_DIR$/resources/assets/sass/pages/_footer.scss" />
+        <option value="$PROJECT_DIR$/resources/assets/sass/pages/_header.scss" />
+        <option value="$PROJECT_DIR$/resources/assets/sass/pages/_index.scss" />
+        <option value="$PROJECT_DIR$/resources/views/pages/projects.blade.php" />
+        <option value="$PROJECT_DIR$/resources/assets/sass/pages/_projects.scss" />
+        <option value="$PROJECT_DIR$/resources/assets/sass/pages/_opportunities.scss" />
+        <option value="$PROJECT_DIR$/resources/assets/sass/style.scss" />
         <option value="$PROJECT_DIR$/resources/views/admin/reports/reports.blade.php" />
         <option value="$PROJECT_DIR$/resources/assets/sass/admin/partials/_reports.scss" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ReportsController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AboutController.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/about.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/ViewComposers/AdminComposer.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/admins/admins.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/admins/admin.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/admins/update.blade.php" />
+        <option value="$PROJECT_DIR$/resources/lang/ru/aboutProject.php" />
+        <option value="$PROJECT_DIR$/resources/lang/ua/aboutProject.php" />
       </list>
     </option>
   </component>
@@ -202,312 +733,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reports" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sass" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sass" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sass" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Requests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scratches">
         <subPane>
           <PATH>
@@ -598,6 +823,156 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ua" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ru" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ViewComposers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -614,6 +989,7 @@
       <recent name="$PROJECT_DIR$/resources/views/admin/positions" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/assets/sass/admin" />
       <recent name="$PROJECT_DIR$/public/files" />
     </key>
   </component>
@@ -665,7 +1041,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28397712" sideWeight="0.49371633" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27682403" sideWeight="0.49156627" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -673,17 +1049,39 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2267525" sideWeight="0.50843376" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932693" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27825466" sideWeight="0.50628364" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28397712" sideWeight="0.49371633" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -703,426 +1101,373 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/seeds/PositionsTableSeeder.php">
+    <entry file="file://$PROJECT_DIR$/app/Report.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26288658">
-          <caret line="12" column="58" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_07_06_094558_create_projects_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3724227">
-          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-          <folding />
+        <state vertical-scroll-proportion="0.81958765">
+          <caret line="40" column="42" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Article.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5773196">
-          <caret line="73" column="20" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
-          <folding />
+        <state vertical-scroll-proportion="-0.98582476">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ArticlesController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OpportunitiesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26288658">
-          <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
-          <folding />
+        <state vertical-scroll-proportion="0.19716495">
+          <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_07_05_084345_create_articles_table.php">
+    <entry file="file://$PROJECT_DIR$/public/js/ajax.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41623712">
-          <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
-          <folding />
+        <state vertical-scroll-proportion="0.2543641">
+          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_07_05_084542_create_articles_contents_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48195878">
-          <caret line="23" column="49" selection-start-line="21" selection-start-column="12" selection-end-line="23" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_07_05_091346_create_categories_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35051546">
-          <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Exceptions/Handler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/factories/ModelFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63917524">
-          <caret line="117" column="28" selection-start-line="117" selection-start-column="28" selection-end-line="117" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_08_01_130215_create_reports_contents_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7886598">
-          <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/positions/positions.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17525773">
-          <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/positions/_position_for_list.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15335052">
-          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/ReportsTableSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28479382">
-          <caret line="13" column="56" selection-start-line="13" selection-start-column="56" selection-end-line="13" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41623712">
-          <caret line="19" column="50" selection-start-line="13" selection-start-column="8" selection-end-line="19" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/AdminBaseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6572165">
-          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Position.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7229381">
-          <caret line="33" column="5" selection-start-line="30" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/ProfileRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.89819586">
-          <caret line="42" column="55" selection-start-line="35" selection-start-column="12" selection-end-line="42" selection-end-column="55" />
-          <folding>
-            <element signature="e#37#67#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/ProfileCreateRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30670103">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/profiles/profile.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34178907">
-          <caret line="19" column="30" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/PositionContent.php">
+    <entry file="file://$PROJECT_DIR$/app/ArticleContent.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32860824">
-          <caret line="15" column="7" selection-start-line="12" selection-start-column="4" selection-end-line="15" selection-end-column="7" />
-          <folding />
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/PositionRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.89819586">
-          <caret line="43" column="55" selection-start-line="36" selection-start-column="12" selection-end-line="43" selection-end-column="55" />
-          <folding>
-            <element signature="e#37#67#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/PositionCreateRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32860824">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/PositionsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11469072">
-          <caret line="45" column="47" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43814433">
-          <caret line="20" column="7" selection-start-line="16" selection-start-column="4" selection-end-line="20" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Project.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ReportContent.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/partials/_articles_for_list.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13144329">
-          <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
-          <folding />
+          <caret line="6" column="65" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24097939">
+          <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3724227">
+          <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/sass/pages/_aboutProject.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4523196">
+          <caret line="73" column="13" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3221649">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/project.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.59149486">
+          <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/profiles/_update_form.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/positions/_update_form.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/ProfileContent.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.9230769">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/PositionContent.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13144329">
-          <caret line="6" column="43" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="43" />
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38788658">
+          <caret line="509" column="7" selection-start-line="509" selection-start-column="7" selection-end-line="511" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProfilesController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AboutProjectController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5734536">
-          <caret line="77" column="52" selection-start-line="77" selection-start-column="30" selection-end-line="77" selection-end-column="52" />
-          <folding>
-            <element signature="e#46#63#0#PHP" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-19.615385">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/ReportRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3724227">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#37#67#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AdminBaseModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.2345362">
-          <caret line="102" column="38" selection-start-line="102" selection-start-column="38" selection-end-line="102" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/reports/_update_form.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.7164948">
-          <caret line="37" column="58" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/reports/_form.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.087628864">
-          <caret line="4" column="73" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/reports/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24097939">
-          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/reports/report.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.83247423">
-          <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/reports/update.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56958765">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/partials/flash_messages.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Profile.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Report.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/about_project.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28479382">
-          <caret line="13" column="71" selection-start-line="13" selection-start-column="71" selection-end-line="13" selection-end-column="71" />
-          <folding />
+        <state vertical-scroll-proportion="-46.192307">
+          <caret line="105" column="75" selection-start-line="105" selection-start-column="75" selection-end-line="105" selection-end-column="75" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/reports/_report_for_list.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/assets/sass/pages/_footer.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3943299">
-          <caret line="18" column="67" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
-          <folding />
+        <state vertical-scroll-proportion="-0.073453605">
+          <caret line="109" column="37" selection-start-line="109" selection-start-column="37" selection-end-line="109" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/reports/reports.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/partials/footer.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10953608">
-          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/projects.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.961538">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ReportsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.80283505">
-          <caret line="78" column="47" selection-start-line="78" selection-start-column="47" selection-end-line="78" selection-end-column="47" />
-          <folding>
-            <element signature="e#46#61#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/sass/admin/partials/_profiles_positions.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48582473">
-          <caret line="28" column="5" selection-start-line="26" selection-start-column="4" selection-end-line="28" selection-end-column="5" />
-          <folding />
+        <state vertical-scroll-proportion="0.32860824">
+          <caret line="17" column="66" selection-start-line="17" selection-start-column="66" selection-end-line="17" selection-end-column="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/assets/sass/admin/partials/_reports.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.043814432">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-          <folding />
+        <state vertical-scroll-proportion="0.087628864">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/sass/admin/admin.scss">
+    <entry file="file://$PROJECT_DIR$/resources/assets/sass/pages/_opportunities.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21907216">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-          <folding />
+        <state vertical-scroll-proportion="-0.13917525">
+          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/partials/drawer.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/assets/sass/style.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6353093">
-          <caret line="29" column="169" selection-start-line="29" selection-start-column="169" selection-end-line="29" selection-end-column="169" />
-          <folding />
+        <state vertical-scroll-proportion="0.5051546">
+          <caret line="43" column="29" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537">
-          <caret line="113" column="49" selection-start-line="113" selection-start-column="49" selection-end-line="113" selection-end-column="49" />
-          <folding>
-            <element signature="e#784#1586#1#PHP" expanded="false" />
-            <element signature="e#1644#2432#1#PHP" expanded="false" />
-            <element signature="e#2486#3281#1#PHP" expanded="false" />
-            <element signature="e#4197#5006#1#PHP" expanded="false" />
-            <element signature="e#5926#6746#1#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/partials/header.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/article.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/admins/update.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/articles.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48195878">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/contacts.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/opportunities.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7938144">
+          <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/admins/admin.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59149486">
-          <caret line="40" column="31" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
-          <folding />
+        <state vertical-scroll-proportion="0.5670103">
+          <caret line="27" column="42" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/admins/admins.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.021907216">
-          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/articles/articles.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/categories/categories.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/positions/positions.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/profiles/profiles.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/projects/projects.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.59149486">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/reports/reports.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15335052">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/subscribers/subscribers.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/layout.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.564433">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AboutController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24097939">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/about.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.66108245">
+          <caret line="64" column="57" selection-start-line="64" selection-start-column="57" selection-end-line="64" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/sass/pages/_index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.5579897">
+          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/sass/pages/_header.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7667526">
+          <caret line="319" column="31" selection-start-line="319" selection-start-column="31" selection-end-line="319" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/sass/pages/_projects.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="76" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="76" />
+          <folding>
+            <element signature="e#1598#2400#1#PHP" expanded="false" />
+            <element signature="e#2452#3240#1#PHP" expanded="false" />
+            <element signature="e#3294#4089#1#PHP" expanded="false" />
+            <element signature="e#4145#4947#1#PHP" expanded="false" />
+            <element signature="e#5005#5814#1#PHP" expanded="false" />
+            <element signature="e#5870#6662#1#PHP" expanded="false" />
+            <element signature="e#6722#7542#1#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/ViewComposers/AdminComposer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5837629">
-          <caret line="50" column="55" selection-start-line="50" selection-start-column="55" selection-end-line="50" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="163" column="22" selection-start-line="163" selection-start-column="22" selection-end-line="163" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/UsersTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.461538">
+          <caret line="16" column="53" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/ru/aboutProject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8461537">
+          <caret line="17" column="249" selection-start-line="17" selection-start-column="249" selection-end-line="17" selection-end-column="249" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/ua/aboutProject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21907216">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
           <folding />
         </state>
       </provider>

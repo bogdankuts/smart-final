@@ -1,0 +1,35 @@
+.projects-list {
+	.about {
+		font-size: 16px;
+		text-align: justify;
+		color: $grey;
+	}
+	.projects {
+		margin-top: 40px;
+		.heading {
+			text-transform: uppercase;
+			text-align: center;
+			font-size: 18px;
+			color: $grey;
+			margin-bottom: 40px;
+		}
+		.one_project {
+			width: 40%;
+			float: left;
+			font-size: 16px;
+			color: $blue;
+			display: block;
+			margin-bottom: 10px;
+			text-transform: uppercase;
+			margin-right: 5%;
+			margin-left: 5%;
+			min-height: 44px;
+			&:hover,
+			&:focus {
+				text-decoration: none;
+				cursor: pointer;
+				color: $blue;
+			}
+		}
+	}
+}

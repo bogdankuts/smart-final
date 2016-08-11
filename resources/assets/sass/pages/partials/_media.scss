@@ -1,0 +1,58 @@
+// Media mixins 
+@mixin media($type) {
+
+  @if $type == mobile_320 {
+    @media only screen and (max-width: 320px) {
+      @content;
+    }
+  
+  }
+  @else if $type == mobile_v {
+    @media only screen and (max-width: 415px) {
+      @content;
+    }
+  
+  }
+  @else if $type == mobile_480 {
+    @media only screen and (max-width: 480px) {
+      @content;
+    }
+  
+  }
+  @else if $type == mobile_570 {
+    @media only screen and (max-width: 570px) {
+      @content;
+    }
+  
+  }
+  @else if $type == mobile_667 {
+	  @media only screen and (max-width: 667px) {
+		  @content;
+	  }
+
+  }
+  @else if $type == mobile {
+    @media only screen and (max-width: 767px) {
+      @content;
+    }
+  }
+  @else if $type == tablet {
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+
+  }
+  @else if $type == laptop {
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      @content;
+    }
+
+  }
+  @else if $type == pc {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+
+  }
+  
+}

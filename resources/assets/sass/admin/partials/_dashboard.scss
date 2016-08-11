@@ -1,0 +1,85 @@
+.dashboard {
+	.notifications {
+		overflow: hidden;
+		.one_notification {
+			width: 16.6%;
+			float: left;
+			position: relative;
+			.content {
+				display: table;
+				margin: auto;
+				.badge-block {
+					display: table;
+					margin: auto;
+				}
+				.mdl-badge {
+					float: left;
+				}
+				.mdl-card__actions {
+					float: left;
+				}
+				.mdl-card__menu {
+					position: absolute;
+					top: -17px;
+					right: 52px;
+				}
+			}
+		}
+	}
+	.recent_block {
+		float: left;
+		overflow: hidden;
+		.block_heading {
+			text-align: center;
+			margin-bottom: 40px;
+		}
+		.article-card {
+			width: 47%;
+			margin: 0 1.5% 40px 1.5%;
+		}
+		.mdl-card__actions {
+			a,
+			form input{
+				font-size: 12px;
+				padding: 0 14px;
+				&:hover,
+				&:focus {
+					text-decoration: none;
+				}
+			}
+			form {
+				float: right;
+			}
+		}
+		.profile-card,
+		.position-card {
+			.mdl-card__title {
+				min-height: 120px;
+			}
+			.title {
+				font-size: 18px;
+			}
+		}
+		.subscriber {
+			width: 47%;
+			margin: auto 1.5% 20px 1.5%;
+		}
+		//&--docs,
+		&--positions,
+		&--profiles {
+			float: right;
+		}
+	}
+	.popular_block {
+		overflow: hidden;
+		.block_heading {
+			text-align: center;
+			margin-bottom: 40px;
+		}
+		.profile-card
+		.position-card {
+			width: 30%;
+			margin: 0 1.5% 40px 1.5%;
+		}
+	}
+}

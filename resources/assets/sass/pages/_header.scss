@@ -1,0 +1,335 @@
+header {
+	overflow: hidden;
+	margin-bottom: 40px;
+	//height: 116px;
+	//margin-top: 42px;
+	border-bottom: 2px solid $blue;
+	@include media(mobile_v) {
+		padding-bottom: 40px;
+	}
+	@include media(mobile_320) {
+		padding-bottom: 50px;
+	}
+	.credentials {
+		float: left;
+		margin-bottom: 40px;
+		@include media(laptop) {
+			margin-bottom: 24px;
+		}
+		@include media(tablet) {
+			margin-bottom: 24px;
+		}
+		@include media(mobile_v) {
+			margin-bottom: 0;
+		}
+		.logo {
+			float: left;
+			max-width: 190px;
+			margin-right: 12px;
+			@include media(mobile_v) {
+				margin-right: 0;
+			}
+			@include media(mobile_320) {
+				width: 50%;
+			}
+			img {
+				max-width: 190px;
+				@include media(laptop) {
+					max-width: 110px;
+				}
+				@include media(tablet) {
+					max-width: 80px;
+					margin-top: 5px;
+				}
+				@include media(mobile) {
+					max-width: 200px;
+				}
+				@include media(mobile_570) {
+					max-width: 110px;
+					margin-top: 20px;
+				}
+				@include media(mobile_v) {
+					max-width: 100%;
+					margin-top: 0;
+				}
+				@include media(mobile_320) {
+					max-width: 90%;
+					margin-top: 20px;
+				}
+			}
+			a {
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+		.title {
+			float: right;
+			max-width: 184px;
+			border-left: 2px solid #2079c3;
+			margin-top: 35px;
+			font-size: 12px;
+			font-weight: 400;
+			text-decoration: underline;
+			line-height: 1.2;
+			padding-left: 12px;
+			text-transform: uppercase;
+			@include media(laptop) {
+				margin-top: 8px;
+				max-width: 190px;
+			}
+			@include media(tablet) {
+				margin-top: 8px;
+				max-width: 120px;
+				font-size: 10px;
+			}
+			@include media(mobile) {
+				max-width: 220px;
+				font-size: 13px;
+			}
+			@include media(mobile_480) {
+				max-width: 150px;
+				font-size: 11px;
+			}
+			@include media(mobile_v) {
+				max-width: 50%;
+			}
+				a {
+				color: $blue;
+				&:hover,
+				&:focus {
+					text-decoration: underline;
+					cursor: pointer;
+					color: $blue;
+				}
+			}
+		}
+	}
+	.navbar {
+		float: left;
+		margin-top: 31px;
+		background-color: transparent;
+		border: none;
+		@include media(laptop) {
+			margin-top: 5px;
+		}
+		@include media(tablet) {
+			margin-top: 8px;
+		}
+		@include media(mobile) {
+			float: right;
+			//margin-right: 10%;
+			width: 100%;
+			position: absolute;
+			right: 10%;
+			z-index: 999;
+			//top: 30px;
+			//left: 50%;
+		}
+		@include media(mobile_667) {
+			position: absolute;
+			top: 12%;
+			right: 46%;
+		}
+		@include media(mobile_570) {
+			top: 13%;
+		}
+		@include media(mobile_480) {
+			top: 15%;
+		}
+		@include media(mobile_v) {
+			top: 12%;
+		}
+		@include media(mobile_320) {
+			top: 18.5%;
+		}
+		.container-fluid {
+			padding: 0;
+		}
+		.navbar-collapse {
+			padding: 0;
+			@include media(mobile_667) {
+				overflow: visible;
+			}
+		}
+		.navbar-nav {
+			@include media(mobile) {
+				width: 50%;
+				float: right;
+				background-color: #ffffff;
+				z-index: 999;
+			}
+			@include media(mobile_667) {
+				position: relative;
+				left: 17%;
+				background-color: #ffffff;
+				z-index: 999;
+			}
+			&>li {
+				&>a {
+					text-transform: uppercase;
+					font-size: 14px;
+					font-weight: 400;
+					color: $grey;
+					@include media(laptop) {
+						font-size: 13px;
+						padding-left: 5px;
+						padding-right: 5px;
+					}
+					@include media(tablet) {
+						font-size: 12px;
+						padding-left: 5px;
+						padding-right: 5px;
+					}
+						&:focus,
+					&:hover {
+						color: $blue;
+						background-color: transparent;
+						cursor: pointer;
+					}
+				}
+			}
+			.active {
+				&>a {
+					color: $blue;
+					background-color: transparent;
+					&:focus,
+					&:hover {
+						color: $blue;
+						background-color: transparent;
+					}
+				}
+			}
+		}
+	}
+	.social {
+		float: left;
+		border-left: 1px solid $grey;
+		border-right: 1px solid $grey;
+		padding-left: 12px;
+		padding-right: 17px;
+		margin-top: 32px;
+		height: 42px;
+		@include media(laptop) {
+			margin-top: 2px;
+		}
+		@include media(tablet) {
+			margin-top: 10px;
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+		@include media(mobile_v) {
+			width: 50%;
+			float: left;
+			margin: 0;
+			border-left: none;
+			border-right: none;
+		}
+		.vk,
+		.fb,
+		.yb {
+			float: left;
+			font-size: 25px;
+			margin-right: 17px;
+			margin-top: 7px;
+			@include media(tablet) {
+				font-size: 16px;
+				margin-right: 5px;
+				margin-top: 11px;
+			}
+			@include media(mobile_480) {
+				font-size: 22px;
+				margin-right: 5px;
+				margin-top: 11px;
+			}
+			@include media(mobile_v) {
+				font-size: 25px;
+				margin-right: 7%;
+				margin-left: 7%;
+			}
+			a {
+				color: $blue;
+				&:hover,
+				&:focus {
+					cursor: pointer;
+					color: #3e8da2;
+				}
+			}
+		}
+		.yb {
+			margin-right: 0;
+			margin-top: 8px;
+			@include media(tablet) {
+				margin-top: 10px;
+			}
+		}
+		.vk {
+			margin-top: 10px;
+			@include media(tablet) {
+				margin-top: 12px;
+			}
+		}
+	}
+	.langs {
+		margin-left: 13px;
+		margin-top: 45px;
+		float: right;
+		text-transform: uppercase;
+		@include media(laptop) {
+			margin-top: 18px;
+		}
+		@include media(tablet) {
+			margin-top: 22px;
+		}
+		@include media(mobile) {
+			float: left;
+		}
+		@include media(mobile_v) {
+			width: 40%;
+			float: left;
+			margin-left: 10%;
+			margin-top: 15px;
+		}
+		@-moz-document url-prefix() {
+			margin-left: 0;
+		}
+		.ua,
+		.ru {
+			font-weight: 600;
+			font-size: 14px;
+			color: grey;
+			@include media(tablet) {
+				font-size: 12px;
+			}
+			@include media(mobile_v) {
+				font-size: 14px;
+			}
+			&:hover,
+			&:focus {
+				color: $blue;
+				text-decoration: none;
+				cursor: pointer;
+			}
+			&.active {
+				color: $blue;
+			}
+		}
+		.ua {
+			margin-right: 12px;
+			@include media(tablet) {
+				margin-right: 1px;
+			}
+			@include media(mobile_v) {
+				margin-right: 20%;
+			}
+		}
+	}
+	&.ru {
+		.credentials {
+			margin-bottom: 27px;
+			.title {
+				max-width: 160px;
+			}
+		}
+	}
+}

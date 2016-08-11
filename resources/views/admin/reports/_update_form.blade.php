@@ -1,12 +1,17 @@
 <div class="general_info">
-	<h2>Общая инфрмация</h2>
+	<h2>Общая информация</h2>
 	<div class="one_select mdl-cell mdl-cell--6-col">
 		{!! Form::label('category_id', 'Выберете категорию', ['class' => 'non_material_label']) !!}
 		{!! Form::select('category_id', [1 => 'Документы', 2 => 'Отчеты'], null, ['class' =>'form-control select']) !!}
 	</div>
-	<div class="one_select mdl-cell mdl-cell--6-col">
+	<div class="one_select mdl-cell mdl-cell--6-col {{ $errors->has('published_at') ? 'is-invalid' : '' }}">
 		{!! Form::label('published_at', 'Дата публикации', ['class' => 'non_material_label']) !!}
 		{!! Form::text('published_at', $report->published_at->format('d.m.Y H:i'), ['id' => 'published_at', 'class' => 'form-control datepicker-here select', 'data-timepicker' => 'true']) !!}
+		@if ($errors->has('published_at'))
+			<span class="help-block">
+				<strong>{{ $errors->first('published_at') }}</strong>
+			</span>
+		@endif
 	</div>
 </div>
 <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect mdl-cell mdl-cell--12-col">

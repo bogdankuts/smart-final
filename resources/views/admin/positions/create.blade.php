@@ -13,6 +13,7 @@
 		{!! Form::close() !!}
 	</div>
 @stop
+
 @section('js')
 	{!! Html::script('js/vendor/date-time/js/datepicker.js') !!}
 @stop

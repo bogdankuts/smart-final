@@ -16,6 +16,7 @@ class ReportsController extends AdminBaseController {
 
 		return view('admin.reports.reports')->with([
 			'reports' => Report::getAllReports(),
+		    'types'   => [1 => 'Документы', 2 => 'Отчеты'],
 		]);
 	}
 
@@ -72,6 +73,7 @@ class ReportsController extends AdminBaseController {
 
 	public function delete(Report $report) {
 
+		$report->deleteFile();
 		$report->content()->delete();
 		$report->delete();
 		flash('Отчет успешно удален', 'success');

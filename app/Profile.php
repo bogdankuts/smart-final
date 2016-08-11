@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\File;
 
 class Profile extends Model {
 	protected $dates=['created_at', 'updated_at', 'published_at'];
@@ -26,5 +27,13 @@ class Profile extends Model {
 	public static function getAllProfiles() {
 
 		return  Profile::orderBy('created_at', 'desc')->get();
+	}
+
+	public function deleteFile() {
+		$contents = $this->content;
+
+		foreach ($contents as $content) {
+			File::delete(public_path('files/profiles/'.$content->file));
+		}
 	}
 }

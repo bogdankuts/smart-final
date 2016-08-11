@@ -35,9 +35,7 @@
 </div>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-{{--{{ HTML::script('js/new_admin.js') }}--}}
-{{--{{ HTML::script('js/common.js') }}--}}
-{{--{{ HTML::script('js/admin.js') }}--}}
+{{--{{ HTML::script('js/admin/admin.js') }}--}}
 <script>
 	$('div.alert').not('.alert-important').delay(3000).fadeOut(350);
 </script>

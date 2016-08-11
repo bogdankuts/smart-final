@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\File;
 
 class Position extends Model {
 
@@ -33,4 +34,11 @@ class Position extends Model {
 		return Position::orderBy('created_at', 'desc')->get();
 	}
 
+	public function deleteFile() {
+		$contents = $this->content;
+
+		foreach ($contents as $content) {
+			File::delete(public_path('files/positions/'.$content->file));
+		}
+	}
 }

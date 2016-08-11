@@ -83,6 +83,7 @@ class ProfilesController extends AdminBaseController {
 
 	public function delete(Profile $profile) {
 
+		$profile->deleteFile();
 		$profile->content()->delete();
 		$profile->delete();
 		flash('Профайл успешно удален', 'success');

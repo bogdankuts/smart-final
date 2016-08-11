@@ -9,6 +9,7 @@
 /.idea
 /node_modules
 /public/files
+/public/img/articles
 *~
 .DS_Store
 /vendor

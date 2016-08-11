@@ -12,13 +12,12 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, AuthorizesResources, DispatchesJobs, ValidatesRequests;
 
-	//protected $lang = 'ua';
-	//
-	//public function defineLanguage($lang = null) {
-	//	if ($lang) {
-	//		$this->lang = $lang;
-	//	}
-	//
-	//	return \App::setLocale($this->lang);
-	//}
+	protected function getLangId() {
+		$lang = \App::getLocale();
+		if ($lang === 'ua') {
+			return 2;
+		} else {
+			return 1;
+		}
+	}
 }

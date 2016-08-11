@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ArticleRequest extends Request
 {
@@ -13,7 +14,15 @@ class ArticleRequest extends Request
      */
     public function authorize()
     {
-        return false;
+	    $article = $this->route('article');
+	    $userId = $article->user->id;
+	    if (Auth::user()->master || Auth::user()->id === $userId) {
+
+		    return true;
+	    } else {
+
+		    return false;
+	    }
     }
 
     /**
@@ -24,7 +33,15 @@ class ArticleRequest extends Request
     public function rules()
     {
         return [
-            //
+	        'type_id'             => 'required',
+	        'published_at'        => 'required',
+	        'slug'                => 'required|max:255',
+	        //'meta_title[ua]'    => 'required|max:80',
+	        //'meta_description'  => 'required|max:200',
+	        //'meta_keywords'     => 'required|max:250',
+	        //'title'             => 'required|max:255',
+	        //'description'       => 'required|max:128',
+	        //'file'              => 'required|max:255'
         ];
     }
 }

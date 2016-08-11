@@ -63,3 +63,16 @@
 	}
 }
 
+.admin-body {
+	.positions_by_admin,
+	.profiles_by_admin {
+		.position-card,
+		.profile-card {
+			.mdl-card__title {
+				.title{
+					font-size: 22px;
+				}
+			}
+		}
+	}
+}

@@ -1,4 +1,4 @@
-@import '../partials/colors';
+@import 'colors';
 @import "partials/login";
 @import "partials/header";
 @import "partials/drawer";
@@ -9,6 +9,8 @@
 @import "partials/categories";
 @import "partials/profiles_positions";
 @import "partials/reports";
+@import "partials/subscribers";
+@import "partials/dashboard";
 .body {
 	padding: 20px 30px;
 }

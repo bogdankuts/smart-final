@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Auth;
 
 class PositionsController extends AdminBaseController {
 	public function index() {
-		if (Auth::user()->master) {
+		if (\Auth::user()->master) {
 			$positions = Position::getAllPositions();
 		} else {
 			$positions = User::find(Auth::user()->id)->positions;
@@ -82,7 +82,7 @@ class PositionsController extends AdminBaseController {
 	}
 
 	public function delete(Position $position) {
-
+		$position->deleteFile();
 		$position->content()->delete();
 		$position->delete();
 		flash('Профайл успешно удален', 'success');

@@ -37,7 +37,8 @@ class AdminBaseController extends Controller {
 
     public function __construct(Admin $admin) {
 	    \App::setLocale('ru');
-		$admin->updateLastVisit();
+		//TODO::maybe uncomment that
+		//$admin->updateLastVisit();
     }
 
 	/**

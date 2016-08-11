@@ -108,6 +108,12 @@
   .actions .delete_entity_form {
     margin-left: 25px; }
 
+.admin-body .positions_by_admin .position-card .mdl-card__title .title,
+.admin-body .positions_by_admin .profile-card .mdl-card__title .title,
+.admin-body .profiles_by_admin .position-card .mdl-card__title .title,
+.admin-body .profiles_by_admin .profile-card .mdl-card__title .title {
+  font-size: 22px; }
+
 .article-card {
   float: left;
   width: 30%;
@@ -116,6 +122,10 @@
     max-height: 250px;
     min-height: 250px;
     width: 100%; }
+    .article-card .mdl-card__image img {
+      display: table;
+      margin: auto;
+      max-height: 250px; }
   .article-card .mdl-card__title {
     font-size: 18px;
     min-height: 85px;
@@ -173,6 +183,47 @@
     .article-card .delete_form_btn input {
       margin: 0; }
 
+.one-article-body .mdl-tabs__tab-bar a.mdl-tabs__tab:hover, .one-article-body .mdl-tabs__tab-bar a.mdl-tabs__tab:focus {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer; }
+
+.one-article-body .main_info p {
+  font-size: 18px; }
+
+.one-article-body .links {
+  width: 100%;
+  float: left;
+  margin-bottom: 20px; }
+  .one-article-body .links a:hover, .one-article-body .links a:focus {
+    text-decoration: none; }
+
+.create-article-body .mdl-textfield {
+  width: 100%; }
+
+.create-article-body .general_parameters {
+  overflow: hidden; }
+  .create-article-body .general_parameters .one_select {
+    float: left; }
+  .create-article-body .general_parameters .project_input {
+    display: none; }
+  .create-article-body .general_parameters .date {
+    width: 50%;
+    float: left; }
+  .create-article-body .general_parameters .file_block {
+    width: 50%;
+    float: right; }
+    .create-article-body .general_parameters .file_block .file_uploader {
+      display: table;
+      margin: auto;
+      margin-top: 10px; }
+      .create-article-body .general_parameters .file_block .file_uploader--label {
+        display: table;
+        margin: auto; }
+    .create-article-body .general_parameters .file_block .help-block {
+      display: table;
+      margin: auto; }
+
 .projects-body .project_articles {
   overflow: hidden;
   border-bottom: 2px solid #FFC107; }
@@ -206,7 +257,7 @@
   min-height: initial; }
   .one_category .mdl-card__title h2 {
     float: left;
-    width: 50%; }
+    width: 70%; }
     .one_category .mdl-card__title h2 a {
       color: inherit;
       text-decoration: none; }
@@ -293,13 +344,101 @@
 
 .profile-create-body .mdl-tabs__tab-bar a.mdl-tabs__tab:hover, .profile-create-body .mdl-tabs__tab-bar a.mdl-tabs__tab:focus {
   text-decoration: none;
-  color: inherit; }
+  color: inherit;
+  cursor: pointer; }
 
 .positions-body .mdl-card__title {
   min-height: 130px; }
 
+.reports-body .type_heading {
+  width: 100%;
+  overflow: hidden;
+  text-align: center; }
+
 .reports-body .mdl-card__title {
   min-height: 165px; }
+
+.subscribers-body .subscriber {
+  width: 30%;
+  float: left;
+  margin: auto 1.5% 20px 1.5%;
+  padding: 20px; }
+  .subscribers-body .subscriber .name,
+  .subscribers-body .subscriber .email {
+    font-size: 18px; }
+  .subscribers-body .subscriber .email {
+    color: inherit;
+    text-decoration: none; }
+    .subscribers-body .subscriber .email:hover, .subscribers-body .subscriber .email:focus {
+      text-decoration: none;
+      color: inherit; }
+  .subscribers-body .subscriber .delete_btn {
+    float: right; }
+
+.subscribers-body .actions a {
+  margin-right: 30px; }
+
+.dashboard .notifications {
+  overflow: hidden; }
+  .dashboard .notifications .one_notification {
+    width: 16.6%;
+    float: left;
+    position: relative; }
+    .dashboard .notifications .one_notification .content {
+      display: table;
+      margin: auto; }
+      .dashboard .notifications .one_notification .content .badge-block {
+        display: table;
+        margin: auto; }
+      .dashboard .notifications .one_notification .content .mdl-badge {
+        float: left; }
+      .dashboard .notifications .one_notification .content .mdl-card__actions {
+        float: left; }
+      .dashboard .notifications .one_notification .content .mdl-card__menu {
+        position: absolute;
+        top: -17px;
+        right: 52px; }
+
+.dashboard .recent_block {
+  float: left;
+  overflow: hidden; }
+  .dashboard .recent_block .block_heading {
+    text-align: center;
+    margin-bottom: 40px; }
+  .dashboard .recent_block .article-card {
+    width: 47%;
+    margin: 0 1.5% 40px 1.5%; }
+  .dashboard .recent_block .mdl-card__actions a,
+  .dashboard .recent_block .mdl-card__actions form input {
+    font-size: 12px;
+    padding: 0 14px; }
+    .dashboard .recent_block .mdl-card__actions a:hover, .dashboard .recent_block .mdl-card__actions a:focus,
+    .dashboard .recent_block .mdl-card__actions form input:hover,
+    .dashboard .recent_block .mdl-card__actions form input:focus {
+      text-decoration: none; }
+  .dashboard .recent_block .mdl-card__actions form {
+    float: right; }
+  .dashboard .recent_block .profile-card .mdl-card__title,
+  .dashboard .recent_block .position-card .mdl-card__title {
+    min-height: 120px; }
+  .dashboard .recent_block .profile-card .title,
+  .dashboard .recent_block .position-card .title {
+    font-size: 18px; }
+  .dashboard .recent_block .subscriber {
+    width: 47%;
+    margin: auto 1.5% 20px 1.5%; }
+  .dashboard .recent_block--positions, .dashboard .recent_block--profiles {
+    float: right; }
+
+.dashboard .popular_block {
+  overflow: hidden; }
+  .dashboard .popular_block .block_heading {
+    text-align: center;
+    margin-bottom: 40px; }
+  .dashboard .popular_block .profile-card
+.position-card {
+    width: 30%;
+    margin: 0 1.5% 40px 1.5%; }
 
 .body {
   padding: 20px 30px; }

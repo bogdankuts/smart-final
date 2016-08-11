@@ -63,6 +63,14 @@ class AdminComposer {
 				$this->title = 'Новость';
 				$this->env = 'article';
 				break;
+			case 'edit_article':
+				$this->title = 'Изменить новость';
+				$this->env = 'update_article';
+				break;
+			case 'create_article':
+				$this->title = 'Добавить новость';
+				$this->env = 'create_article';
+				break;
 			case 'admin_projects':
 				$this->title = 'Проекты';
 				$this->env = 'projects';
@@ -142,6 +150,32 @@ class AdminComposer {
 			case 'edit_report':
 				$this->title = 'Изменить отчет';
 				$this->env = 'update_report';
+				break;
+			case 'admin_subscribers':
+				$this->title = 'Подписчики';
+				$this->env = 'subscribers';
+				break;
+			case 'admin_about':
+				$this->title = 'Ver 2.5';
+				$this->env = 'about';
+				break;
+			case 'recent_admins':
+				$this->title = 'Последние админы';
+				break;
+			case 'recent_articles':
+				$this->title = 'Последние новости';
+				break;
+			case 'recent_profiles':
+				$this->title = 'Последние профайлы';
+				break;
+			case 'recent_positions':
+				$this->title = 'Последние вакансии';
+				break;
+			case 'recent_documents':
+				$this->title = 'Последние документы';
+				break;
+			case 'recent_subscribers':
+				$this->title = 'Последние подписчики';
 				break;
 		}
 	}

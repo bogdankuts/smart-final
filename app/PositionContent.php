@@ -16,4 +16,9 @@ class PositionContent extends AdminBaseModel {
 	 */
 	protected $fields = ['meta_title', 'meta_description', 'meta_keywords', 'title', 'description', 'file', 'lang_id'];
 
+	public function position() {
+
+		return $this->belongsTo('App\Position', 'position_id', 'position_id');
+	}
+
 }

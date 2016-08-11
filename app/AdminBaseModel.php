@@ -30,7 +30,11 @@ class AdminBaseModel extends Model {
 				}
 				$dataToStore[$keyName] = $instance->$keyName;
 			}
-			$dataToStore = $this->processData($dataToStore, $mainField, $fileDir);
+			if ($instance instanceof Article) {
+				$dataToStore = $this->processArticleData($dataToStore);
+			} else {
+				$dataToStore = $this->processData($dataToStore, $mainField, $fileDir);
+			}
 
 			if ($dataToStore != []) {
 				$this->updateOrCreate($instance, $dataToStore);
@@ -89,7 +93,7 @@ class AdminBaseModel extends Model {
 		}
 
 		if ($data['meta_title'] === '') {
-			$data['meta_title'] = $data['name'];
+			$data['meta_title'] = $data[$fieldToCheck];
 		}
 
 		if ($data['meta_description'] === '') {
@@ -97,6 +101,42 @@ class AdminBaseModel extends Model {
 		}
 
 		return $data;
+	}
+
+
+	/**
+	 * Process Article specific data
+	 *
+	 * @param array $data
+	 *
+	 * @return array
+	 */
+	private function processArticleData($data) {
+		if ($data['title'] === '') {
+
+			return $data = [];
+		}
+
+		if ($data['body'] === '') {
+
+			return $data = [];
+		}
+
+		if ($data['preview_text'] === '') {
+
+			return $data = [];
+		}
+
+		if ($data['meta_title'] === '') {
+			$data['meta_title'] = $data['title'];
+		}
+
+		if ($data['meta_description'] === '') {
+			$data['meta_description'] = $data['preview_text'];
+		}
+
+		return $data;
+
 	}
 
 	/**

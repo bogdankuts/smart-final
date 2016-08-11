@@ -9,6 +9,8 @@ class Project extends Model {
 
 	protected $fillable = ['title_ua', 'title_ru', 'field_id'];
 
+	protected $defaultProject = 1;
+
 
 	/**
 	 * Get the field for the project
@@ -32,5 +34,9 @@ class Project extends Model {
 
 		return $article->with('content')->where('project_id', $projectId)->get();
 
+	}
+
+	public function setDefaultArticles() {
+		Article::where('project_id', $this->project_id)->update(['project_id' => $this->defaultProject]);
 	}
 }

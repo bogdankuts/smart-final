@@ -1,0 +1,700 @@
+# ************************************************************
+# Sequel Pro SQL dump
+# Версия 4499
+#
+# http://www.sequelpro.com/
+# https://github.com/sequelpro/sequelpro
+#
+# Адрес: localhost (MySQL 5.5.42)
+# Схема: smart
+# Время создания: 2016-08-11 09:17:13 +0000
+# ************************************************************
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+
+# Дамп таблицы articles
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `articles`;
+
+CREATE TABLE `articles` (
+  `article_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `created_by` int(10) unsigned NOT NULL,
+  `type_id` int(10) unsigned NOT NULL,
+  `slug` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `project_id` int(11) DEFAULT NULL,
+  `image` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
+  `published_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `views` int(11) NOT NULL,
+  PRIMARY KEY (`article_id`),
+  UNIQUE KEY `articles_slug_unique` (`slug`),
+  KEY `articles_created_by_foreign` (`created_by`),
+  CONSTRAINT `articles_created_by_foreign` FOREIGN KEY (`created_by`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+LOCK TABLES `articles` WRITE;
+/*!40000 ALTER TABLE `articles` DISABLE KEYS */;
+
+INSERT INTO `articles` (`article_id`, `created_by`, `type_id`, `slug`, `project_id`, `image`, `published_at`, `created_at`, `updated_at`, `views`)
+VALUES
+	(1,23,2,'non-quam-repudiandae-libero-explicabo',5,'skrinshot-2016-04-27-202221png-1470289773.png','2016-08-09 17:46:03','2016-08-01 13:32:16','2016-08-01 13:32:16',920),
+	(2,24,3,'nisi-molestiae-voluptatibus-repudiandae-nesciunt-doloribus-ullam-nihil',2,'skrinshot-2016-04-27-202221png-1470289773.png','2016-08-09 17:46:04','2016-08-01 13:32:22','2016-08-01 13:32:22',765),
+	(4,26,4,'distinctio-necessitatibus-sit-soluta',4,'skrinshot-2016-04-27-202221png-1470289773.png','2016-08-09 17:46:06','2016-08-01 13:32:34','2016-08-01 13:32:34',1159),
+	(5,27,5,'molestias-quia-similique-enim-perspiciatis-sunt',5,'skrinshot-2016-04-27-202221png-1470289773.png','2016-08-09 17:46:07','2016-08-01 13:32:39','2016-08-01 13:32:39',127),
+	(6,28,5,'pariatur-eum-odio-voluptatem-sit',6,'skrinshot-2016-04-27-202221png-1470289773.png','2016-08-09 17:46:10','2016-08-01 13:32:42','2016-08-01 13:32:42',878),
+	(7,2,1,'recusandae-amet-porro-est-velit-aut-aut',NULL,'skrinshot-2016-04-27-202221png-1470289773.png','2016-08-09 17:46:11','2016-08-01 13:32:48','2016-08-08 14:23:05',1064),
+	(8,30,2,'maxime-qui-sit-asperiores-officia-ut',8,'skrinshot-2016-04-27-202221png-1470289773.png','2016-08-09 17:46:12','2016-08-01 13:32:57','2016-08-01 13:32:57',369),
+	(9,31,3,'optio-provident-sint-quo-ratione-fugit-excepturi-voluptatem',9,'skrinshot-2016-04-27-202221png-1470289773.png','2016-08-09 17:46:13','2016-08-01 13:33:04','2016-08-01 13:33:04',286),
+	(38,2,6,'fdsfsdfdsf',5,'skrinshot-2016-04-27-202221png-1470289773.png','2016-08-09 17:01:51','2016-08-03 12:44:09','2016-08-04 08:49:33',0),
+	(43,2,6,'terererere',5,'skrinshot-2016-04-27-202221png-1470289773.png','2016-08-09 17:01:52','2016-08-04 10:59:11','2016-08-04 10:59:53',0);
+
+/*!40000 ALTER TABLE `articles` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Дамп таблицы articles_contents
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `articles_contents`;
+
+CREATE TABLE `articles_contents` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `article_id` int(10) unsigned NOT NULL,
+  `lang_id` int(11) NOT NULL,
+  `meta_title` varchar(80) COLLATE utf8_unicode_ci NOT NULL,
+  `meta_description` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `meta_keywords` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  `title` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
+  `body` text COLLATE utf8_unicode_ci NOT NULL,
+  `preview_text` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `articles_contents_article_id_foreign` (`article_id`),
+  CONSTRAINT `articles_contents_article_id_foreign` FOREIGN KEY (`article_id`) REFERENCES `articles` (`article_id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+LOCK TABLES `articles_contents` WRITE;
+/*!40000 ALTER TABLE `articles_contents` DISABLE KEYS */;
+
+INSERT INTO `articles_contents` (`id`, `article_id`, `lang_id`, `meta_title`, `meta_description`, `meta_keywords`, `title`, `body`, `preview_text`)
+VALUES
+	(1,1,2,'Sed exercitationem ab commodi adipisci consequatur.','Odit sunt fugiat magni hic nihil ut.','Velit voluptas rem dolorum omnis dignissimos dolorem quis cumque.','Украинское название','Velit ratione veniam aut odit delectus id excepturi. Asperiores quo incidunt aut illo id ut consequatur. Consequatur modi assumenda qui. Et placeat non sit optio unde debitis. Nam nemo adipisci soluta rerum autem itaque perferendis. Provident sint dolore sint harum adipisci dolor. Quaerat voluptatem vel ut impedit optio.','Sed alias dolorem eum maiores. Sed alias dolorem eum maiores. Sed alias dolorem eum maiores. Sed alias dolorem eum maiores. Sed '),
+	(2,2,1,'Asperiores facilis quidem consequatur qui.','In nihil totam cupiditate et ipsam.','Nam quisquam architecto iste ut temporibus ea odit similique.','Русское название','Non quibusdam laudantium nihil ullam ab reprehenderit. Voluptas impedit explicabo rerum rem ut et in. Sit consectetur quo provident qui ipsam pariatur eum. Aspernatur dolor dolore vel. Expedita et et deleniti ut nihil eius voluptas.','Temporibus illum mollitia animi amet.'),
+	(4,4,2,'Magni ad placeat animi animi perferendis dolorum quaerat.','Voluptatem sed tempore saepe vel et.','Qui illum omnis voluptatibus eaque est fugit consequatur sint.','Украинское название','Et aspernatur sint repudiandae id accusantium odio ratione. Et dolore quo vero. Illo sint labore error ut doloremque cum. Odit quae facilis ea illo et fugit. Ducimus recusandae ut repellat sapiente est. Enim laboriosam et quisquam quas. Nam eveniet dolores et quia exercitationem id. Quisquam voluptatem amet voluptatum eos nulla recusandae maiores odio. Magnam quis eius quas facere sit eos saepe.','Voluptatem quo voluptatem debitis possimus quos.'),
+	(5,5,2,'Error perspiciatis sunt sunt dolor suscipit deleniti quia voluptas.','Qui ab maxime odio iste quam eligendi.','Voluptate autem quo ea quod ad animi et repudiandae eveniet laboriosam nostrum nemo quia.','Украинское название','Culpa unde ut est culpa. Non enim aliquid officiis nostrum pariatur nihil. Officia est magnam et repudiandae ut velit earum. Unde non sint quia totam. Quasi enim sapiente harum nobis fugiat voluptate accusantium.','Est id et possimus neque.'),
+	(6,6,1,'Vel necessitatibus sapiente esse mollitia.','Omnis beatae labore totam dolorem asperiores id modi.','Perferendis qui voluptatem minima ea exercitationem repudiandae optio mollitia soluta.','Русское название','Dignissimos aliquid aliquid doloribus. Cumque at nisi aut officiis sint omnis est. Et qui aut soluta ab est totam autem. Ea quae autem maxime repellendus molestiae dolor nisi. Suscipit et officia quia provident consectetur. Quia placeat labore et illo minima odit earum. Expedita id nam mollitia recusandae.','Perferendis fugit sed corrupti ab aut ut non.'),
+	(7,7,2,'Nisi ut quia sapiente vitae deleniti in voluptates.','Ea vitae tempora vero harum eum.','Voluptas repellat qui sit quidem et dolores.','Украинское название','<p>Ea quisquam eveniet saepe. Sit suscipit nam saepe laborum et aliquam non. Soluta quisquam tempore voluptatem qui voluptate reprehenderit nesciunt. In asperiores eveniet officia non voluptatibus quo aut eius. A voluptatum est iure beatae et. Doloribus voluptate repellendus doloribus qui et. Excepturi voluptate in modi rerum provident incidunt. Mollitia ratione aut aut nisi libero excepturi dignissimos quia. Praesentium consequatur officia qui. Sed rerum a voluptate in est est voluptatum velit.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<div class=\"embeddedContent oembed-provider- oembed-provider-slideshare\" data-align=\"left\" data-oembed=\"http://www.slideshare.net/donnamoritz/19-social-media-success-summit-quotes-to-ignite-your-business\" data-oembed_provider=\"slideshare\" data-resizetype=\"noresize\" style=\"float: left;\"><iframe allowfullscreen=\"\" frameborder=\"0\" height=\"356\" marginheight=\"0\" marginwidth=\"0\" scrolling=\"no\" src=\"https://www.slideshare.net/slideshow/embed_code/key/lmzfmcd88hMbRo\" style=\"border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;\" width=\"427\"></iframe>\r\n\r\n<div style=\"margin-bottom:5px\"><strong><a href=\"https://www.slideshare.net/donnamoritz/19-social-media-success-summit-quotes-to-ignite-your-business\" target=\"_blank\" title=\"19 Social Media Success Summit Quotes to Ignite Your Business\">19 Social Media Success Summit Quotes to Ignite Your Business</a> </strong> from <strong><a href=\"http://www.slideshare.net/donnamoritz\" target=\"_blank\">Donna Moritz</a></strong></div>\r\n</div>\r\n\r\n<p>&nbsp;jkfdshdsjkfhjkdsh fkjsjkfhsdjk fkdhf kjdhs</p>\r\n\r\n<p>&nbsp;jksdgfkjsd fhjkds jkfhds kjfsdhfkjsdh fkjsjk</p>\r\n\r\n<p>j fhkjsdhf jksdhjk fdsjkf jksdhfjk sd kjf</p>\r\n\r\n<p>jsh fkjsdhkj fdskjfhkjsdhf kjsdhfkj hsdkjf&nbsp;</p>\r\n\r\n<p>&nbsp;dsfjhsdjkhf kjsdhfkj dsfkjhsdkj fh</p>\r\n\r\n<p>\\j sdkfjksdhf jsdhfkj jkf</p>\r\n\r\n<p>&nbsp;sjdfhkjsdhfk jsdhf kjfkjhdsjk fhsdjk fhdskjf&nbsp;</p>\r\n','Nulla omnis qui ut non commodi molestiae alias.'),
+	(8,8,1,'At architecto omnis esse soluta voluptas.','Nisi voluptas ipsam consequatur odit ut dolorem in.','Dolore debitis est voluptatem sapiente voluptatem facere sequi nihil omnis odit.','Русское название','Voluptatum molestias occaecati quo magnam aperiam. Provident dolore reiciendis omnis possimus alias. Quis omnis ratione molestias aperiam in accusantium accusantium. Voluptas commodi molestiae et ad dolore qui. Consequatur necessitatibus dolor minima dolores porro autem labore nobis. Sit dolor libero non minima animi. Quo consequatur consectetur qui dolorum rerum ea. Laudantium et et atque hic alias nihil hic.','Sunt tempora quisquam debitis sequi placeat officia ratione.'),
+	(9,9,2,'Ad dicta rerum ex facere tempora recusandae vel.','Enim laudantium enim nihil adipisci vitae debitis ad quam.','Ut sed temporibus ipsum quo totam porro sunt nesciunt.','Украинское название','Alias aliquid enim atque rem quia sed est. Iure itaque quia voluptas eum eos voluptates. Magnam cumque inventore similique quo rerum dolor dolores. Eum in id omnis necessitatibus quae autem. Error ex iusto nemo cupiditate voluptatem. Iusto omnis necessitatibus recusandae rerum. Error ut vel inventore fuga. Nihil alias possimus est est. Molestiae est cupiditate magni aut.','Veritatis optio vel laborum et magnam voluptates.'),
+	(12,38,2,'Українська назва','Українська назва якоїсь статті для чогось','Українська назва','Українська назва','<p><strong>Українська назва якоїсь статті для чогось<img alt=\"\" src=\"/kcfinder/upload/images/2rVsNYB8nIc.jpg\" style=\"height:108px; width:200px\" /></strong></p>\r\n','Українська назва якоїсь статті для чогось'),
+	(13,38,1,'Русское название','Русское название какой-то статьи','Русское название','Русское название','<p>Русское название какой-то статьи для чего-то</p>\r\n\r\n<div class=\"embeddedContent oembed-provider-slideshare\" data-align=\"left\" data-oembed=\"http://www.slideshare.net/Tommasodb/how-to-create-an-impacting-startup-name\" data-oembed_provider=\"slideshare\" data-resizetype=\"noresize\" style=\"float:left\"><iframe allowfullscreen=\"\" frameborder=\"0\" height=\"356\" marginheight=\"0\" marginwidth=\"0\" scrolling=\"no\" src=\"https://www.slideshare.net/slideshow/embed_code/key/C21bUiiTzjvtCK\" width=\"427\"></iframe>\r\n\r\n<div><strong><a href=\"https://www.slideshare.net/Tommasodb/how-to-create-an-impacting-startup-name\" target=\"_blank\">How To Create An Impacting Startup Name</a> </strong> from <strong><a href=\"http://www.slideshare.net/Tommasodb\" target=\"_blank\">Tommaso Di Bartolo</a></strong></div>\r\n</div>\r\n\r\n<p>&nbsp;</p>\r\n','Русское название какой-то статьи'),
+	(17,43,2,'Ad dicta rerum ex facere tempora recusandae vel.','Ad dicta rerum ex facere tempora recusandae vel.','b','Украинское название','<p>bbb</p>\r\n','Veritatis optio vel laborum et magnam voluptates.');
+
+/*!40000 ALTER TABLE `articles_contents` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Дамп таблицы categories
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `categories`;
+
+CREATE TABLE `categories` (
+  `category_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `title_ua` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `title_ru` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`category_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+LOCK TABLES `categories` WRITE;
+/*!40000 ALTER TABLE `categories` DISABLE KEYS */;
+
+INSERT INTO `categories` (`category_id`, `title_ua`, `title_ru`)
+VALUES
+	(1,'Без категорії','Без категории'),
+	(2,'Magni.','Minus beatae.'),
+	(3,'Nihil nisi.','Voluptatibus odio.'),
+	(4,'Magni iste.','Nemo dolor.'),
+	(5,'Ut sit.','Illo.'),
+	(6,'Quidem iste.','Minus occaecati.'),
+	(7,'Dolorum.','Dolore unde.'),
+	(8,'Deleniti.','Esse hic.'),
+	(9,'Nihil.','Dolores quisquam.'),
+	(10,'Occaecati.','Veniam.'),
+	(11,'Vero iure.','Voluptatem.'),
+	(12,'Doloribus sapiente.','Cupiditate expedita.'),
+	(13,'Tempora.','Magni.'),
+	(14,'Ea.','Esse.'),
+	(15,'Odit.','Natus.'),
+	(16,'Dolorum nemo.','Dignissimos.'),
+	(17,'Cum deleniti.','Adipisci nemo.'),
+	(18,'Quia beatae.','Rerum dolor.'),
+	(19,'Provident et.','Odit.'),
+	(20,'Ullam.','Qui molestias.'),
+	(21,'Veritatis.','Dolores pariatur.'),
+	(22,'Porro.','Esse dicta.'),
+	(23,'Hic.','Eius.'),
+	(24,'Perspiciatis.','A.'),
+	(25,'Possimus temporibus.','Natus ab.'),
+	(26,'Et.','Porro magni.'),
+	(27,'Dolores.','Amet quasi.'),
+	(28,'Dolor.','Quidem accusamus.'),
+	(29,'Nobis.','Vel mollitia.'),
+	(30,'Nam eligendi.','Est.');
+
+/*!40000 ALTER TABLE `categories` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Дамп таблицы fields
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `fields`;
+
+CREATE TABLE `fields` (
+  `field_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `title_ua` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `title_ru` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`field_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+LOCK TABLES `fields` WRITE;
+/*!40000 ALTER TABLE `fields` DISABLE KEYS */;
+
+INSERT INTO `fields` (`field_id`, `title_ua`, `title_ru`)
+VALUES
+	(1,'СМАРТ-UP','СМАРТ-UP'),
+	(2,'СМАРТ-MIND','СМАРТ-MIND'),
+	(3,'СМАРТ-GO','СМАРТ-GO');
+
+/*!40000 ALTER TABLE `fields` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Дамп таблицы languages
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `languages`;
+
+CREATE TABLE `languages` (
+  `lang_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `lang_code` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
+  `title` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`lang_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+LOCK TABLES `languages` WRITE;
+/*!40000 ALTER TABLE `languages` DISABLE KEYS */;
+
+INSERT INTO `languages` (`lang_id`, `lang_code`, `title`)
+VALUES
+	(1,'ru','Русский'),
+	(2,'ua','Українська');
+
+/*!40000 ALTER TABLE `languages` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Дамп таблицы migrations
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `migrations`;
+
+CREATE TABLE `migrations` (
+  `migration` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `batch` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+LOCK TABLES `migrations` WRITE;
+/*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
+
+INSERT INTO `migrations` (`migration`, `batch`)
+VALUES
+	('2014_10_12_000000_create_users_table',1),
+	('2014_10_12_100000_create_password_resets_table',1),
+	('2016_07_05_083948_create_languages_table',1),
+	('2016_07_05_084345_create_articles_table',1),
+	('2016_07_05_084542_create_articles_contents_table',1),
+	('2016_07_05_091052_create_types_table',1),
+	('2016_07_05_091346_create_categories_table',1),
+	('2016_07_05_091439_create_profiles_table',1),
+	('2016_07_05_091656_create_positions_table',1),
+	('2016_07_05_092405_create_profiles_contents_table',1),
+	('2016_07_05_092802_create_positions_contents_table',1),
+	('2016_07_06_094558_create_projects_table',1),
+	('2016_07_06_095338_create_fields_table',1),
+	('2016_08_01_130207_create_reports_table',1),
+	('2016_08_01_130215_create_reports_contents_table',1);
+
+/*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Дамп таблицы password_resets
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `password_resets`;
+
+CREATE TABLE `password_resets` (
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `token` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  KEY `password_resets_email_index` (`email`),
+  KEY `password_resets_token_index` (`token`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+
+# Дамп таблицы positions
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `positions`;
+
+CREATE TABLE `positions` (
+  `position_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `category_id` int(10) unsigned NOT NULL,
+  `created_by` int(10) unsigned NOT NULL,
+  `published_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `views` int(11) NOT NULL,
+  PRIMARY KEY (`position_id`),
+  KEY `positions_category_id_foreign` (`category_id`),
+  KEY `positions_created_by_foreign` (`created_by`),
+  CONSTRAINT `positions_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `categories` (`category_id`),
+  CONSTRAINT `positions_created_by_foreign` FOREIGN KEY (`created_by`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+LOCK TABLES `positions` WRITE;
+/*!40000 ALTER TABLE `positions` DISABLE KEYS */;
+
+INSERT INTO `positions` (`position_id`, `category_id`, `created_by`, `published_at`, `created_at`, `updated_at`, `views`)
+VALUES
+	(1,1,8,'2016-08-01 13:33:10','2016-08-01 13:33:10','2016-08-01 13:33:10',1173),
+	(2,2,13,'2016-08-01 13:33:15','2016-08-01 13:33:15','2016-08-01 13:33:15',1300),
+	(3,3,16,'2016-08-01 13:33:20','2016-08-01 13:33:20','2016-08-01 13:33:20',1035),
+	(4,4,7,'2016-08-01 13:33:35','2016-08-01 13:33:35','2016-08-01 13:33:35',241),
+	(5,5,8,'2016-08-01 13:33:38','2016-08-01 13:33:38','2016-08-01 13:33:38',449),
+	(6,6,1,'2016-08-01 13:33:42','2016-08-01 13:33:42','2016-08-01 13:33:42',271),
+	(7,7,10,'2016-08-01 13:33:47','2016-08-01 13:33:47','2016-08-01 13:33:47',641),
+	(8,8,22,'2016-08-01 13:33:53','2016-08-01 13:33:53','2016-08-01 13:33:53',824),
+	(9,9,4,'2016-08-01 13:33:59','2016-08-01 13:33:59','2016-08-01 13:33:59',577),
+	(10,10,19,'2016-08-01 13:34:14','2016-08-01 13:34:14','2016-08-01 13:34:14',1279),
+	(11,11,7,'2016-08-01 13:34:19','2016-08-01 13:34:19','2016-08-01 13:34:19',262),
+	(12,12,2,'2016-08-01 13:34:00','2016-08-01 13:34:25','2016-08-01 14:00:34',1111),
+	(13,13,15,'2016-08-01 13:34:36','2016-08-01 13:34:36','2016-08-01 13:34:36',648),
+	(14,14,19,'2016-08-01 13:34:44','2016-08-01 13:34:44','2016-08-01 13:34:44',1063),
+	(15,15,7,'2016-08-01 13:35:02','2016-08-01 13:35:02','2016-08-01 13:35:02',74);
+
+/*!40000 ALTER TABLE `positions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Дамп таблицы positions_contents
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `positions_contents`;
+
+CREATE TABLE `positions_contents` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `position_id` int(10) unsigned NOT NULL,
+  `lang_id` int(10) unsigned NOT NULL,
+  `meta_title` varchar(80) COLLATE utf8_unicode_ci NOT NULL,
+  `meta_description` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `meta_keywords` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `description` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
+  `file` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `positions_contents_position_id_foreign` (`position_id`),
+  CONSTRAINT `positions_contents_position_id_foreign` FOREIGN KEY (`position_id`) REFERENCES `positions` (`position_id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+LOCK TABLES `positions_contents` WRITE;
+/*!40000 ALTER TABLE `positions_contents` DISABLE KEYS */;
+
+INSERT INTO `positions_contents` (`id`, `position_id`, `lang_id`, `meta_title`, `meta_description`, `meta_keywords`, `title`, `description`, `file`)
+VALUES
+	(1,1,2,'Sit quod consequuntur sapiente voluptas qui.','Dolorem eum eveniet voluptate enim occaecati laudantium.','Non nemo quisquam omnis quis earum asperiores eveniet officia corrupti est harum.','Nihil ut molestiae distinctio et voluptatem.','Dicta quas corporis nobis non odit omnis illum.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/5f4b3fe24de618dfd21c6a4af4fd854c.jpg'),
+	(2,2,2,'Expedita voluptatem maiores autem doloribus reiciendis quisquam eius.','Perferendis quidem voluptatem consequatur dicta autem eos cumque laboriosam.','Placeat quis et error qui aliquid dolor.','Adipisci et quas aut itaque minus.','Eligendi omnis sed quae saepe.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/4d8c5404f26b5e12c5b1414f7fb82410.jpg'),
+	(3,3,1,'Laborum quia a facilis voluptatibus id officiis tempora.','Dolores natus incidunt nobis consequatur.','Qui voluptatem perspiciatis corporis error harum qui veniam ab voluptate molestias doloribus omnis.','Dolores magnam quia enim quo quo.','Sit qui voluptatem repudiandae aut quam.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/5f8e8e4c48f9880c1cc01447b1c8c9b0.jpg'),
+	(4,4,1,'Quia quia provident ipsum reiciendis.','Architecto saepe eaque recusandae quo rerum.','Neque odio voluptatem necessitatibus tenetur nisi sunt quae qui nobis.','Dolor minus est ut sed.','Explicabo placeat consequuntur temporibus.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/2eeb34c4f795061b574cfd7f87ad7ab4.jpg'),
+	(5,5,1,'Sit possimus et qui libero.','Rem asperiores in earum quis ex iure quis.','Quis commodi dignissimos doloribus delectus soluta deleniti maxime quis iure.','Sit possimus nostrum aspernatur consectetur sapiente.','Nostrum et aut optio aliquam.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/5e63ae8134d84d5a9edc202c90f246eb.jpg'),
+	(6,6,2,'Quo eveniet blanditiis sapiente architecto illo vel asperiores.','Quos amet itaque consequatur recusandae.','Tempore ut voluptatibus dicta est repellat ut vel accusamus nobis voluptate hic.','Voluptates nulla accusantium ipsa quam ut aut consectetur.','Mollitia distinctio eum vero corporis aspernatur.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/b48824282cc0022e1a1e5e774ae13bf0.jpg'),
+	(7,7,1,'Eligendi blanditiis ducimus delectus perspiciatis nobis.','Recusandae ipsum earum eum magnam dolor quis iusto.','Numquam necessitatibus est quis dolore velit laboriosam illum sint repudiandae repellendus ut ut perferendis.','Consequatur ipsum enim et mollitia nesciunt.','Tempora voluptatibus veritatis minima voluptatum deserunt velit.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/b0ceaa5a891ea35bd74edf375bbb63fd.jpg'),
+	(8,8,1,'Dolorem repellat modi qui aut.','Perferendis facere maxime neque aperiam et perspiciatis.','Aut sit officia voluptatem consequatur atque ea eum quis voluptatem adipisci asperiores autem dolores.','Hic eum accusantium dolore velit et.','Repellendus quas fuga vel eligendi possimus voluptatem consequatur.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/e458b2d59db459202f8db87df0534a06.jpg'),
+	(9,9,2,'Delectus rerum sit assumenda rerum incidunt magni omnis.','Nam consequatur officia nulla tempore harum totam.','Perferendis ex non aperiam et illum nemo nam voluptas qui provident architecto modi reiciendis.','Enim quia sint iure eos sint ea asperiores odit.','Ipsam fugiat libero voluptas impedit quo repudiandae necessitatibus sit.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/78addf6173e7be6040330a44a999c5cd.jpg'),
+	(10,10,2,'Nisi facere nihil fugiat a similique.','Placeat quisquam voluptate omnis ipsum minus.','Adipisci iure ut id nesciunt nostrum occaecati numquam et eum voluptate maiores et.','Veritatis consequatur cupiditate iure est aut voluptatem animi optio.','Sint magni porro nihil in qui vel.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/ed20bdbc0c62524c5bd8f5cd25af2d5d.jpg'),
+	(11,11,2,'Ut nihil explicabo ipsa quas.','Fuga adipisci dolor dolores quod id.','Ut exercitationem blanditiis voluptatem in voluptas unde.','Reprehenderit est quo aspernatur nobis saepe vitae exercitationem.','Adipisci deleniti molestias qui rerum.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/440c7250b4888639f10fa278aa60fab1.jpg'),
+	(12,12,1,'Natus ea et accusantium perspiciatis nulla ut laudantium.','Illum assumenda ipsam harum expedita non ut facilis maxime.','Cum sed vero eum est nam quisquam eos vel eveniet excepturi dolores.','Quos atque autem nesciunt saepe.','Doloribus reiciendis omnis ea similique vel.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/c19cdf376b3e0b127f3db28fde4564d0.jpg'),
+	(13,13,1,'Est aut voluptates et.','Commodi et excepturi natus consequuntur voluptatem.','Assumenda est iure excepturi tempora molestias dolore.','Qui in voluptatem temporibus qui corrupti maxime.','Ipsam laudantium aspernatur et.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/cb92d3026d671deef20879e605f4dfcc.jpg'),
+	(14,14,1,'Eum ut nesciunt delectus dolor qui rerum deleniti quisquam.','Quos in non mollitia architecto.','Corporis vitae dolorum sed aut id ut.','Maxime quisquam magnam magnam aut.','Autem sequi quis velit doloribus est dolores aperiam.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/76114a1bf139367ed67a9bdadcc5cec1.jpg'),
+	(15,15,2,'Quod ducimus qui vero est consequatur.','Aut itaque eveniet necessitatibus quaerat facere quod ut.','In unde provident officiis fuga laboriosam qui voluptatum.','Reiciendis voluptatem asperiores consequatur nostrum voluptatem.','Eum fugiat adipisci saepe doloribus ea ea.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/586cb42cf63ba9aaefdd974005737870.jpg');
+
+/*!40000 ALTER TABLE `positions_contents` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Дамп таблицы profiles
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `profiles`;
+
+CREATE TABLE `profiles` (
+  `profile_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `category_id` int(10) unsigned NOT NULL,
+  `created_by` int(10) unsigned NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `published_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `views` int(11) NOT NULL,
+  PRIMARY KEY (`profile_id`),
+  KEY `profiles_category_id_foreign` (`category_id`),
+  KEY `profiles_created_by_foreign` (`created_by`),
+  CONSTRAINT `profiles_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `categories` (`category_id`),
+  CONSTRAINT `profiles_created_by_foreign` FOREIGN KEY (`created_by`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+LOCK TABLES `profiles` WRITE;
+/*!40000 ALTER TABLE `profiles` DISABLE KEYS */;
+
+INSERT INTO `profiles` (`profile_id`, `category_id`, `created_by`, `created_at`, `updated_at`, `published_at`, `views`)
+VALUES
+	(1,16,11,'2016-08-01 13:35:16','2016-08-01 13:35:16','2016-08-01 13:35:16',101),
+	(2,17,8,'2016-08-01 13:35:24','2016-08-01 13:35:24','2016-08-01 13:35:24',731),
+	(3,18,8,'2016-08-01 13:35:30','2016-08-01 13:35:30','2016-08-01 13:35:30',683),
+	(4,19,14,'2016-08-01 13:35:47','2016-08-01 13:35:47','2016-08-01 13:35:47',922),
+	(5,20,11,'2016-08-01 13:37:58','2016-08-01 13:37:58','2016-08-01 13:37:58',692),
+	(6,21,5,'2016-08-01 13:38:09','2016-08-01 13:38:09','2016-08-01 13:38:09',1153),
+	(7,22,16,'2016-08-01 13:38:24','2016-08-01 13:38:24','2016-08-01 13:38:24',1232),
+	(8,23,2,'2016-08-01 13:38:28','2016-08-01 13:38:28','2016-08-01 13:38:28',743),
+	(9,24,4,'2016-08-01 13:38:38','2016-08-01 13:38:38','2016-08-01 13:38:38',509),
+	(10,25,9,'2016-08-01 13:38:42','2016-08-01 13:38:42','2016-08-01 13:38:42',973),
+	(11,26,21,'2016-08-01 13:38:53','2016-08-01 13:38:53','2016-08-01 13:38:53',197),
+	(12,27,14,'2016-08-01 13:38:59','2016-08-01 13:38:59','2016-08-01 13:38:59',677),
+	(13,28,18,'2016-08-01 13:39:04','2016-08-01 13:39:04','2016-08-01 13:39:04',1173),
+	(14,29,11,'2016-08-01 13:39:20','2016-08-01 14:21:57','2016-08-01 13:39:00',599),
+	(15,30,12,'2016-08-01 13:39:30','2016-08-01 13:39:30','2016-08-01 13:39:30',1288),
+	(16,5,2,'2016-08-01 15:01:15','2016-08-01 15:01:15','2016-08-28 23:59:00',0),
+	(17,5,2,'2016-08-01 15:01:39','2016-08-01 15:01:39','2016-08-28 23:59:00',0),
+	(18,5,2,'2016-08-01 15:02:08','2016-08-01 15:02:08','2016-08-28 23:59:00',0),
+	(19,2,2,'2016-08-09 15:53:21','2016-08-09 15:53:21','2016-08-09 15:53:00',0);
+
+/*!40000 ALTER TABLE `profiles` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Дамп таблицы profiles_contents
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `profiles_contents`;
+
+CREATE TABLE `profiles_contents` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `profile_id` int(10) unsigned NOT NULL,
+  `lang_id` int(10) unsigned NOT NULL,
+  `meta_title` varchar(80) COLLATE utf8_unicode_ci NOT NULL,
+  `meta_description` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `meta_keywords` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `description` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
+  `file` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `profiles_contents_profile_id_foreign` (`profile_id`),
+  CONSTRAINT `profiles_contents_profile_id_foreign` FOREIGN KEY (`profile_id`) REFERENCES `profiles` (`profile_id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+LOCK TABLES `profiles_contents` WRITE;
+/*!40000 ALTER TABLE `profiles_contents` DISABLE KEYS */;
+
+INSERT INTO `profiles_contents` (`id`, `profile_id`, `lang_id`, `meta_title`, `meta_description`, `meta_keywords`, `name`, `description`, `file`)
+VALUES
+	(1,1,2,'Pariatur voluptas non odit autem.','Qui et aspernatur quis in voluptatum commodi porro.','Laborum molestias exercitationem consequatur assumenda consequatur quo.','Dortha Hodkiewicz','Sunt repellendus totam voluptatem.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/7838ae12e500df80a6a9de89368fa51f.jpg'),
+	(2,2,1,'Aut aperiam totam libero illo.','Illum tempora nulla laborum accusantium est laudantium.','Enim nam molestiae impedit sit culpa et voluptas et iure quibusdam corporis atque fugit.','Carolanne Terry DVM','Nam eius vel quia odit sed impedit est.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/aa80b5425016dc9b4c883e7a67fb0d98.jpg'),
+	(3,3,2,'Iste et aut tempora mollitia soluta.','Sed maxime consequatur sit vitae laudantium occaecati id.','Aut eos consequatur nisi dolor atque praesentium enim.','Kenneth Hermann','Odio necessitatibus dolorem soluta aspernatur numquam.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/38ad9e284c75dd7cfb55b9ccc5dfcb02.jpg'),
+	(4,4,1,'Et ipsa quam ipsam quam eaque.','Dicta et nesciunt quo voluptas.','Aut similique aut iusto reprehenderit suscipit quidem minima facilis quia inventore et est aut.','Jennifer McGlynn','Ut et maxime assumenda sed quibusdam autem corporis excepturi.','0'),
+	(5,5,2,'Cumque ab rerum eius impedit.','Ratione nostrum sed maxime reprehenderit itaque nesciunt tempore.','Qui neque adipisci consectetur veritatis iste voluptas.','Simeon Ruecker','Velit consequatur et expedita aliquid.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/13ad806eb36a415b64a0a705018ae363.jpg'),
+	(6,6,1,'Modi facere dolorum odit distinctio ut.','Neque sint a sint nobis commodi.','Accusantium magnam ea consectetur aliquid nihil quas quis odio.','Sister Wisozk','Et aut ut iure soluta quisquam sint.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/5b2ba94d003d9b5df41a5d0ed8b4a6a5.jpg'),
+	(7,7,2,'Veritatis dicta inventore dicta vitae ducimus eum.','Dolore est officia assumenda eos.','Et nostrum qui omnis vel a totam impedit magnam alias quis est quo.','Leda Goodwin','Corrupti eius recusandae quo sint sint eos explicabo.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/fe5a7217865c5814487eea84b1a8b6b9.jpg'),
+	(8,8,1,'Iste perspiciatis aut omnis ipsum doloribus velit iure quia.','Voluptatem ratione minus sunt recusandae earum aut.','Hic praesentium corrupti dolore mollitia consectetur iusto impedit sunt occaecati qui tempora.','Lavon Steuber','Ut dolor tenetur aliquid necessitatibus quia quo.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/bc86254434513b27bdffbaaa997be0bb.jpg'),
+	(9,9,2,'Officia labore molestiae quae doloremque recusandae quos mollitia.','Sit quo dolorem eligendi aliquid.','Qui commodi libero laboriosam nam dignissimos recusandae enim consequatur minus consequatur accusantium et.','Ms. Madisyn Spencer','Reiciendis nostrum porro eos eos a et hic.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/6e1a330cb6d61c69725cb76429c367b4.jpg'),
+	(10,10,1,'Iure placeat dolore omnis pariatur quisquam reprehenderit.','Ut pariatur ducimus commodi saepe aut eveniet.','Magnam fuga aut accusantium consequatur aliquam quis velit mollitia.','Nora Kohler','Tenetur repudiandae iusto ut eveniet ea qui ea numquam.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/7efdafc7b877afb39393707ee162ac22.jpg'),
+	(11,11,1,'Assumenda officiis fugiat at reprehenderit reprehenderit quia illum.','Nisi aliquam beatae rerum dolor possimus consectetur sunt.','Perferendis sequi numquam sit assumenda sed vel ut.','Albina Hodkiewicz','A aperiam harum aut optio consequatur eum accusamus.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/f78756ea386c6336368dfa07ac5d3e23.jpg'),
+	(12,12,2,'Voluptatem reiciendis nobis molestiae quisquam.','Vel dolorem harum velit.','Dolor in officia minus veniam facilis consequatur qui ullam alias minima quod mollitia at.','Abbigail Altenwerth II','Dolore quis quas officia.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/d4d4ceb8e7e24fa1923fcd68805f9f99.jpg'),
+	(13,13,1,'Quas quos et aspernatur libero corporis ex.','Tempora sed minima illo iusto voluptate quo.','Repudiandae qui aspernatur molestiae qui ab rerum mollitia et harum dolore animi.','Ellen McLaughlin','Assumenda eligendi asperiores omnis totam adipisci.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/0b8b5e46c3172f259cdb78b030d8da7c.jpg'),
+	(14,14,2,'Ipsum et nihil soluta cumque ab voluptatem.','Fugiat voluptas et voluptate blanditiis laborum.','In at perferendis vel et unde cum nemo.','Thaddeus Gleason','Maxime laboriosam maxime eius incidunt quis hic.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/a22f9d0ef492ee03f67b6c61ffcacacb.jpg'),
+	(15,15,1,'Eligendi molestias aut quaerat.','Maiores cupiditate non quasi et dolores eligendi.','Sit suscipit odit magnam hic nihil nobis quos architecto qui.','Kayleigh Reinger','Pariatur perspiciatis mollitia dolores provident et et et accusamus.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/969bfa1edf729087fe7d22e025ab8db3.jpg'),
+	(16,17,2,'UKR','UKR','UKR','UKR','UKR','smart-upvoprosy-po-kontentupdf-1470052899.pdf'),
+	(17,18,1,'RUS','RUS','RUS','RUS','RUS','hellodocx-1470052928.docx'),
+	(18,18,2,'Ukr','Ukr','Ukr','Ukr','Ukr','hellodocx-1470052960.docx'),
+	(19,17,1,'Rus','Rus','Rus','Rus','Rus','brief-webefremov-zapolnenyipdf-1470052995.pdf'),
+	(20,19,2,'bla','bl','','bla','bl','brifydocx-1470747201.docx');
+
+/*!40000 ALTER TABLE `profiles_contents` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Дамп таблицы projects
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `projects`;
+
+CREATE TABLE `projects` (
+  `project_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `field_id` int(11) NOT NULL,
+  `title_ua` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `title_ru` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`project_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+LOCK TABLES `projects` WRITE;
+/*!40000 ALTER TABLE `projects` DISABLE KEYS */;
+
+INSERT INTO `projects` (`project_id`, `field_id`, `title_ua`, `title_ru`, `created_at`, `updated_at`)
+VALUES
+	(1,1,'Default','Default','2016-08-01 13:31:44','2016-08-01 13:31:44'),
+	(2,2,'Dolor autem eligendi sed officia provident. Dolor autem eligendi sed officia provident. Dolor autem eligendi sed officia provident. Dolor autem eligendi sed officia provident. Dolor autem eligendi sed officia provident. Dolor autem eligendi sed officia pr','Assumenda esse voluptatem sint quisquam commodi.','2016-08-01 13:32:17','2016-08-01 13:32:17'),
+	(3,2,'Culpa aut doloribus eius qui.','Adipisci nulla ea quia velit reiciendis architecto unde.','2016-08-01 13:32:22','2016-08-01 13:32:22'),
+	(4,2,'Itaque facilis nesciunt doloribus voluptatibus nisi molestiae.','Facilis consequuntur repudiandae consequatur labore sit doloribus.','2016-08-01 13:32:29','2016-08-01 13:32:29'),
+	(5,1,'Assumenda esse voluptatem sint quisquam commodi.','Assumenda esse voluptatem sint quisquam commodi.','2016-08-01 13:32:34','2016-08-01 13:32:34'),
+	(6,2,'Qui reiciendis perspiciatis dolorem vel.','Iure et soluta nisi consequatur quae aut reiciendis dolore.','2016-08-01 13:32:39','2016-08-01 13:32:39'),
+	(7,1,'Minima ea maxime ut.','Assumenda illum ducimus commodi.','2016-08-01 13:32:42','2016-08-01 13:32:42'),
+	(8,2,'Facere autem quaerat aut rem.','Placeat animi enim in commodi ullam voluptas.','2016-08-01 13:32:49','2016-08-01 13:32:49'),
+	(9,1,'Possimus consequatur iusto quia quo rerum et aperiam.','Doloremque voluptate dolore accusamus vel ad quas.','2016-08-01 13:32:57','2016-08-01 13:32:57'),
+	(10,2,'Cumque explicabo alias eligendi alias autem.','Perferendis nulla explicabo dignissimos architecto.','2016-08-01 13:33:05','2016-08-01 13:33:05');
+
+/*!40000 ALTER TABLE `projects` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Дамп таблицы reports
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `reports`;
+
+CREATE TABLE `reports` (
+  `report_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `category_id` int(10) unsigned NOT NULL,
+  `published_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `views` int(11) NOT NULL,
+  PRIMARY KEY (`report_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+LOCK TABLES `reports` WRITE;
+/*!40000 ALTER TABLE `reports` DISABLE KEYS */;
+
+INSERT INTO `reports` (`report_id`, `category_id`, `published_at`, `created_at`, `updated_at`, `views`)
+VALUES
+	(46,2,'2016-08-01 14:26:42','2016-08-01 14:26:42','2016-08-01 14:26:42',975),
+	(47,2,'2016-08-01 14:26:51','2016-08-01 14:26:51','2016-08-01 14:26:51',969),
+	(48,1,'2016-08-01 14:26:55','2016-08-01 14:26:55','2016-08-01 14:26:55',79),
+	(49,2,'2016-08-01 14:27:01','2016-08-01 14:27:01','2016-08-01 14:27:01',1094),
+	(50,2,'2016-08-01 14:27:14','2016-08-01 14:27:14','2016-08-01 14:27:14',470),
+	(51,1,'2016-08-01 14:27:20','2016-08-01 14:27:20','2016-08-01 14:27:20',1097),
+	(52,1,'2016-08-01 14:27:26','2016-08-01 14:27:26','2016-08-01 14:27:26',2),
+	(53,2,'2016-08-01 14:27:35','2016-08-01 14:27:35','2016-08-01 14:27:35',410),
+	(54,2,'2016-08-01 14:27:38','2016-08-01 14:27:38','2016-08-01 14:27:38',1152),
+	(55,1,'2016-08-01 14:27:48','2016-08-01 14:27:48','2016-08-01 14:27:48',558),
+	(56,1,'2016-08-01 14:27:52','2016-08-01 14:27:52','2016-08-01 14:27:52',498),
+	(57,2,'2016-08-01 14:27:59','2016-08-01 14:27:59','2016-08-01 14:27:59',1486),
+	(58,2,'2016-08-01 14:28:02','2016-08-01 14:28:02','2016-08-01 14:28:02',471),
+	(59,1,'2016-08-01 14:28:08','2016-08-01 14:28:08','2016-08-01 14:28:08',1464),
+	(60,2,'2016-08-09 14:14:00','2016-08-09 14:34:13','2016-08-09 14:34:13',0);
+
+/*!40000 ALTER TABLE `reports` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Дамп таблицы reports_contents
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `reports_contents`;
+
+CREATE TABLE `reports_contents` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `report_id` int(10) unsigned NOT NULL,
+  `lang_id` int(10) unsigned NOT NULL,
+  `meta_title` varchar(80) COLLATE utf8_unicode_ci NOT NULL,
+  `meta_description` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `meta_keywords` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `description` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
+  `file` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `reports_contents_report_id_foreign` (`report_id`),
+  CONSTRAINT `reports_contents_report_id_foreign` FOREIGN KEY (`report_id`) REFERENCES `reports` (`report_id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+LOCK TABLES `reports_contents` WRITE;
+/*!40000 ALTER TABLE `reports_contents` DISABLE KEYS */;
+
+INSERT INTO `reports_contents` (`id`, `report_id`, `lang_id`, `meta_title`, `meta_description`, `meta_keywords`, `title`, `description`, `file`)
+VALUES
+	(1,46,2,'Dolorem et rem repudiandae nihil in mollitia.','Error nobis aut quam vel.','Saepe sed harum cumque expedita voluptas culpa aut similique dolorum voluptatum saepe culpa et.','Eligendi animi ducimus facilis.','Cumque qui consequatur ut eaque.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/593c90bae56a4ff320c0b181eda99481.jpg'),
+	(2,47,1,'Voluptas accusamus aliquam quia quae consequuntur perspiciatis sint.','Aspernatur rerum voluptatem quia modi.','Et similique nesciunt rerum eum sint sint et dolore.','Sapiente impedit soluta veritatis non ea.','Dolores quos rerum vel aut iusto neque.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/3578df914604b4707b0359a646a21db5.jpg'),
+	(3,48,1,'Dignissimos ab accusamus fuga eos.','Soluta laborum nam velit deleniti velit quae repellendus.','Et et qui cum et repellat et qui nulla architecto voluptatem laudantium rerum.','Velit accusantium tenetur id.','Aspernatur corrupti nostrum maxime tenetur atque.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/fc92c0e91bf467f1215bdbdf93be92f1.jpg'),
+	(4,49,2,'Id corrupti quos reprehenderit magnam.','Nostrum non iste molestias unde consequatur ut eveniet.','Repellendus officia illo et pariatur aut qui provident consequatur aut similique libero nesciunt dolores.','Quia sunt aspernatur veritatis esse excepturi magni.','Nihil aliquid qui doloribus non aut aut vel.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/c34942d79dd92fa9315cd9ac82c85622.jpg'),
+	(5,50,2,'Quia ea totam quia quidem.','Veritatis qui reiciendis est.','Qui sapiente dolor autem quisquam fugit debitis molestias.','Aut nulla maiores recusandae nihil mollitia est voluptatem.','Quis cumque vel possimus quis sed.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/b0d92c8a83c3781d546fe72a5afb45f0.jpg'),
+	(6,51,2,'Quod in tenetur enim minima et blanditiis expedita blanditiis.','Magnam modi tenetur veritatis perferendis sit.','Nisi quisquam ea vitae eaque est dolorem vel officiis.','Ipsa ad molestiae quisquam accusantium veniam nam quasi omnis.','Molestiae iusto ut adipisci nam voluptates est nobis ab.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/6190c88c14f9cd353eff94571cd57c5f.jpg'),
+	(7,52,1,'Ut quam non sequi consequatur ut minus neque neque.','Voluptatem blanditiis sed architecto minus et.','Et est adipisci veritatis deserunt et sunt dicta eaque magni possimus velit voluptas laudantium.','Voluptatem exercitationem et dolorem tempora.','In praesentium dicta sit voluptas commodi aut.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/ed997a1624a8485c7d6924a63ed509b4.jpg'),
+	(8,53,2,'Labore itaque corporis sapiente sapiente.','Mollitia ipsa ea ducimus sed placeat consequatur.','Nulla molestiae aut nisi nihil ut perferendis nam voluptatem accusantium nulla.','Dicta neque rerum eveniet modi ipsum placeat perspiciatis.','Ratione delectus excepturi nihil ullam.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/0eb646c8c414710a9181ca9d0362d92d.jpg'),
+	(9,54,1,'Vero omnis molestiae sint voluptatem nihil ut.','Dolor minima sed consequuntur ullam quibusdam illum.','Rerum quas blanditiis quia enim ut eum consequatur minima sit ipsa deserunt eius cum.','Id perferendis eos exercitationem dolor ut quibusdam.','Non debitis vitae consequatur voluptate.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/e44d7b6d10fbac6b979da63e6de57205.jpg'),
+	(10,55,1,'Quasi soluta fugiat et mollitia nam laboriosam exercitationem.','Explicabo voluptate ea officiis expedita animi ut qui.','Ut natus nesciunt sit minus in ea excepturi expedita tempore praesentium et et.','Incidunt totam ab architecto necessitatibus possimus tenetur autem.','Repudiandae et repellendus ut ut velit magnam perferendis quaerat.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/084467a1ed2b8d4ad2a864311e006aad.jpg'),
+	(11,56,1,'Sed quibusdam et ut ad esse accusantium dolores.','Veniam maiores provident ex tenetur modi harum vero.','Accusantium aut dolores qui qui aut libero.','Magni fugiat voluptas culpa ipsam.','Porro magnam minus qui occaecati delectus.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/dc293714913c68d3475ecdf658d70f39.jpg'),
+	(12,57,2,'Voluptatem facilis ex corporis perferendis sed at commodi.','Dolore voluptate perspiciatis est quaerat sit eos sapiente.','Eius fugiat ut voluptas exercitationem id ad corporis a ad eos itaque.','Est eius ab voluptates tenetur.','Illum vel perferendis consequatur atque.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/483cfe634fd1bc731f03f1a8bd8d8b1f.jpg'),
+	(13,58,2,'Aspernatur culpa et ut.','Vel ea at hic eligendi et.','Molestiae aut repellendus autem dolor quia amet repudiandae tempore dolor.','Eligendi voluptatem porro blanditiis neque optio sapiente.','Minus perferendis molestiae pariatur porro non.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/847dabdb5367ed206e35e88b0a825887.jpg'),
+	(14,59,2,'Illo debitis deleniti aspernatur eligendi adipisci et.','Iste ut maiores adipisci.','Et sunt et cumque sequi est exercitationem.','Est recusandae quod necessitatibus culpa commodi.','Quasi iusto molestias totam nihil voluptatem.','/var/folders/t5/wkp981yj1_j67d15ttyts0lm0000gn/T/68585d7dc3dd95f9210b442d3d4e4426.jpg'),
+	(15,60,2,'bla','bla','','bla','bla','brifydocx-1470742453.docx');
+
+/*!40000 ALTER TABLE `reports_contents` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Дамп таблицы subscribers
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `subscribers`;
+
+CREATE TABLE `subscribers` (
+  `subscriber_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `email` varchar(255) NOT NULL DEFAULT '',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`subscriber_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+LOCK TABLES `subscribers` WRITE;
+/*!40000 ALTER TABLE `subscribers` DISABLE KEYS */;
+
+INSERT INTO `subscribers` (`subscriber_id`, `email`, `created_at`, `updated_at`)
+VALUES
+	(1,'koota@yandex.ru','2000-11-11 00:00:00',NULL),
+	(2,'kts@ex.ua','2012-11-11 00:00:00',NULL),
+	(3,'TST@op.com','2016-01-01 00:00:00',NULL),
+	(5,'bla@com.com','2016-01-01 00:00:00',NULL),
+	(6,'bla@bnol.dsklfj','2016-01-01 00:00:00',NULL),
+	(7,'bla@bnol.dsklfj','2016-01-01 00:00:00',NULL),
+	(8,'bla@bnol.dsklfj','2016-01-01 00:00:00',NULL),
+	(9,'bla@bnol.dsklfj','2016-01-01 00:00:00',NULL),
+	(10,'bla@bnol.dsklfj','2016-01-01 00:00:00',NULL),
+	(11,'bodya@bodya.com','2016-08-07 12:25:46','2016-08-07 12:25:46'),
+	(13,'bodyakootz@gmail.com','2016-08-07 12:38:04','2016-08-07 12:38:04'),
+	(15,'bla@bladfasdasd.com','2016-08-07 12:42:23','2016-08-07 12:42:23'),
+	(16,'joke.@joker.gotham','2016-08-07 12:42:48','2016-08-07 12:42:48'),
+	(17,'bla10@bla.com','2016-08-09 20:45:06','2016-08-09 20:45:06'),
+	(18,'fjlashdf@fdsljhf.com','2016-08-09 20:46:08','2016-08-09 20:46:08'),
+	(19,'fsdjkfhs.fd@fds.c','2016-08-09 20:47:31','2016-08-09 20:47:31');
+
+/*!40000 ALTER TABLE `subscribers` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Дамп таблицы types
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `types`;
+
+CREATE TABLE `types` (
+  `type_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `type` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `type_title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`type_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+LOCK TABLES `types` WRITE;
+/*!40000 ALTER TABLE `types` DISABLE KEYS */;
+
+INSERT INTO `types` (`type_id`, `type`, `type_title`)
+VALUES
+	(1,'article','Новость'),
+	(2,'event','Событие'),
+	(3,'challenge','Конкурс'),
+	(4,'grant','Грант'),
+	(5,'project','Проект'),
+	(6,'story','История успеха');
+
+/*!40000 ALTER TABLE `types` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Дамп таблицы users
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `users`;
+
+CREATE TABLE `users` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `remember_token` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `master` tinyint(1) NOT NULL,
+  `last_visit` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `users_email_unique` (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `master`, `last_visit`, `created_at`, `updated_at`)
+VALUES
+	(1,'Unknown','default@admin.com','$2y$10$C/80xa2D3cKtXWr903db9OgIu54baW0j8yZCJ7QXtMz/e2O7TqxpS','v0qSzAISCZ',1,'2016-08-01 13:31:37',NULL,NULL),
+	(2,'BogdanKuts','bodyakootz@gmail.com','$2y$10$V7b8z2uk/IcJdYFAWAJ3nOVSzCo3Qz9Rq9FQiZkX.y81IVHHUBSOW','KlKu553CS15BaZOLtBYjedHATTsvFJmQLJ2oHYFXtMCKvnW1pf3XvHNVKt9O',1,'2016-08-08 14:21:20',NULL,'2016-08-04 12:16:03'),
+	(3,'Prof. Rashad Roob','nia.hauck@example.net','$2y$10$O4Cs/K1iJ5nkT8m20ZijW.g91Oa8MeOTsLoJOj754SqxKzhf.2DHG','FOi2kj9bsp',1,'2016-08-01 13:31:43','2016-08-01 13:31:43','2016-08-01 13:31:43'),
+	(4,'Niko Schulist II','quincy.zemlak@example.com','$2y$10$hBjp7Xi0sGic/cHYa3WpHe/pw2m./uVfTO7zGv.CPKgro91cuBFNC','Bqk271UnkW',0,'2016-08-01 13:31:43','2016-08-01 13:31:43','2016-08-01 13:31:43'),
+	(5,'Dr. Jonas Maggio','schaden.scarlett@example.org','$2y$10$MevGkv0usRlssfmMJ6mcwum2NiLSoP.QXa.xwr3nUhR4/sdbh/azm','tf88uTWGwu',1,'2016-08-01 13:31:43','2016-08-01 13:31:43','2016-08-01 13:31:43'),
+	(6,'Johnathan Bednar','juston.schultz@example.net','$2y$10$83yET2gl/XN/8spBQMlD0eIqiKbRjZDu3sRTQ9Lv9VAsKCBSn7kEm','7LjucVlnTu',0,'2016-08-01 13:31:43','2016-08-01 13:31:43','2016-08-01 13:31:43'),
+	(7,'Kieran Zieme','boehm.frida@example.net','$2y$10$uy7w.6uiI37mjJMKB0SEBe7fLQZeAE4gINjl7tURLEcLzwBTro2/O','fU2ydEkj0L',1,'2016-08-01 13:31:43','2016-08-01 13:31:43','2016-08-01 13:31:43'),
+	(8,'Winfield Torp','dhalvorson@example.org','$2y$10$bEYuZy7YPTOo0vpBddjE0eumxTyMXXL3OJQnXk9PJuM84anJ4wzzO','LLGt6Mu3ky',1,'2016-08-01 13:31:43','2016-08-01 13:31:43','2016-08-01 13:31:43'),
+	(9,'Jonatan Klein DDS','lind.berniece@example.com','$2y$10$jtg7LKL8xveCynnr2EUq4.548snJs2IIiM4OCg5aXCfwJ3uwdT/8u','Cs8ujaldrp',0,'2016-08-01 13:31:43','2016-08-01 13:31:43','2016-08-01 13:31:43'),
+	(10,'Haylee Williamson IV','mclaughlin.shirley@example.com','$2y$10$HCqpzfBfWilHN3dnRoy7deqOX31QlfsrV1odeVck5qqYB1ctKJFDS','e3x6MFhe14',0,'2016-08-01 13:31:43','2016-08-01 13:31:43','2016-08-01 13:31:43'),
+	(11,'Sarina Schiller','jamey19@example.net','$2y$10$wsfE7ph37ab/NJSwjgTBEe4lMeXkVZUY3l7mF1oJtq8SqsSAdXnoS','vy7em73Upl',0,'2016-08-01 13:31:43','2016-08-01 13:31:43','2016-08-01 13:31:43'),
+	(12,'Gia Weimann','haley.albina@example.com','$2y$10$FWRkXfNv4XhSfoGtyjTt2uWMK86nexP2nN77LpXcMB1vO1vhzcQRW','xTVzV7ij8s',1,'2016-08-01 13:31:43','2016-08-01 13:31:43','2016-08-01 13:31:43'),
+	(13,'Haven Langworth','friesen.dewitt@example.com','$2y$10$4JWBDpDjhPE6LeSL21JkDexuqgdG2n.an7zuP5O6ehqycOMxyxlPK','uy8kgoeZHH',1,'2016-08-01 13:31:43','2016-08-01 13:31:43','2016-08-01 13:31:43'),
+	(14,'Wava Renner','qgislason@example.com','$2y$10$IJeYOb7zC3xRrkk.AaFXY.tzpL66.xFicVmFQqWJAIhdw0Zgql9qy','Kzdmbgwp9r',0,'2016-08-01 13:31:43','2016-08-01 13:31:43','2016-08-01 13:31:43'),
+	(15,'Raegan Schimmel','kathryn.funk@example.org','$2y$10$NYsGAqNpbGyeOb38Wcl9rucpojjvCZNPrJcBgS93ScRL2BVx7dXzi','FfZV7EPCa1',0,'2016-08-01 13:31:43','2016-08-01 13:31:43','2016-08-01 13:31:43'),
+	(16,'Prof. Sigurd Stark Jr.','bud.okeefe@example.org','$2y$10$Uqw0hOxZZ2.OC.uzxfnn8O.e.HBNjnP8MwB4LE8tjjSqNEtQYnqKa','2e2l1clPAx',1,'2016-08-01 13:31:43','2016-08-01 13:31:43','2016-08-01 13:31:43'),
+	(17,'Noelia Green','gerard09@example.org','$2y$10$kjbKeHBi1KzhFW91pl3VwONyQnTg/lAOqss5cdo5REUt1bjCPKZ/K','k5WBb9jAIP',1,'2016-08-01 13:31:43','2016-08-01 13:31:43','2016-08-01 13:31:43'),
+	(18,'Elenor Blanda II','alf37@example.net','$2y$10$hCazgMIhuxtogLvAg15mb.NvqjCMTThBVWKHPaUq0y6lD4LfQYpsa','JLL0NXjfgl',1,'2016-08-01 13:31:43','2016-08-01 13:31:43','2016-08-01 13:31:43'),
+	(19,'Theo Pagac','ziemann.marcus@example.org','$2y$10$naPqFMASj5qKzI9Xm6viD.TNrgWH59h6n6cEmHDyBNoPZkOkgKmam','dEm53ftdl1',1,'2016-08-01 13:31:43','2016-08-01 13:31:43','2016-08-01 13:31:43'),
+	(20,'Abdullah Sawayn','dane.dare@example.com','$2y$10$qj1Iv7UCRwDEL/8jtSTFheRICeUeSeUrYVYU16h.GA20nf3bJJIIm','ZgkADZ8eHS',0,'2016-08-01 13:31:43','2016-08-01 13:31:43','2016-08-01 13:31:43'),
+	(21,'Devonte Jacobi','sanford.rogers@example.com','$2y$10$5BdypndhwxMTSwNabJ2Csui9RI8Un9fyHusTUdn62TszfLp8M3Hv2','pcauCofss2',1,'2016-08-01 13:31:43','2016-08-01 13:31:43','2016-08-01 13:31:43'),
+	(22,'Mr. Terrence Turner Sr.','lesch.ressie@example.com','$2y$10$V904JPapD/FAyz/AsFEJdeEkgNlRkcBqOFapRAdLs7KrdX7IH42Ku','qnGO3o7Ohw',1,'2016-08-01 13:31:43','2016-08-01 13:31:43','2016-08-01 13:31:43'),
+	(23,'Mariam Heidenreich','laverne65@example.net','$2y$10$Gh7RmpdMFuQQur9OgX9c6.aqTa8Y0HbLonDV5BkLPzXqu08qu8bia','ymIphHjtoT',0,'2016-08-01 13:31:44','2016-08-01 13:31:44','2016-08-01 13:31:44'),
+	(24,'Arlo Yundt','ashlee07@example.com','$2y$10$N43h6IQr5JpcjN8OMWFblODeUwiV8zr7rV8hOPlE.TFveKb06wIFm','zwMzI6BbMk',1,'2016-08-01 13:32:17','2016-08-01 13:32:17','2016-08-01 13:32:17'),
+	(25,'Claudine Beier','loyal64@example.org','$2y$10$Ys1HVOF1SZCrSX9LTysk5eOimzRh3SzBwXt.6D/OQr5EVLz.5o9Fe','sVd0xxjnzl',1,'2016-08-01 13:32:22','2016-08-01 13:32:22','2016-08-01 13:32:22'),
+	(26,'Brennan Jacobi III','cartwright.jonas@example.org','$2y$10$LRdgKRRGZhaYRXlF5h/xmOIPcz3Kp7wkhBW0XOW6ZuEpBH0i52dge','Y0l7U5Zo2X',0,'2016-08-01 13:32:29','2016-08-01 13:32:29','2016-08-01 13:32:29'),
+	(27,'Dr. Sharon Stehr V','mohr.rodger@example.org','$2y$10$USEqIq.90lq.H.Wc1QQKN.svYGUYmMlyQhNKrlVrh7efnzP6iHfLG','mfhVvbfbIp',1,'2016-08-01 13:32:34','2016-08-01 13:32:34','2016-08-01 13:32:34'),
+	(28,'Mack Hirthe MD','khalid88@example.org','$2y$10$MjOhUudNaW1m1BFEjgusDOONlAxpQ4QvsmtAodFCPE7NUPpH/7gz6','tqTJX9W4uF',0,'2016-08-01 13:32:39','2016-08-01 13:32:39','2016-08-01 13:32:39'),
+	(29,'Jayce Grady','bins.lou@example.net','$2y$10$Nqn4K/368/SyK7dx0lrHCuGXEXJlPbkutfLCNWkk1lvkUxhNWsuyC','iAS1SiKah8',0,'2016-08-01 13:32:42','2016-08-01 13:32:42','2016-08-01 13:32:42'),
+	(30,'Stewart Sporer','bogan.donato@example.com','$2y$10$03NCaU4UVNeF10m4LbxuYuYKxaZ.8Uvy0iwdIwP4AB7oFyQiMBurO','sqBgdI4RTM',1,'2016-08-01 13:32:49','2016-08-01 13:32:49','2016-08-01 13:32:49'),
+	(31,'Nichole Gibson PhD','daugherty.retta@example.net','$2y$10$.gkfBplxj/28nrcWFQf1R.6Szqa15WtMmuKQaNs0Gv7l5dFAhtzc2','nB2ShOFaPm',1,'2016-08-01 13:32:57','2016-08-01 13:32:57','2016-08-01 13:32:57'),
+	(32,'Charles Halvorson','remington.kuvalis@example.net','$2y$10$JC2/Qwpc0.ijproe1vjvBe2zdkeKmcq5.b2NnZ3KvttG/MGfjCY1y','WulyeciBKH',1,'2016-08-01 13:33:05','2016-08-01 13:33:05','2016-08-01 13:33:05');
+
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

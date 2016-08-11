@@ -1,5 +1,119 @@
-// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-@import 'partials/colors';
+@import "pages/partials/colors";
+@import "pages/partials/flaticon";
+@import "pages/partials/media";
+@import "pages/header";
+@import "pages/footer";
+@import "pages/index";
+@import "pages/articles";
+@import "pages/opportunities";
+@import "pages/projects";
+@import "pages/reports";
+@import "pages/contacts";
+@import "pages/aboutProject";
+@import "pages/donate";
+
 body {
-	color: $blue;
+	font-family: 'Roboto', sans-serif;
+}
+.btn {
+	//width: 149px;
+	height: 35px;
+	border: 1px solid $blue;
+	-webkit-border-radius: 17px;
+	border-radius: 17px;
+	background-color: transparent;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 12px 32px;
+	color: $grey;
+	font-size: 12px;
+	line-height: 1;
+	&:hover,
+	&:focus {
+		color: #fff;
+		background-color: $blue;
+	}
+}
+.front {
+
+}
+.short_about {
+	overflow: hidden;
+	.block {
+		overflow: hidden;
+		@include media(laptop) {
+			margin-top: 30px;
+		}
+		@include media(tablet) {
+			margin-top: 30px;
+		}
+		@include media(mobile) {
+			margin-top: 30px;
+		}
+		.content {
+			background-color: #f7f7f7;
+			overflow: hidden;
+			//padding: 10px 0px 10px 12px;
+			.text_block {
+				border-left: 2px solid $blue;
+				padding: 12px 0px 0px 15px;
+				overflow: hidden;
+				float: left;
+				width: 50%;
+				margin: 10px 0 10px 12px;
+				height: 240px;
+				.short_about_heading {
+					font-size: 20px;
+					font-weight: 500;
+					color: $blue;
+					text-transform: uppercase;
+					margin-top: 0;
+					margin-bottom: 24px;
+				}
+				.short_about_description {
+					font-size: 14px;
+					color: $grey;
+				}
+			}
+		}
+		.short_about_img {
+			float: right;
+			width: 131px;
+			height: 260px;
+			background-image: url('../img/markup/sd_img.png');
+			-webkit-background-size: cover;
+			background-size: cover;
+			@include media(laptop) {
+				width: 120px;
+			}
+			@include media(tablet) {
+				width: 131px;
+			}
+			@include media(modile) {
+				width: 131px;
+			}
+			@include media(mobile_v) {
+				width: 106px;
+			}
+			@include media(mobile_320) {
+				width: 100px;
+			}
+		}
+	}
+}
+.errors-page {
+	h1 {
+		text-align: center;
+		color: $grey;
+		text-transform: uppercase;
+		a {
+			color: $blue;
+			&:hover,
+			&:focus {
+				text-decoration: none;
+				color: $blue;
+				cursor: pointer;
+			}
+		}
+	}
 }

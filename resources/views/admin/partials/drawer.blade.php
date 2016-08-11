@@ -6,8 +6,8 @@
             <a class="mdl-navigation__link @if ( $env === 'dashboard') active_nav @endif" href="{{route('dashboard')}}">Панель управления</a>
             <div class="mdl-navigation__devider"></div>
 
-            <a class="mdl-navigation__link @if ( $env === 'articles' || $env == 'article') active_nav @endif" href="{{route('admin_articles')}}">Новости</a>
-            <a class="mdl-navigation__link @if ( $env === 'change_article') active_nav @endif" href="{{route('create_article')}}">Добавить новость</a>
+            <a class="mdl-navigation__link @if ( $env === 'articles') active_nav @endif" href="{{route('admin_articles')}}">Новости</a>
+            <a class="mdl-navigation__link @if ( $env == 'article' || $env == 'create_article' || $env === 'update_article') active_nav @endif" href="{{route('create_article')}}">Добавить новость</a>
             <div class="mdl-navigation__devider"></div>
 
 			<a class="mdl-navigation__link @if ( $env === 'profiles') active_nav @endif" href="{{route('admin_profiles')}}">Профайлы</a>
@@ -28,6 +28,9 @@
 
 			<a class="mdl-navigation__link @if ( $env === 'reports') active_nav @endif" href="{{route('admin_reports')}}">Отчеты</a>
 			<a class="mdl-navigation__link @if ( $env === 'report' || $env == 'create_report' || $env == 'update_report') active_nav @endif" href="{{route('create_report')}}">Добавить отчет</a>
+			<div class="mdl-navigation__devider"></div>
+
+			<a class="mdl-navigation__link @if ( $env === 'subscribers') active_nav @endif" href="{{route('admin_subscribers')}}">Подписчики</a>
 			<div class="mdl-navigation__devider"></div>
 
             <a class="mdl-navigation__link @if ( $env === 'admins') active_nav @endif" href="{{route('admins')}}">Администраторы</a>

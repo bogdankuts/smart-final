@@ -15,4 +15,15 @@ class ProfileContent extends AdminBaseModel {
 	 */
 	protected $fields = ['meta_title', 'meta_description', 'meta_keywords', 'name', 'description', 'file', 'lang_id'];
 
+
+	public function category() {
+
+		return $this->hasOneT('App\Category', 'category_id', 'category_id');
+	}
+
+	public function profile() {
+
+		return $this->belongsTo('App\Profile', 'profile_id', 'profile_id');
+	}
+
 }

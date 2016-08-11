@@ -6,6 +6,7 @@ use App\Admin;
 
 use App\Http\Requests;
 use App\Http\Requests\AdminRequest;
+use Illuminate\Support\Facades\Auth;
 
 class AdminsController extends AdminBaseController {
 
@@ -28,9 +29,17 @@ class AdminsController extends AdminBaseController {
 
 	public function create() {
 
-		return view('.admin.admins.create')->with([
-		    'submitButton'  => 'Добавить'
-		]);
+		if (Auth::user()->master != 1) {
+			flash('У вас нет прав для совершения этого действия', 'danger');
+
+			return redirect()->back();
+		} else {
+
+			return view('.admin.admins.create')->with([
+				'submitButton'  => 'Добавить'
+			]);
+		}
+
 	}
 
 	public function store(AdminRequest $request) {
@@ -50,11 +59,17 @@ class AdminsController extends AdminBaseController {
 	}
 
 	public function edit(Admin $admin) {
+		if (Auth::user()->master != 1) {
+			flash('У вас нет прав для совершения этого действия', 'danger');
 
-		return view('admin.admins.update')->with([
-		    'admin'         => $admin,
-		    'submitButton'  => 'Изменить'
-		]);
+			return redirect()->back();
+		} else {
+
+			return view('admin.admins.update')->with([
+				'admin'         => $admin,
+				'submitButton'  => 'Изменить'
+			]);
+		}
 	}
 
 	public function update(AdminRequest $request, Admin $admin) {
@@ -74,14 +89,21 @@ class AdminsController extends AdminBaseController {
 	}
 
 	public function delete(Admin $admin) {
-		if ($admin->id !== 1) {
-			$admin->deleteAdmin();
-			flash('Админ успешно удален', 'success');
-		} else {
-			flash('Админ по умолчанию не может быть удален', 'danger');
-		}
+		if (Auth::user()->master != 1) {
+			flash('У вас нет прав для совершения этого действия', 'danger');
 
-		return redirect()->route('admins');
+			return redirect()->back();
+		} else {
+
+			if ($admin->id !== 1) {
+				$admin->deleteAdmin();
+				flash('Админ успешно удален', 'success');
+			} else {
+				flash('Админ по умолчанию не может быть удален', 'danger');
+			}
+
+			return redirect()->route('admins');
+		}
 	}
 
 	/**

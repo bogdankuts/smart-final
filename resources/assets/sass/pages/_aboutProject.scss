@@ -1,0 +1,93 @@
+.aboutProject-page {
+	.sidebar .sidebar_list li .text {
+		font-size: 13px;
+	}
+	.about {
+		.heading {
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 18px;
+			font-weight: 400;
+			color: $light-grey;
+			margin-top: 0;
+			margin-bottom: 47px;
+		}
+		.subheading {
+			font-size: 24px;
+			text-align: center;
+			color: $blue;
+			font-weight: 400;
+			margin-bottom: 46px;
+			margin-top: 0;
+			text-transform: uppercase;
+		}
+		.about_block {
+			.icon {
+				display: table;
+				margin: auto;
+				margin-bottom: 48px;
+				.fi {
+					color: $blue;
+					font-size: 125px;
+					display: table;
+					margin: auto;
+				}
+			}
+			.text {
+				text-align: justify;
+				p,
+				a {
+					font-size: 16px;
+					color: $grey;
+				}
+				a {
+					&:hover,
+					&:focus {
+						color: $grey;
+						text-decoration: none;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+	.profiles {
+		.category {
+			width: 100%;
+			overflow: hidden;
+			margin-bottom: 30px;
+			.heading {
+				text-transform: uppercase;
+				text-align: center;
+				color: $grey;
+				font-size: 16px;
+				margin-bottom: 20px;
+			}
+		}
+		.one_profile {
+			float: left;
+			width: 50%;
+			min-height: 74px;
+			@include media(mobile) {
+				width: 100%;
+			}
+			.report_link {
+				color: $blue;
+				font-size: 16px;
+				text-transform: uppercase;
+				&:hover,
+				&:focus {
+					text-decoration: none;
+					cursor: pointer;
+					color: $blue;
+				}
+			}
+			.small_description {
+				font-size: 14px;
+				text-align: justify;
+				font-style: italic;
+				font-weight: 400;
+			}
+		}
+	}
+}

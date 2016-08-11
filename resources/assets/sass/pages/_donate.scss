@@ -1,0 +1,43 @@
+.help-page {
+	.heading {
+		//text-transform: uppercase;
+		//font-size: 18px;
+		//text-align: center;
+		//font-weight: 500;
+		//color: $grey;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: 400;
+		color: $light-grey;
+		margin-top: 0;
+		margin-bottom: 47px;
+	}
+	.subheading {
+		//text-transform: uppercase;
+		//text-align: center;
+		//font-size: 16px;
+		//font-weight: 400;
+		//font-style: italic;
+		//color: $grey;
+		//margin-bottom: 30px;
+		font-size: 24px;
+		text-align: center;
+		color: $blue;
+		font-weight: 400;
+		margin-bottom: 46px;
+		margin-top: 0;
+	}
+	.requisites {
+		width: 50%;
+		display: table;
+		margin: auto;
+		background-color: rgba(80, 174, 199, 0.21);
+		padding: 20px;
+		p {
+			text-transform: uppercase;
+			font-size: 14px;
+			color: $grey;
+		}
+	}
+}

@@ -1,0 +1,65 @@
+.sidebar {
+	.sidebar_list {
+		list-style: none;
+		padding: 0;
+		overflow: hidden;
+		@include media(tablet) {
+			display: table;
+			margin: auto;
+		}
+		@include media(mobile) {
+			display: table;
+			margin: auto;
+		}
+		li {
+			display: block;
+			float: left;
+			width: 100%;
+			margin-bottom: 22px;
+			@include media(tablet) {
+				float: none;
+				display: table;
+				margin: auto;
+				margin-bottom: 22px;
+			}
+			@include media(mobile) {
+				float: none;
+				display: table;
+				margin: auto;
+				margin-bottom: 22px;
+			}
+			.icon {
+				float: left;
+				i {
+					font-size: 24px;
+					color: $blue;
+				}
+			}
+			.text {
+				float: left;
+				font-size: 14px;
+				color: $grey;
+				font-weight: 400;
+				margin-left: 15px;
+				margin-top: 7px;
+				text-transform: uppercase;
+				&:hover,
+				&:focus {
+					text-decoration: none;
+					color: $blue;
+					cursor: pointer;
+				}
+			}
+			&.active {
+				.text {
+					color: $blue;
+				}
+			}
+		}
+	}
+}
+.empty {
+	font-size: 20px;
+	text-align: center;
+
+}
