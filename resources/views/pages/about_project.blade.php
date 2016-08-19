@@ -49,9 +49,10 @@
 							<div class="about">
 								<h2 class="heading">@lang('aboutProject.about_heading')</h2>
 								<h4 class="subheading">@lang('aboutProject.about_subheading')</h4>
-								<div class="about_block student col-lg-5">
+								<div class="about_block student col-lg-6">
 									<div class="icon">
 										<i class="fi flaticon-graduation"></i>
+										<p>@lang('aboutProject.student_heading')</p>
 									</div>
 									<div class="text">
 										<div>
@@ -59,9 +60,10 @@
 										</div>
 									</div>
 								</div>
-								<div class="about_block employer col-lg-6 col-lg-offset-1">
+								<div class="about_block employer col-lg-6">
 									<div class="icon">
 										<i class="fi flaticon-businessman-outline"></i>
+										<p>@lang('aboutProject.employer_heading')</p>
 									</div>
 									<div class="text">
 										<div>
@@ -82,7 +84,7 @@
 										@foreach($profiles as $profile)
 											@if($profile->profile->category_id == $category->category_id)
 												<div class="one_profile">
-													<a href="{{'/files/profiles/'.$profile->file}}" class="report_link js_increment"
+													<a href="{{'/files/profiles/'.$profile->file}}" target="_blank" class="report_link js_increment"
 													   data-link="/increment-views-profile/{{$profile->profile->profile_id}}">
 														{{$profile->name}}
 													</a>
@@ -105,7 +107,7 @@
 										@foreach($positions as $position)
 											@if($position->position->category_id == $category->category_id)
 												<div class="one_profile">
-													<a href="{{'/files/positions/'.$position->file}}" class="report_link js_increment"
+													<a href="{{'/files/positions/'.$position->file}}" target="_blank" class="report_link js_increment"
 													   data-link="/increment-views-position/{{$position->position->position_id}}">
 														{{$position->title}}
 													</a>

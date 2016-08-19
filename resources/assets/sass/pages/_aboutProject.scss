@@ -25,12 +25,18 @@
 			.icon {
 				display: table;
 				margin: auto;
-				margin-bottom: 48px;
+				margin-bottom: 25px;
 				.fi {
 					color: $blue;
 					font-size: 125px;
 					display: table;
 					margin: auto;
+				}
+				p {
+					text-align: center;
+					font-size: 22px;
+					text-transform: uppercase;
+					color: $blue;
 				}
 			}
 			.text {
@@ -66,7 +72,9 @@
 		}
 		.one_profile {
 			float: left;
-			width: 50%;
+			width: 48%;
+			margin-left: 1%;
+			margin-right: 1%;
 			min-height: 74px;
 			@include media(mobile) {
 				width: 100%;
@@ -84,7 +92,7 @@
 			}
 			.small_description {
 				font-size: 14px;
-				text-align: justify;
+				//text-align: justify;
 				font-style: italic;
 				font-weight: 400;
 			}

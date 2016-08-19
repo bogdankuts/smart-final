@@ -5,7 +5,7 @@ header {
 	//margin-top: 42px;
 	border-bottom: 2px solid $blue;
 	@include media(mobile_v) {
-		padding-bottom: 40px;
+		padding-bottom: 44px;
 	}
 	@include media(mobile_320) {
 		padding-bottom: 50px;
@@ -19,6 +19,12 @@ header {
 		@include media(tablet) {
 			margin-bottom: 24px;
 		}
+		@include media(mobile_667) {
+			margin-bottom: 80px;
+		}
+		@include media(mobile_570) {
+			margin-bottom: 40px;
+		}
 		@include media(mobile_v) {
 			margin-bottom: 0;
 		}
@@ -26,6 +32,9 @@ header {
 			float: left;
 			max-width: 190px;
 			margin-right: 12px;
+			@include media(tablet) {
+				margin-top: 6px;
+			}
 			@include media(mobile_v) {
 				margin-right: 0;
 			}
@@ -35,7 +44,8 @@ header {
 			img {
 				max-width: 190px;
 				@include media(laptop) {
-					max-width: 110px;
+					max-width: 100px;
+					margin-top: 5px;
 				}
 				@include media(tablet) {
 					max-width: 80px;
@@ -87,6 +97,10 @@ header {
 				max-width: 220px;
 				font-size: 13px;
 			}
+			@include media(mobile_570) {
+				max-width: 150px;
+				font-size: 11px;
+			}
 			@include media(mobile_480) {
 				max-width: 150px;
 				font-size: 11px;
@@ -118,30 +132,35 @@ header {
 		}
 		@include media(mobile) {
 			float: right;
-			//margin-right: 10%;
-			width: 100%;
-			position: absolute;
-			right: 10%;
+			margin-right: 10px;
+			//width: 100%;
+			//position: absolute;
+			//right: 10%;
 			z-index: 999;
 			//top: 30px;
 			//left: 50%;
 		}
 		@include media(mobile_667) {
 			position: absolute;
-			top: 12%;
-			right: 46%;
+			top: 20%;
+			right: 44%;
 		}
 		@include media(mobile_570) {
-			top: 13%;
+			position: absolute;
+			top: 15%;
 		}
 		@include media(mobile_480) {
+			position: absolute;
 			top: 15%;
 		}
 		@include media(mobile_v) {
+			position: absolute;
 			top: 12%;
 		}
 		@include media(mobile_320) {
-			top: 18.5%;
+			position: absolute;
+			top: 16.5%;
+			right: 40%;
 		}
 		.container-fluid {
 			padding: 0;
@@ -327,8 +346,28 @@ header {
 	&.ru {
 		.credentials {
 			margin-bottom: 27px;
+			@include media(tablet) {
+				margin-bottom: 0;
+			}
+			@include media(mobile) {
+				margin-bottom: 42px;
+			}
+			@include media(mobile_v) {
+				margin-bottom: 0;
+			}
+			.logo {
+				@include media(tablet) {
+					margin-top: 11px;
+				}
+			}
 			.title {
 				max-width: 160px;
+				@include media(tablet) {
+					margin-top: 8px;
+					max-width: 114px;
+					font-size: 10px;
+					padding-left: 3px;
+				}
 			}
 		}
 	}

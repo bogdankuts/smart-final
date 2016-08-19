@@ -3,6 +3,11 @@
 		position: relative;
 		height: 423px;
 		margin-bottom: 60px;
+		@include media(mobile) {
+			position: initial;
+			height: initial;
+			margin-bottom: 0;
+		}
 	}
 	.nav_block {
 		//display: none;
@@ -19,6 +24,9 @@
 			padding-bottom: 80px;
 		}
 		@include media(mobile) {
+			position: initial;
+			display: none;
+			z-index: 5;
 			padding-bottom: 80px;
 		}
 		//margin-bottom: 60px;
@@ -30,6 +38,9 @@
 			-ms-animation: fadein 1.5s; /* Internet Explorer */
 			-o-animation: fadein 1.5s; /* Opera < 12.1 */
 			animation: fadein 1.5s;
+			@include media(mobile) {
+				display: block;
+			}
 		}
 		.more_btn {
 			display: table;

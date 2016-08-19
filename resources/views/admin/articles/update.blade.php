@@ -34,22 +34,22 @@
 		//CKEDITOR EMBED
 		if ($('#editor').length) {
 			CKEDITOR.replace('editor', {
-				filebrowserBrowseUrl 	   : '../../kcfinder/browse.php?opener=ckeditor&type=files',
-				filebrowserImageBrowseUrl  : '../../kcfinder/browse.php?opener=ckeditor&type=images',
-				filebrowserFlashBrowseUrl  : '../../kcfinder/browse.php?opener=ckeditor&type=flash',
-				filebrowserUploadUrl  	   : '../../kcfinder/upload.php?opener=ckeditor&type=files',
-				filebrowserImageUploadUrl  : '../../kcfinder/upload.php?opener=ckeditor&type=images',
-				filebrowserFlashUploadUrl  : '../../kcfinder/upload.php?opener=ckeditor&type=flash',
+				filebrowserBrowseUrl 	   : '../../../kcfinder/browse.php?opener=ckeditor&type=files',
+				filebrowserImageBrowseUrl  : '../../../kcfinder/browse.php?opener=ckeditor&type=images',
+				filebrowserFlashBrowseUrl  : '../../../kcfinder/browse.php?opener=ckeditor&type=flash',
+				filebrowserUploadUrl  	   : '../../../kcfinder/upload.php?opener=ckeditor&type=files',
+				filebrowserImageUploadUrl  : '../../../kcfinder/upload.php?opener=ckeditor&type=images',
+				filebrowserFlashUploadUrl  : '../../../kcfinder/upload.php?opener=ckeditor&type=flash',
 			});
 		}
 		if ($('#editor-ru').length) {
 			CKEDITOR.replace('editor-ru', {
-				filebrowserBrowseUrl 	   : '../../kcfinder/browse.php?opener=ckeditor&type=files',
-				filebrowserImageBrowseUrl  : '../../kcfinder/browse.php?opener=ckeditor&type=images',
-				filebrowserFlashBrowseUrl  : '../../kcfinder/browse.php?opener=ckeditor&type=flash',
-				filebrowserUploadUrl  	   : '../../kcfinder/upload.php?opener=ckeditor&type=files',
-				filebrowserImageUploadUrl  : '../../kcfinder/upload.php?opener=ckeditor&type=images',
-				filebrowserFlashUploadUrl  : '../../kcfinder/upload.php?opener=ckeditor&type=flash',
+				filebrowserBrowseUrl 	   : '../../../kcfinder/browse.php?opener=ckeditor&type=files',
+				filebrowserImageBrowseUrl  : '../../../kcfinder/browse.php?opener=ckeditor&type=images',
+				filebrowserFlashBrowseUrl  : '../../../kcfinder/browse.php?opener=ckeditor&type=flash',
+				filebrowserUploadUrl  	   : '../../../kcfinder/upload.php?opener=ckeditor&type=files',
+				filebrowserImageUploadUrl  : '../../../kcfinder/upload.php?opener=ckeditor&type=images',
+				filebrowserFlashUploadUrl  : '../../../kcfinder/upload.php?opener=ckeditor&type=flash',
 			});
 		}
 	</script>

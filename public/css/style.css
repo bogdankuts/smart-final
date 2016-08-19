@@ -91,7 +91,7 @@ header {
   border-bottom: 2px solid #50aec7; }
   @media only screen and (max-width: 415px) {
     header {
-      padding-bottom: 40px; } }
+      padding-bottom: 44px; } }
   @media only screen and (max-width: 320px) {
     header {
       padding-bottom: 50px; } }
@@ -104,6 +104,12 @@ header {
     @media only screen and (min-width: 768px) and (max-width: 991px) {
       header .credentials {
         margin-bottom: 24px; } }
+    @media only screen and (max-width: 667px) {
+      header .credentials {
+        margin-bottom: 80px; } }
+    @media only screen and (max-width: 570px) {
+      header .credentials {
+        margin-bottom: 40px; } }
     @media only screen and (max-width: 415px) {
       header .credentials {
         margin-bottom: 0; } }
@@ -111,6 +117,9 @@ header {
       float: left;
       max-width: 190px;
       margin-right: 12px; }
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        header .credentials .logo {
+          margin-top: 6px; } }
       @media only screen and (max-width: 415px) {
         header .credentials .logo {
           margin-right: 0; } }
@@ -121,7 +130,8 @@ header {
         max-width: 190px; }
         @media only screen and (min-width: 992px) and (max-width: 1199px) {
           header .credentials .logo img {
-            max-width: 110px; } }
+            max-width: 100px;
+            margin-top: 5px; } }
         @media only screen and (min-width: 768px) and (max-width: 991px) {
           header .credentials .logo img {
             max-width: 80px;
@@ -167,6 +177,10 @@ header {
         header .credentials .title {
           max-width: 220px;
           font-size: 13px; } }
+      @media only screen and (max-width: 570px) {
+        header .credentials .title {
+          max-width: 150px;
+          font-size: 11px; } }
       @media only screen and (max-width: 480px) {
         header .credentials .title {
           max-width: 150px;
@@ -194,27 +208,30 @@ header {
     @media only screen and (max-width: 767px) {
       header .navbar {
         float: right;
-        width: 100%;
-        position: absolute;
-        right: 10%;
+        margin-right: 10px;
         z-index: 999; } }
     @media only screen and (max-width: 667px) {
       header .navbar {
         position: absolute;
-        top: 12%;
-        right: 46%; } }
+        top: 20%;
+        right: 44%; } }
     @media only screen and (max-width: 570px) {
       header .navbar {
-        top: 13%; } }
+        position: absolute;
+        top: 15%; } }
     @media only screen and (max-width: 480px) {
       header .navbar {
+        position: absolute;
         top: 15%; } }
     @media only screen and (max-width: 415px) {
       header .navbar {
+        position: absolute;
         top: 12%; } }
     @media only screen and (max-width: 320px) {
       header .navbar {
-        top: 18.5%; } }
+        position: absolute;
+        top: 16.5%;
+        right: 40%; } }
     header .navbar .container-fluid {
       padding: 0; }
     header .navbar .navbar-collapse {
@@ -388,8 +405,26 @@ header {
           margin-right: 20%; } }
   header.ru .credentials {
     margin-bottom: 27px; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      header.ru .credentials {
+        margin-bottom: 0; } }
+    @media only screen and (max-width: 767px) {
+      header.ru .credentials {
+        margin-bottom: 42px; } }
+    @media only screen and (max-width: 415px) {
+      header.ru .credentials {
+        margin-bottom: 0; } }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      header.ru .credentials .logo {
+        margin-top: 11px; } }
     header.ru .credentials .title {
       max-width: 160px; }
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        header.ru .credentials .title {
+          margin-top: 8px;
+          max-width: 114px;
+          font-size: 10px;
+          padding-left: 3px; } }
 
 footer {
   border-top: 2px solid #50aec7;
@@ -524,6 +559,11 @@ footer {
   position: relative;
   height: 423px;
   margin-bottom: 60px; }
+  @media only screen and (max-width: 767px) {
+    .index-page .main_block {
+      position: initial;
+      height: initial;
+      margin-bottom: 0; } }
 
 .index-page .nav_block {
   position: absolute;
@@ -539,6 +579,9 @@ footer {
       padding-bottom: 80px; } }
   @media only screen and (max-width: 767px) {
     .index-page .nav_block {
+      position: initial;
+      display: none;
+      z-index: 5;
       padding-bottom: 80px; } }
   .index-page .nav_block.active {
     opacity: 1;
@@ -548,6 +591,9 @@ footer {
     /* Internet Explorer */
     /* Opera < 12.1 */
     animation: fadein 1.5s; }
+    @media only screen and (max-width: 767px) {
+      .index-page .nav_block.active {
+        display: block; } }
   .index-page .nav_block .more_btn {
     display: table;
     margin: auto;
@@ -926,6 +972,10 @@ footer {
   .contacts .phone .phone_link:hover,
   .contacts .phone .phone_link:focus {
     cursor: default; }
+  .contacts .mail .phone_link.person,
+  .contacts .phone .phone_link.person {
+    margin-top: 0;
+    margin-bottom: 0; }
 
 @media only screen and (max-width: 767px) {
   .contacts .phone {
@@ -968,12 +1018,17 @@ footer {
 .aboutProject-page .about .about_block .icon {
   display: table;
   margin: auto;
-  margin-bottom: 48px; }
+  margin-bottom: 25px; }
   .aboutProject-page .about .about_block .icon .fi {
     color: #50aec7;
     font-size: 125px;
     display: table;
     margin: auto; }
+  .aboutProject-page .about .about_block .icon p {
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #50aec7; }
 
 .aboutProject-page .about .about_block .text {
   text-align: justify; }
@@ -999,7 +1054,9 @@ footer {
 
 .aboutProject-page .profiles .one_profile {
   float: left;
-  width: 50%;
+  width: 48%;
+  margin-left: 1%;
+  margin-right: 1%;
   min-height: 74px; }
   @media only screen and (max-width: 767px) {
     .aboutProject-page .profiles .one_profile {
@@ -1014,7 +1071,6 @@ footer {
       color: #50aec7; }
   .aboutProject-page .profiles .one_profile .small_description {
     font-size: 14px;
-    text-align: justify;
     font-style: italic;
     font-weight: 400; }
 
@@ -1088,6 +1144,15 @@ body {
         width: 50%;
         margin: 10px 0 10px 12px;
         height: 240px; }
+        @media only screen and (min-width: 992px) and (max-width: 1199px) {
+          .short_about .block .content .text_block {
+            height: 270px; } }
+        @media only screen and (max-width: 415px) {
+          .short_about .block .content .text_block {
+            height: 265px; } }
+        @media only screen and (max-width: 320px) {
+          .short_about .block .content .text_block {
+            height: 306px; } }
         .short_about .block .content .text_block .short_about_heading {
           font-size: 20px;
           font-weight: 500;
@@ -1104,18 +1169,49 @@ body {
       height: 260px;
       background-image: url("../img/markup/sd_img.png");
       background-size: cover; }
+      .short_about .block .short_about_img.who {
+        background-image: url("../img/markup/sd_block_who.png"); }
+      .short_about .block .short_about_img.why {
+        background-image: url("../img/markup/sd_block_why.png"); }
       @media only screen and (min-width: 992px) and (max-width: 1199px) {
         .short_about .block .short_about_img {
-          width: 120px; } }
+          width: 120px;
+          height: 290px; } }
       @media only screen and (min-width: 768px) and (max-width: 991px) {
         .short_about .block .short_about_img {
           width: 131px; } }
       @media only screen and (max-width: 415px) {
         .short_about .block .short_about_img {
-          width: 106px; } }
+          width: 106px;
+          height: 285px; } }
       @media only screen and (max-width: 320px) {
         .short_about .block .short_about_img {
-          width: 100px; } }
+          width: 100px;
+          height: 326px; } }
+
+.ru .short_about .block .content .text_block {
+  height: 270px; }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .ru .short_about .block .content .text_block {
+      height: 300px; } }
+  @media only screen and (max-width: 415px) {
+    .ru .short_about .block .content .text_block {
+      height: 280px; } }
+  @media only screen and (max-width: 320px) {
+    .ru .short_about .block .content .text_block {
+      height: 320px; } }
+
+.ru .short_about .block .short_about_img {
+  height: 290px; }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .ru .short_about .block .short_about_img {
+      height: 320px; } }
+  @media only screen and (max-width: 415px) {
+    .ru .short_about .block .short_about_img {
+      height: 300px; } }
+  @media only screen and (max-width: 415px) {
+    .ru .short_about .block .short_about_img {
+      height: 340px; } }
 
 .errors-page h1 {
   text-align: center;

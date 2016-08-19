@@ -42,9 +42,11 @@
 		.phone_link {
 			&:hover,
 			&:focus {
-				//color: $grey;
-				//text-decoration: none;
 				cursor: default;
+			}
+			&.person {
+				margin-top: 0;
+				margin-bottom: 0;
 			}
 		}
 	}

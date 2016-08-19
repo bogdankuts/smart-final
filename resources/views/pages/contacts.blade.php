@@ -27,6 +27,7 @@
 								<i class="fi flaticon-phone-call"></i>
 							</div>
 							<p class="link phone_link">+38 099-401-79-12</p>
+							<p class="link phone_link person">@lang('general.contact_person')</p>
 						</div>
 					</div>
 					<div class="map col-lg-6 col-md-6 col-sm-12 col-xs-12">
